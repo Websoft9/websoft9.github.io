@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ghost Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/TryGhost/Ghost' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#ghost-stack-components">Ghost Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-ghost">Getting Started with Ghost</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#will-be-used-usernames-and-passwords">Will be used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#using-themes">Using Themes</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#update">Update</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#preparation-backup-your-content">Preparation: backup your content</a><li class=""><a href="#upgrading-ghost-via-the-ghost-cli">Upgrading Ghost via the Ghost-CLI</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#ghost-faq">Ghost FAQ</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#how-to-configure-ghost">How to configure Ghost?</a><li class=""><a href="#how-to-export-the-blog-settings-and-data">How to Export the blog settings and data</a><li class=""><a href="#what-is-markdown-and-how-does-it-work">What is Markdown and how does it work?</a><li class=""><a href="#how-can-i-track-how-many-views-my-site-is-getting">How can I track how many views my site is getting?</a><li class=""><a href="#how-do-i-upload-an-image-into-ghost">How do I upload an image into Ghost?</a><li class=""><a href="#how-can-i-edit-my-ghost-theme">How can I edit my Ghost theme?</a><li class=""><a href="#how-to-define-your-own-http-redirects">How to define your own HTTP redirects</a><li class=""><a href="#how-to-configure-the-mail">How to configure the Mail?</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-start-or-stop-the-services">How to start or stop the services?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-configure-domain">How to configure domain?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-configure-ssl">How to configure SSL?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-new-nginx-configuration">How to Add new Nginx Configuration?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#other-solution">Other solution</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#config-domain-on-apache">Config Domain on Apache</a><li class=""><a href="#ssl-setup-on-apache">SSL Setup on Apache</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#more-ghost-help-link">More Ghost Help Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Ghost Image Guide</h1>
+                              <div class="version"> Version 1.8.5</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Ghost is a pre-configured, ready to run image for running Ghost on Alibaba Cloud.</p>
+<p>Ghost is a fully open source, hackable platform for building and running a modern online publication. We power blogs, magazines and journalists from Zappos to Sky News.Ghost’re a proud non-profit organisation building open source technology for journalism.Ghost was founded in April 2013, after a very successful Kickstarter campaign to create a new platform focused solely on professional publishing. It mission is to create the best open source tools for independent journalists and writers across the world, and have a real impact on the future of online media.</p>
+<p><img src="https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7676/416570ed-adb8-4e4f-a52f-36cc14bb6b4a.jpg" /></p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="ghost-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Ghost Stack Components</h2><p><strong>Application Software(Ghost1.8.5,Ghost-CLI1.1.1)</strong><br />
+Ghost install directory: <em>/data/wwwroot/ghost<br />
+</em>Ghost configuration directory:<em>/data/wwwroot/ghost/config.production.json<br />
+</em>Note:Ghost-CLI is a command console for Ghost<em><br />
+</em></p>
+<p><strong>Infrastructure(Node.js v6.11.3,Nginx 1.10.3)</strong><br />
+Nginx configuration file: <em>/etc/nginx/sites-available/default</em><br />
+Nginx log files: <em>/ var/log/nginx/error.log</em></p>
+<p><strong>Database(MYSQL5.7)</strong><br />
+Database data directory:  <em>/data/mysql</em><br />
+Database Configuration File: <em>/etc/my.cnf</em></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the Ghost directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-ghost" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Ghost</h2><p>It is recommended to complete two steps before the the installation:</p>
+<ul>
+<li>Domain resolution if you want to use domain for this application (Add an A record to the Internet IP Address of Server from Domain Control Panel)</li>
+<li>Modify the MySQL password of r<em>oot</em></li>
+</ul>
+<p>Then access the installation page and complete the installation wizard for the following steps:</p>
+<ol>
+<li>http://domain.com/ghost or http://Inernet IP Address/ghost,go to the installation Wizard.Click the button &#8220;Create you account&#8221;.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghost-setup001-websoft9.png" width="960" height="652" /></li>
+<li>Begin to create your account(make sure remember it),and then go to the next step<strong><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghost-setup002-websoft9.png" width="960" height="709" /><br />
+</strong></li>
+<li>Sytem will remind you &#8220;invite you team&#8221;,suggest &#8220;I&#8217;ll do this later&#8230;&#8221;,and then go to the next step<strong><br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghost-setup003-websoft9.png" width="960" height="709" /><br />
+</strong></li>
+<li>At last,system come to the backend of Ghost after the complete of installstion<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/ghost/ghost-backend-websoft9.png" width="960" height="709" /></li>
+</ol>
+</div>  </section>
+
+  <section id="will-be-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Will be used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、Ghost:</strong>Username and Password is<strong> </strong>set by youself when installation,<br />
+Backend URL:<em>http://youdomain.com/ghost or http://ip/ghost</em><br />
+<strong>2、MySQL Database:</strong>Default username and password is<strong> </strong><span style="color: #ff0000;"><em>root/123456</em></span><br />
+Control Panel URL:<em>http://Internet IP Address/phpmyadmin</em><br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net/" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</p>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the “yes”<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="using-themes" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Themes</h2><p>Ghost themes live in the <em>/data/wwwroot/ghost/content/themes</em> directory and are also available in <a href="http://marketplace.ghost.org/">Ghost Marketplace</a>.</p>
+<p>We can intall theme using Web Interface</p>
+<ul>
+<li>Download the theme in Ghost Marketplace.</li>
+<li>upload and unzip theme package .zip file to  <em>/data/wwwroot/ghost/content/themes</em></li>
+<li>Restart the Ghost service
+<pre class=" language-markup"><code class=" language-markup">root@iZbp1i4rjdsy216yq7lgucZ:/# ghost restart
+</code></pre>
+</li>
+<li>Log into the application and navigate to &#8220;Settings -&gt; General&#8221; section. Scroll down to the bottom of the page.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-newthemes-websoft9.png" width="1045" height="564" /></li>
+<li>The new theme is displayed in the &#8220;Themes&#8221; section. Select the theme in the list and click the sav you want to perform.</li>
+</ul>
+</div>  </section>
+
+  <section id="update" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Update</h2><p>In this example we assume you are using the Ghost CLI, which we highly recommend, to run your blog.</p>
+<div id='preparation-backup-your-content' class='step-content clearfix'><h3 class='steps-header'><a href='#preparation-backup-your-content'>Preparation: backup your content</a></h3><p>We can&#8217;t stress this enough &#8211; even if it all goes horribly wrong, recovering is quick and easy if you&#8217;re properly backed up. Use the export tool on the labs page to create a <code>.json</code> file and make copy of the <code>/content</code> folder in the root of your Ghost install &#8211; this contains your images and themes. Read our guide on<a href="https://help.ghost.org/hc/en-us/articles/224112927-Import-Export-Data"> importing &amp; exporting</a>for detailed instructions.</p>
+</div><div id='upgrading-ghost-via-the-ghost-cli' class='step-content clearfix'><h3 class='steps-header'><a href='#upgrading-ghost-via-the-ghost-cli'>Upgrading Ghost via the Ghost-CLI</a></h3><p>Once you got all your important data backed up, you can go ahead and upgrade Ghost to the latest version:</p>
+<pre><code class="language-markup">ghost update</code></pre>
+<p>You will need to navigate to the folder of your current Ghost installation to execute this command. Ghost CLI will then fetch information about a newer version, download and install it.</p>
+<p>After the installation, Ghost CLI will restart the app automatically.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-update-websoft9.jpg" width="800" height="240" /></p>
+<p>&nbsp;</p>
+</div></div>  </section>
+
+  <section id="ghost-faq" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Ghost FAQ</h2><div id='how-to-configure-ghost' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-configure-ghost'>How to configure Ghost?</a></h3><p>Ghost has a number of configuration options which you can add to change things about how Ghost works.</p>
+<p>you can modify the configuration file from <em>/data/wwwroot/ghost/config.js</em></p>
+<table>
+<tbody>
+<tr class="ng-scope">
+<th class="ng-binding ng-scope">Name</th>
+<th class="ng-binding ng-scope">Required</th>
+<th class="ng-binding ng-scope">Description</th>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>url</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><strong>only in production</strong></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Set the public URL for your blog</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>adminUrl</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>You can specify a separated admin url.</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>mail</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><strong>only in production</strong></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Add a mail service so that Ghost can send emails such as forgotten password and user invite emails</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>database</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><strong>only in production</strong></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>The type of database that Ghost uses. This is configured to sqlite3 by default and does not need editing</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>server</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Host and port, or socket for Ghost to listen on</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>privacy</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Disable the Ghost features listed in <a href="https://github.com/TryGhost/Ghost/blob/master/PRIVACY.md">PRIVACY.md</a>, e.g. update check, rpc ping, and google fonts</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>paths</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Customise Ghost&#8217;s internal paths, e.g. to the content directory</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>maintenance</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Transform your blog into maintenance mode.</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>referrerPolicy</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Control the content attribute of the meta referrer tag.</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>useMinFiles</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Generate assets url with .min notation.</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>storage</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Set a custom storage adapter, read more here <a class="doc-link" href="https://docs.ghost.org/v1.0.0/docs/using-a-custom-storage-module" data-sidebar="using-a-custom-storage-module">Using a custom storage module</a></p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>scheduling</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Set a custom scheduling adapter, read more here <a class="doc-link" href="https://docs.ghost.org/v1.0.0/docs/using-a-custom-scheduling-module" data-sidebar="using-a-custom-scheduling-module">Using a custom scheduling module</a></p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>logging</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Configure logging for Ghost.</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>spam</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Configure spam settings.</p>
+</div>
+</td>
+</tr>
+<tr class="ng-scope">
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p><code>caching</code></p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>no</p>
+</div>
+</td>
+<td class="ng-scope">
+<div class="ng-isolate-scope">
+<p>Configure caching settings.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div id='how-to-export-the-blog-settings-and-data' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-export-the-blog-settings-and-data'>How to Export the blog settings and data</a></h3><p>Go to Administrator-&gt;Labs,Click the &#8220;Export&#8221; button,system download the jason file automatically</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-exportdata-websoft9.png" width="1042" height="426" /></p>
+</div><div id='what-is-markdown-and-how-does-it-work' class='step-content clearfix'><h3 class='steps-header'><a href='#what-is-markdown-and-how-does-it-work'>What is Markdown and how does it work?</a></h3><p>Markdown is the minimal syntax that Ghost uses for marking up your documents with formatting, using punctuation and special characters. If you’re unsure of how to work with Markdown, please checkout our <a href="https://help.ghost.org/hc/en-us/articles/224410728-Markdown-Guide" target="_blank" rel="noopener noreferrer">Markdown Guide</a>.</p>
+</div><div id='how-can-i-track-how-many-views-my-site-is-getting' class='step-content clearfix'><h3 class='steps-header'><a href='#how-can-i-track-how-many-views-my-site-is-getting'>How can I track how many views my site is getting?</a></h3><p>You can easily get detailed data about how much traffic your site is getting by installing any standard analytics service. Google Analytics is the one very popular option, which is very <a href="http://academy.ghost.org/how-to-monitor-your-ghost-blogs-traffic/">simple to add to Ghost</a>.</p>
+</div><div id='how-do-i-upload-an-image-into-ghost' class='step-content clearfix'><h3 class='steps-header'><a href='#how-do-i-upload-an-image-into-ghost'>How do I upload an image into Ghost?</a></h3><p>You can add an image to your post by typing <code>![]()</code> in the editor, or pressing <code>CMD/Ctrl + Shift + I</code>. This will load an upload box in the post preview area for you to upload an image. More info <a href="https://help.ghost.org/hc/en-us/articles/223237408-Upload-Images">here</a>, if you need it</p>
+</div><div id='how-can-i-edit-my-ghost-theme' class='step-content clearfix'><h3 class='steps-header'><a href='#how-can-i-edit-my-ghost-theme'>How can I edit my Ghost theme?</a></h3><p>Editing a Ghost theme requires some basic development knowledge, but is relatively straightforward. You can follow along with our <a href="https://help.ghost.org/hc/en-us/articles/225094848-Ghost-Theme-Editing">support guide</a> to get started, or check out the full <a href="https://themes.ghost.org/">Ghost theme doumentation</a> for more advanced areas.</p>
+</div><div id='how-to-define-your-own-http-redirects' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-define-your-own-http-redirects'>How to define your own HTTP redirects</a></h3><p>You can define your own HTTP redirects for your Ghost blog. The redirects file is a JSON file and needs to be located in <code>content/data/redirects.json</code>.</p>
+<p>Each entry in the redirects file has the following structure:</p>
+<pre><code>{
+  "from": "regex" ,
+  "to":  "/url",
+  "permanent": true | false
+}
+</code></pre>
+<p>Permanent redirects (301) can be defined with <code>permanent: true</code>, otherwise we use 302 redirects as the default configuration.</p>
+<p>Example:</p>
+<pre><code>[
+    {
+        "from": "^/post/[0-9]+/([a-z0-9\\-]+)",
+        "to": "/$1"
+    },
+    {
+        "permanent": true,
+        "from": "/my-old-blog-post/",
+        "to": "/revamped-url/"
+    },
+    {
+        "from": "^\\/what(\\/?)$",
+        "to": "/what-does-god-say"
+    },
+    {
+        "from": "^\\/search\\/label\\/([^\\%20]+)$",
+        "to": "/tag/$1"
+    },
+    {
+        "from": "^\\/topic\\/",
+        "to": "/"
+    },
+    {
+        "from": "^/resources\\/download(\\/?)$",
+        "to": "/shubal-stearns"
+    },
+    {
+        "from": "^\\/[0-9]{4}\\/[0-9]{2}\\/([a-z0-9\\-]+)(\\.html)?(\\/)?$",
+        "to": "/$1"
+    },
+    {
+        "from": "^/prefix/([a-z0-9\\-]+)?",
+        "to": "/blog/$1"
+    }
+]</code></pre>
+</div><div id='how-to-configure-the-mail' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-configure-the-mail'>How to configure the Mail?</a></h3><p>Ghost requires a mail configuration in order to send emails to users. This is used for password resets, user invitations, system notifications, and other upcoming features. Ghost will try to use <a href="https://github.com/andris9/Nodemailer">Nodemailer</a>, if available, but configuring an external mail service will generally be more reliable.</p>
+<p>More about Mail Configuration,please read <a class="active" href="https://docs.ghost.org/docs/mail-config" target="_blank" rel="noopener noreferrer">Mail Configuration</a></p>
+</div></div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the services?</h2><p>You can use the command to manage the services for Server.Please choose the corresponding command mode according to different types of operating system</p>
+<ul>
+<li>Ngnix Service
+<pre class=" language-markup"><code class=" language-markup">~# systemctl restart nginx.service</code></pre>
+</li>
+<li>Ghost-CLI Service
+<pre><code class="language-markup">~# ghost stop
+~# ghsot restart </code></pre>
+</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-configure-domain" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure domain?</h2><p>Use domain you should complete the following steps:</p>
+<p>If you want use Domain for this application,you should complete below steps:</p>
+<ol>
+<li>Domain resolution if you want to use (Add an A record to the Internet IP Address of Server from your Domain Control Panel).e.g,If you using the AliCloud Domain product,you should log in to your Domain Console Panel<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alicloud-domains.png" width="960" height="308" /></li>
+<li>Modiy the Apache configuration file:<em> /etc/nginx/sites-available/default<br />
+</em></p>
+<pre class="line-numbers"><code class="language-markup">server {
+        listen 80 default_server;
+        server_name _;
+
+
+        location / {
+         proxy_pass http://127.0.0.1:2368;
+         proxy_set_header Host $host;
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+
+}</code></pre>
+</li>
+<li>Restart the services
+<pre><code class="language-markup">root@iZuf65n6gzuzce01ma4usiZ:~# systemctl restart nginx.service</code></pre>
+</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-configure-ssl" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure SSL?</h2><p>The following example will show you how to set up SSL. We assume, that you have followed this guide so far and use nginx as your proxy server. A setup with another proxy server should look similar.</p>
+<p>First you need to obtain a SSL certificate from a provider you trust. Your provider will guide you through the process of generating your private key and a certificate signing request (CSR). After you have received the certificate file you have to copy the CRT file from your certificate provider and the KEY file which is generated during issuing the CSR to the server.</p>
+<ul>
+<li><code>mkdir /etc/nginx/ssl</code></li>
+<li><code>cp server.crt /etc/nginx/ssl/server.crt</code></li>
+<li><code>cp server.key /etc/nginx/ssl/server.key</code></li>
+</ul>
+<p>After these two files are in place you need to update your nginx configuration.</p>
+<ul>
+<li>Open the nginx configuration file with a text editor (e.g. <code>sudo nano /etc/nginx/sites-available/ghost.conf</code></li>
+<li>Add the settings indicated with a plus to your configuration file:</li>
+</ul>
+<pre><code class="language-markup">server {
+     listen 80;
++    listen 443 ssl;
+     server_name example.com;
++    ssl_certificate        /etc/nginx/ssl/server.crt;
++    ssl_certificate_key    /etc/nginx/ssl/server.key;
+     ...
+     location / {
++       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
++       proxy_set_header Host $http_host;
++       proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://127.0.0.1:2368;
+        ...
+     }
+ }</code></pre>
+<p>&#8212; Restart nginx</p>
+<pre><code class="language-markup">$ sudo service nginx restart</code></pre>
+<p>After these steps you should be able to reach the admin area of your blog using a secure HTTPS connection. If you want to force all your traffic to use SSL it is possible to change the protocol of the url setting in your config.js file to https (e.g.: <code>url: 'https://my-ghost-blog.com'</code>). This will force the use of SSL for frontend and admin. All requests sent over HTTP will be redirected to HTTPS. If you include images in your post that are retrieved from domains that are using HTTP an &#8216;insecure content&#8217; warning will appear. Scripts and fonts from HTTP domains will stop working.</p>
+<p>In most cases you&#8217;ll want to force SSL for the administration interface and serve the frontend using HTTP and HTTPS. To force SSL for the admin area you can use the <code>forceAdminSSL: true</code> configuration option. For more information on configuring your blog to work with SSL, see the <a href="https://docs.ghost.org/v1.0.0/docs/configuring-ghost#section-ssl">config Guide</a>.</p>
+<p>If you need further information on how to set up SSL for your proxy server the official SSL documention of <a href="http://nginx.org/en/docs/http/configuring_https_servers.html">nginx</a>and <a href="http://httpd.apache.org/docs/current/ssl/ssl_howto.html">apache</a> are a perfect place to start.</p>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-add-new-nginx-configuration" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to Add new Nginx Configuration?</h2><p>You should add new Nginx Configuration file when you have add new Node.JS application on this Image,please follow below:</p>
+<ol>
+<li>Set you DNS from Domain Admin Panel,make sure one A record resolution to Internet IP Address,e.g 47.88.157.4</li>
+<li>Make sure you have completed the installation of application and you can visit the <strong>Your_app</strong> through http://47.88.157.4:2000</li>
+<li>Create a new file in /etc/nginx/sites-available/ called your_apps.conf</li>
+<li>Open the file with a text editor (e.g. sudo nano /etc/nginx/sites-available/your_apps.conf) and paste the following:
+<pre><code class="language-markup">server {
+ listen 80;
+ server_name example.com;
+
+ location / {
+     proxy_set_header   X-Real-IP $remote_addr;
+     proxy_set_header   Host      $http_host;
+     proxy_pass         http://127.0.0.1:2000;
+ }
+}</code></pre>
+</li>
+<li>Change <code>server_name</code> to your domain</li>
+<li>Symlink your configuration in <code>sites-enabled</code>:
+<pre><code class="language-markup">$ sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/your_apps.conf</code></pre>
+</li>
+<li>Restart nginx
+<pre><code class="language-markup">$ sudo service nginx restart</code></pre>
+</li>
+</ol>
+</div>  </section>
+
+  <section id="other-solution" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Other solution</h2><div id='config-domain-on-apache' class='step-content clearfix'><h3 class='steps-header'><a href='#config-domain-on-apache'>Config Domain on Apache</a></h3><p>If you use Apache HTTP Server,please follow below:</p>
+<ol>
+<li>Set you DNS from Domain Admin Panel,make sure one A record resolution to Internet IP Address,e.g 47.88.157.4</li>
+<li>Make sure you have completed the installation and you can visit the Ghost through http://47.88.157.4:2000</li>
+<li>Modify the /usr/local/apache/conf/httpd.conf<br />
+Enable the proxy module by removing the &#8220;#&#8221; before it<br />
+<em>LoadModule proxy_module modules/mod_proxy.so </em><br />
+<em>LoadModule proxy_http_module modules/mod_proxy_http.so</em><br />
+<img class="alignnone size-medium" src="http:///libs.websoft9.com/Websoft9/DocsPicture/en/ghost/ghost-domain-proxy-websoft9.png" width="611" height="413" /></li>
+<li>Add new config code snippet to /usr/local/apache/conf/extra/httpd-vhosts.conf<br />
+Note:172.21.172.27 is you Server&#8217;s Private IP Address</p>
+<pre><code class="language-markup">&lt;VirtualHost *:80&gt;
+ServerAdmin webmaster@dummy-host2.localhost
+ServerName youdomain.com
+ProxyRequests off
+&lt;Proxy *&gt;
+Order deny,allow
+Allow from all
+&lt;/Proxy&gt;
+ProxyPass / http://172.21.172.27:20000/
+ProxyPassReverse / http://172.21.172.27:20000/
+&lt;/VirtualHost&gt;</code></pre>
+</li>
+<li>Modify the /usr/local/apache/conf/httpd.conf,remove the &#8220;#&#8221; before <em>Include conf/extra/httpd-vhosts.conf</em>
+<pre><code class="language-markup"># Virtual hosts
+Include conf/extra/httpd-vhosts.conf</code></pre>
+</li>
+<li>Restart Apache
+<pre><code class="language-markup"># service httpd restart</code></pre>
+</li>
+</ol>
+</div><div id='ssl-setup-on-apache' class='step-content clearfix'><h3 class='steps-header'><a href='#ssl-setup-on-apache'>SSL Setup on Apache</a></h3><p>SSL Setup on Apache is similar with Nginx.</p>
+<ol>
+<li>First you need to obtain a SSL certificate from a provider you trust.</li>
+<li>then Modify you vhosts like below
+<pre>&lt;VirtualHost *:80&gt;
+ServerAdmin webmaster@dummy-host2.localhost
+ServerName youdomain.com
+ProxyRequests off
+SSLEngine on
+ SSLCertificateFile "/usr/local/apache/conf/ssl/www.websoft9.cn.crt"
+ SSLCertificateKeyFile "/usr/local/apache/conf/ssl/www.websoft9.cn.key"
+&lt;Proxy *&gt;
+Order deny,allow
+Allow from all
+&lt;/Proxy&gt;
+ProxyPass / http://172.21.172.27:20000/
+ProxyPassReverse / http://172.21.172.27:20000/
+&lt;/VirtualHost&gt;</pre>
+</li>
+<li>Restart Apache Server</li>
+</ol>
+<p>Get more from :<a href="http://httpd.apache.org/docs/current/ssl/ssl_howto.html">mod_ssl Configuration How-To</a></p>
+</div></div>  </section>
+
+  <section id="more-ghost-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>More Ghost Help Link</h2><ul>
+<li><a href="http://support.ghost.org/" target="_blank" rel="noopener noreferrer">Help Center</a></li>
+<li><a href="http://marketplace.ghost.org/" target="_blank" rel="noopener noreferrer">Ghost Marketpalce</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 1.8.5</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

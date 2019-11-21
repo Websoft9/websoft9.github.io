@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SuiteCRM Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/salesagility/SuiteCRM' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#suitecrm-stack-components">SuiteCRM Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#start-to-install-suitecrm">Start to install SuiteCRM</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-suitecrm">Step3. Install SuiteCRM</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#backup">Backup</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-another-language">How to use another  language?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-allow-non-admins-to-create-groups">How to allow Non-admins to Create Groups?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#suitecrm-help-link">SuiteCRM Help Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>SuiteCRM Image Guide</h1>
+                              <div class="version"> Version 7.8.2</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 SuiteCRM is a pre-configured, ready to run image for running SuiteCRM on Alibaba Cloud.</p>
+<p>SuiteCRM is a fork of SugarCRM Community Edition. Massively extended, SuiteCRM delivers Workflow, Reporting, Portal, Quotes, Products, Invoices, Accounts, Contacts, Opportunities, Projects, Responsive mobile theme, Email marketing campaigns, Knowledge Base, Outlook and Thunderbird integration, Contracts, Leads, Activities and much more.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="suitecrm-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>SuiteCRM Stack Components</h2><p><strong>Software Version:</strong> SuiteCRM7.8.2<br />
+<strong>Software directory:</strong> /data/wwwroot/default/suitecrm</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+<strong>PHP Configuration File:</strong> /usr/local/php/etc/php.ini<br />
+<strong>Virtual host Configuration File directory:</strong> /usr/local/apache/conf/vhost<br />
+<strong>Virtual host Configuration Command:</strong> /root/oneinstack/vhost.sh</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-bootpage-websoft9.png" width="1288" height="574" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="start-to-install-suitecrm" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Start to install SuiteCRM</h2><div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><code>mysql -uroot –p </code>                               #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p><code>MySQL [(none)]&gt; create database mydbname;</code></p>
+<p><code>MySQL [(none)]&gt; show databases;</code></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p><code>MySQL [(none)]&gt; grant all privileges on mydbname.* to username@'localhost' identified by 'userpassword';</code></p>
+<p><code>MySQL [(none)]&gt; flush privileges;</code></p>
+<p><code>MySQL [(none)]&gt; exit;</code></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /root/oneinstack</code><br />
+<code>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# ./vhost.sh</code><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st00.png" alt="" /></a></p>
+</div><div id='step3-install-suitecrm' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-suitecrm'>Step3. Install SuiteCRM</a></h3><p><strong>Open your domain name via browser:</strong><br />
+<strong>1. Agree the license, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st01.png" alt="" /></a></p>
+<p><strong>2. Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st02.png" alt="" /></a></p>
+<p><strong>3. Fill in your database configration and set admin account, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st03.png" alt="" /></a></p>
+<p><strong>4. Installation was successful! You can now log in to SuiteCRM (using your admin account ). </strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/st04.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>Backup</p>
+<ol>
+<li>Log into your existing SuiteCRM application as the administrator and click admin on the right-hand corner of the page.</li>
+<li>System-&gt;Backups<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backupfunction-websoft9.png" width="1252" height="534" /></li>
+<li>Input the backup directory adn Filename,then click the &#8220;Confirm Settings&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backup-websoft9.png" width="1084" height="321" /></li>
+<li>Settings confirmed. Press &#8220;run backup&#8221; to perform the backup.</li>
+<li>Now,your backup file has been generated<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backupfiles-websoft9.png" width="661" height="418" /></li>
+<li>Then,you should go to phpMyAdmin and export the Database</li>
+<li>Visit http://&lt; Internet IP Address &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-backupdb-websoft9.png" width="856" height="564" /></li>
+<li>Click “go” button,then download the SQL backup file</li>
+</ol>
+</div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>The Upgrade Wizard provides a quick way to upgrade to the latest version of the SuiteCRM application. It includes critical upgrade logic as well as the SQL commands needed to upgrade the application. Ensure that the config.php file for your installation, located in the SuiteCRM root directory, is writable, before using the Upgrade Wizard. Note: Manual upgrades by file replacements and running the upgrade SQL are not supported.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-upgradewz-websoft9.png" width="1579" height="681" /></p>
+<ol>
+<li>Download the appropriate SuiteCRM Upgrade zip file from the SuiteCRM website or GitHub Repository to your local machine.</li>
+<li>Log into your existing SuiteCRM application as the administrator and click admin on the right-hand corner of the page.</li>
+<li>Click Upgrade Wizard in the Systems panel of the Administration Home page.
+<ul>
+<li>This displays the Upgrade Wizard page.</li>
+</ul>
+</li>
+<li>Click Next.
+<ul>
+<li>This displays the System Checks page. and SuiteCRM begins the system check process. The Systems Check page indicates that there were no issues if the system check process completes successfully. Issues with file permissions, database, and server settings are listed on the page if the system check process encountered any problems.</li>
+</ul>
+</li>
+<li>Click Next if the system check is successful.
+<ul>
+<li>This displays the Upload an Upgrade page.</li>
+</ul>
+</li>
+<li>Click Browse, and navigate to the location of the upgrade zip file and select it.
+<ul>
+<li>The path to the file displays in the Upload an upgrade field.</li>
+</ul>
+</li>
+<li>Click Upload Upgrade to upload the package to the SuiteCRM application.
+<ul>
+<li>The system uploads the package and displays it on the page. Use the Delete Package button to remove the package if necessary.</li>
+</ul>
+</li>
+<li>Click Next.
+<ul>
+<li>This displays the Preflight Check page.</li>
+<li>Click Show Schema Change Script toview differences in the SuiteCRM databases schema between your current and new SuiteCRM versions.</li>
+<li>By default, the Upgrade Wizard Runs SQL option is selected as the database update method. Select Manual SQL Queries from the Database Update Method drop-down list and select the Check when SQL has been manually run box, if you ran the SQL queries manually.</li>
+</ul>
+</li>
+<li>Click Recheck to rerun Preflight Check. Click Next to skip this step.
+<ul>
+<li>This displays the Commit Upgrade page.</li>
+<li>You can also click Show to see a list of files that were copied and the rebuilt results. You can also view skipped queries.</li>
+</ul>
+</li>
+<li>Click Next.
+<ul>
+<li>During the upgrade process, SuiteCRM performs a three-way merge between the customized instance on old version, default instance on old version, and default instance on new version. This three-way merge adds any fields that have been added to the default module layouts in the new version to the corresponding module layouts in the existing version, if the module layouts in the old version were not customized through Studio (or in the appropriate upgrade-safe way) prior to the upgrade. The three-way merge also changes the placement of fields in non-Studio-customized module layouts to match the placement in the default module layouts.</li>
+<li>SuiteCRM displays the Confirm Layouts page as Step 5 of the upgrade process if the existing module layouts have been customized, and there are changes to the default fields and field placement in the new module layouts.</li>
+<li>The Confirm Layouts page lists the module layouts that have changed in the new version. The administrator has the option of applying the changes to the existing module layouts. By default, all of the listed module layouts are selected to be merged during the upgrade.</li>
+<li>For example, in 6.1.0, SuiteCRM added the Assigned To fields to the default Detail View and Edit View layouts for Notes and for Email Templates. If the instance being upgraded has a customized EditView layout for Notes, but no customized layouts for Email Templates, the following will occur during the upgrade:</li>
+</ul>
+<dl>
+<dt>a. The Confirm Layouts page appears as Step 5 in the Upgrade Wizard</dt>
+<dt>b. The Confirm Layouts page displays the Notes module with the EditView and DetailView layouts. The Email Templates layouts do not display on the Confirm Layouts page because the existing layouts were not customized.</dt>
+<dt>c. The Administrator has the option of choosing to merge the changes in the Notes module with the existing customized EditView layout.</dt>
+</dl>
+</li>
+<li>Uncheck the module if you do not want to add the new fields to a module.</li>
+<li>Click Next.
+<ul>
+<li>This displays a message confirming that the layouts were successfully merged (if you chose to update your modules).</li>
+</ul>
+</li>
+<li>Click Next.</li>
+<li>The Debrief page confirms the upgrade installation. Complete the steps for manual merging of files or running SQL queries now.</li>
+<li>Click Done.
+<ul>
+<li>This displays the Home page indicating that the upgrade is complete.</li>
+</ul>
+</li>
+<li>Click Repair and select the Rebuild Relationships andRebuild Extensions options in the Systems panel of the Administration Home page.
+<ul>
+<li>For more information, see Repair.</li>
+</ul>
+</li>
+<li>Manually merge the files by extracting the skipped file from the patch zip file if you unchecked any files to prevent the Upgrade Wizard from overwriting them. Merge the file installed in the SuiteCRM application directory.
+<ul>
+<li>Note:Check the upgradeWizard.log file in the SuiteCRM folder for information on unsuccessful SuiteCRM upgrades.</li>
+</ul>
+</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 SuiteCRM Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://localhost/phpMyAdmin,you can enter the login page</li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-use-another-language" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use another  language?</h2><p>SuiteCRM support multi languages,</p>
+<ol>
+<li><a href="https://crowdin.com/project/suitecrmtranslations" target="_blank" rel="noopener noreferrer">Find and Download</a> the language package<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-dllanguge-websoft9.png" width="1276" height="714" /></li>
+<li>Administrator-&gt;MODULE LOADER,upload the language package,then install it<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-module-websoft9.png" width="1282" height="531" /></li>
+<li>Afer the intallation,you can receive the message &#8220;The language package is ready to be installed.&#8221;</li>
+<li>go to Administrator-&gt;admin-&gt;system-Language,now you can see the new language item</li>
+<li>Log out,and log in again,you can see the language selections upper one the account<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/suitecrm/suitecrm-languageitems-websoft9.png" width="463" height="411" /></li>
+</ol>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-allow-non-admins-to-create-groups" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to allow Non-admins to Create Groups?</h2><p>System Administrators can allow non-admin users to add groups to records. This can be done by doing the following steps:</p>
+<ol>
+<li>Navigate to Configure Tabs. Add Security Groups to the displayed tabs.</li>
+<li>Run Repair Roles, within Admin-&gt;Repair, to be able to assign rights to Security Groups.</li>
+<li>Edit role(s) to Enable Security Groups Management.</li>
+<li>Edit role(s) to set List to All or Group for Security Groups Management as desired.</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/suitecrm
+find /data/wwwroot/default/suitecrm -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/suitercrm -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd res</span></code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient to install.</p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 64M <b>Recommended:</b> 128M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="suitecrm-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>SuiteCRM Help Link</h2><h3 class="steps-header">Links</h3>
+<ul>
+<li><a href="https://suitecrm.com" target="_blank" rel="noopener noreferrer">SuiteCRM &#8211; Open source CRM</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 7.8.2</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

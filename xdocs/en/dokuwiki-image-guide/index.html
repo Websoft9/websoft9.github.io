@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DokuWiki Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/splitbrain/dokuwiki' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#dokuwiki-stack-components">DokuWiki Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#getting-started-with-dokuwiki">Getting Started with DokuWiki</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-add-a-virtual-host">Step1. Add a virtual host</a><li class=""><a href="#step2-open-your-domain-name-via-browser">Step2. Open your domain name via browser</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#using-themes">Using Themes</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-plugins">Using Plugins</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#install-plugin">Install Plugin</a><li class=""><a href="#upgrading-plugin">Upgrading Plugin</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#upgrading-dokuwiki">Upgrading DokuWiki</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#backup">Backup</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#setting-up-file-permissions">Setting up file permissions</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#access-control-lists-acl">Access Control Lists (ACL)</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-create-a-new-page">How to create a new page?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-create-a-new-namespace">How to create a new namespace?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#dokuwiki-link">DokuWiki Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>DokuWiki Image Guide</h1>
+                              <div class="version"> Version 1.0.0</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 DokuWiki is a pre-configured, ready to run image for running DokuWiki on Alibaba Cloud.</p>
+<p>DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn&#8217;t require a database. It is loved by users for its clean and readable syntax. The ease of maintenance, backup and integration makes it an administrator&#8217;s favorite. Built in access controls and authentication connectors make DokuWiki especially useful in the enterprise context and the large number of plugins contributed by its vibrant community allow for a broad range of use cases beyond a traditional wiki.</p>
+<p>&nbsp;</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="dokuwiki-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>DokuWiki Stack Components</h2><p><strong>Software Version:</strong> DokuWiki<br />
+<strong>Software directory:</strong> /data/wwwroot/default/dokuwiki</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+<strong>PHP Configuration File:</strong> /usr/local/php/etc/php.ini<br />
+<strong>Virtual host Configuration File directory:</strong> /usr/local/apache/conf/vhost.sh<br />
+<strong>Virtual host Configuration Command:</strong> /root/oneinstack/vhost</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dokuwiki-bootpage-websoft9.png" width="721" height="495" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-dokuwiki" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with DokuWiki</h2><div id='step1-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-add-a-virtual-host'>Step1. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p>[root@iZbp1i4rjdsy216yq7lgucZ ~]# <em>cd /root/oneinstack</em></p>
+<p>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# <em>./vhost.sh</em></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dk00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dk00.png" alt="" /></a></p>
+</div><div id='step2-open-your-domain-name-via-browser' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-open-your-domain-name-via-browser'>Step2. Open your domain name via browser</a></h3><p><strong>Open your domain name via browser:</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dk01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dk01.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="using-themes" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Themes</h2><p>By installing new <strong>templates</strong> you can change the look and feel of your site.DokuWiki&#8217;s layout can be customized through templates (aka. skins or themes).</p>
+<p>How to install templates?</p>
+<ol>
+<li>Download template from <a href="https://www.dokuwiki.org/template" target="_blank" rel="noopener noreferrer">Dokuwiki Template site</a></li>
+<li>Just extract the downloaded template archive (usually a .zip or .tgz file) in the /lib/tpl folder).</li>
+<li>Then select the template in the Config Manager by adjusting the template option.</li>
+</ol>
+</div>  </section>
+
+  <section id="using-plugins" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Plugins</h2><p>Plugins provide a system of extending DokuWiki&#8217;s features without the need to hack the original code (and so again on each update). Below is a list of ready-to-use plugins created by DokuWiki users.</p>
+<p>A plugin is installed by putting it into its own folder under <code>lib/plugins/</code>. From version Ponder Stibbons on this can be done automatically using the <a class="wikilink1" title="plugin:extension" href="https://www.dokuwiki.org/plugin:extension">extension</a> manager. (Up to version Binky this was done with the <a class="wikilink1" title="plugin:plugin" href="https://www.dokuwiki.org/plugin:plugin">plugin</a>manager.) Be sure to read about <a class="wikilink1" title="security" href="https://www.dokuwiki.org/security#plugin_security">Plugin Security</a>. See the detailed <a class="wikilink1" title="plugin_installation_instructions" href="https://www.dokuwiki.org/plugin_installation_instructions">plugin installation instructions</a>.</p>
+<p>If you would like to help translating the plugins in another language, please see this page <a class="wikilink1" title="localization" href="https://www.dokuwiki.org/localization#localizing_the_plugins">Localization of plugins</a>.</p>
+<p>Plugins are divided into seven categories</p>
+<ul class="types">
+<li>
+<div class="li"><a class="wikilink1" title="List all Syntax plugins" href="https://www.dokuwiki.org/plugins?plugintype=1#extension__table">Syntax</a> plugins extend DokuWiki&#8217;s basic syntax.</div>
+</li>
+<li>
+<div class="li"><a class="wikilink1" title="List all Action plugins" href="https://www.dokuwiki.org/plugins?plugintype=4#extension__table">Action</a> plugins replace or extend DokuWiki&#8217;s core functionality</div>
+</li>
+<li>
+<div class="li"><a class="wikilink1" title="List all Admin plugins" href="https://www.dokuwiki.org/plugins?plugintype=2#extension__table">Admin</a> plugins provide extra administration tools</div>
+</li>
+<li>
+<div class="li"><a class="wikilink1" title="List all Helper plugins" href="https://www.dokuwiki.org/plugins?plugintype=16#extension__table">Helper</a> plugins provide functionality shared by other plugins</div>
+</li>
+<li>
+<div class="li"><a class="wikilink1" title="List all Render plugins" href="https://www.dokuwiki.org/plugins?plugintype=8#extension__table">Render</a> plugins add new export modes or replaces the standard XHTML renderer</div>
+</li>
+<li>
+<div class="li"><a class="wikilink1" title="List all Remote plugins" href="https://www.dokuwiki.org/plugins?plugintype=64#extension__table">Remote</a> plugins add methods to the RemoteAPI accessible via web services</div>
+</li>
+<li>
+<div class="li"><a class="wikilink1" title="List all Auth plugins" href="https://www.dokuwiki.org/plugins?plugintype=128#extension__table">Auth</a> plugins add authentication modules</div>
+</li>
+</ul>
+<div id='install-plugin' class='step-content clearfix'><h3 class='steps-header'><a href='#install-plugin'>Install Plugin</a></h3><p>It&#8217;s very easy for installing the plugins of Dokuwiki</p>
+<p><strong>Method one:</strong>Using FTP installation</p>
+<ol>
+<li class="level1">
+<div class="li"><a class="wikilink1" title="plugin:backup ↵" href="https://www.dokuwiki.org/plugin%3Abackup#download">download</a> the tarball/zip-file</div>
+</li>
+<li class="level1">upload it into the  <code>&lt;dokuwiki&gt;/lib/plugins/</code></li>
+<li class="level1">
+<div class="li">unpack it</div>
+</li>
+<li class="level1">
+<div class="li">login as admin and change the plugin in the configuration manager</div>
+</li>
+</ol>
+<p><strong>Method Two:</strong>Using Git installation,e.g.we will install the backup plugin</p>
+<pre><code class="language-markup">% cd &lt;dokuwiki&gt;/lib/plugins/
+% git clone git://github.com/tatewake/dokuwiki-plugin-backup.git backup</code></pre>
+<p>&nbsp;</p>
+</div><div id='upgrading-plugin' class='step-content clearfix'><h3 class='steps-header'><a href='#upgrading-plugin'>Upgrading Plugin</a></h3><p>To upgrade, remove the original lib/plugins/backup folder, and install the new version as instructed above.</p>
+</div></div>  </section>
+
+  <section id="upgrading-dokuwiki" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrading DokuWiki</h2><p>DokuWiki is very simple to upgrade. Its file layout is organized in a way that avoids overwriting any user content, which means an upgrade generally is just unpacking a new version on top of an old one. You should first try the simple instructions given here, if you encounter problems or the instructions are not detailed enough for you, read the details in the section below. Mac users should use Terminal; copying files via Finder will delete all data.</p>
+<p><strong>Step 1:</strong> Make a backup of your DokuWiki, this is not necessarily needed but recommended</p>
+<pre><code class="language-markup">tar zcpfv dokuwiki-backup.tar.gz /data/wwwroot/default/dokuwiki</code></pre>
+<p><strong>Step 2:</strong> Read the <a class="wikilink1" title="changes" href="https://www.dokuwiki.org/changes">changelog</a> to see if there are any special things to consider</p>
+<p><strong>Step 3:</strong> Download the newest release from the <a class="urlextern" title="http://download.dokuwiki.org" href="http://download.dokuwiki.org/">download site</a>.</p>
+<pre><code class="language-git">cd /data/wwwroot/default/dokuwiki
+wget https://github.com/splitbrain/dokuwiki.git</code></pre>
+<p><strong>Step 4:</strong> <a class="wikilink1" title="install:unpacking" href="https://www.dokuwiki.org/install:unpacking">Unpack</a> the distribution tarball and upload/copy the files over your previous installation. Make sure to <strong>overwrite all files</strong> when prompted.</p>
+<pre><code class="language-markup">tar zxvf dokuwiki-xxxx-xx-xx.tgz
+'cp' -af dokuwiki-xxxx-xx-xx/* /data/wwwroot/default/dokuwiki/</code></pre>
+<p><strong>Step 5:</strong> Delete all <a class="wikilink1" title="install:unused_files" href="https://www.dokuwiki.org/install:unused_files">unused files</a></p>
+<p><strong>Step 6:</strong> Upgrade your <a class="wikilink1" title="template" href="https://www.dokuwiki.org/template">template</a> and <a class="wikilink1" title="plugins" href="https://www.dokuwiki.org/plugins">plugins</a> if necessary</p>
+<p><strong>Step 7:</strong> Wait for a day for update notifications to go away, or speed the process by following the steps in <a class="wikilink1" title="update_check" href="https://www.dokuwiki.org/update_check">Update Check</a></p>
+<p>Note: Yes, we explicitly recommend overwriting your old installation. If you adhered to the advice of defining config options in *.local files only (the Configuration Manager does this automatically) your previous config settings will <strong>not</strong> be overwritten. The same is true for all your pages and media files. Using the overwrite approach will save you a lot of trouble with keeping page revisions correctly working as these are depending on file modification time-stamps.</p>
+</div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>We suggest you to using plugin <a href="https://www.dokuwiki.org/plugin:backup" target="_blank" rel="noopener noreferrer">BackupTool for DokuWiki</a> for Backup.</p>
+<p>It is a plugin for DokuWiki which enables you to backup the most important parts of your site; this includes all of your pages, all old revisions, meta data, subscriptions, media files (your downloads), as well as your plugins and templates.This is in case, for some odd reason, your host accidentally loses all your files; it&#8217;s happened to me personally twice, on two different hosts since I began using DokuWiki– and backing up manually can be quite a nightmare.</p>
+<p>To access the plugin, make sure you&#8217;re on the admin account, and click the admin button on your wiki site.</p>
+<p>An entry named “Backup Tool” should be listed in the the available administrative tasks. Click it, and you should see something like the following <strong>image</strong> below:</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/Dokuwiki-backupplugin-websoft9.png" width="314" height="327" /></p>
+<p>Simply check the items you wish to backup, and uncheck the ones you don&#8217;t. For instance, you may not care about old revisions of documents, so you don&#8217;t have to include them if you don&#8217;t want to.</p>
+<p>Click the <strong>Create Backup</strong> button, and the process of backing up starts. For large sites, it may take some time; it may even time out– in which case you may wish to backup each section individually– though this is unlikely. It will usually take at least a little time for the page to respond, so please be patient.</p>
+<p>The backup file is generated and put in the root of your media directory. So you&#8217;re then able to download it from there, and you may wish to delete it afterwards.</p>
+</div>  </section>
+
+  <section id="setting-up-file-permissions" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Setting up file permissions</h2><p>DokuWiki stores its data in plain text files. To be able to do this, DokuWiki needs sufficient permissions to write to these files. At the same time, leaving the permissions too loose can introduce security risks.</p>
+<p>DokuWiki is executed by PHP, so the PHP process needs to be able to write to these files. The PHP process usually runs with the permissions of the webserver, so the webserver needs to be able to write to these files.</p>
+<p>The following permissions must be modified for the respective DokuWiki functions to work:</p>
+<ul>
+<li>data/ and data/tmp/ directory: All files in and below these directories must be writable by the web process for DokuWiki to work.</li>
+<li>lib/plugins/ directory: This directory must be writable by the web process for the Extension Manager to work</li>
+<li>lib/ directory: This directory must be readable by the public for style sheets to display. 755 works fine.</li>
+<li>lib/tpl directory must be writable for the webprocess to install templates</li>
+</ul>
+<p>The following files are copied by the installer.php from the respective *.dist files and given the correct permissions for the web process automatically:</p>
+<ul>
+<li>conf/ directory, following files must be writable by the web process:<br />
+local.php (and local.php.bak) for the installer and for subsequent web configuration to work.<br />
+users.auth.php and acl.auth.php for the ACL web configuration and usermanager to work.<br />
+plugins.local.php (and plugins.local.php.bak) for the Extension Manager</li>
+</ul>
+<h3 id="how_to_set_permissions" class="sectionedit7">How to set permissions?</h3>
+<p>On the command line use chmod for changing permissions, chown for changing the owner of files and dirs and chgrp for changing the group. (Note that chown and chgrp may not be available or function as expected if you use a shared web hosting provider.)</p>
+<p>e.g.Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and Groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre><code class="language-php">chown -R www.www /data/wwwroot/default/docuwiki
+find /data/wwwroot/default/dokuwiki -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/dokuwiki -type f -exec chmod 644 {} \;</code></pre>
+<p>When accessing your server through FTP, consult the manual of your FTP tool. Most graphical FTP tools have a dialog to set permissions (often to be found in the right-click context menu).</p>
+<p>Here are the most commonly used values for setting permissions on directories and files.</p>
+<div class="table sectionedit5">
+<table class="inline">
+<thead>
+<tr class="row0">
+<th class="col0">directories</th>
+<th class="col1 leftalign">files</th>
+<th class="col2">result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row1">
+<td class="col0"><code>0700</code></td>
+<td class="col1"><code>0600</code></td>
+<td class="col2">read/write for owner only. Owner must be the same as the PHP process user.</td>
+</tr>
+<tr class="row2">
+<td class="col0"><code>0770</code></td>
+<td class="col1"><code>0660</code></td>
+<td class="col2">read/write for owner and group. The PHP process user needs to be in the user group</td>
+</tr>
+<tr class="row3">
+<td class="col0"><code>0777</code></td>
+<td class="col1"><code>0666</code></td>
+<td class="col2">read/write for everyone. <strong>Dangerous</strong> everybody with access to the server may write and delete your files. Use only as last resort on trusted machines.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><a href="https://www.dokuwiki.org/install:permissions" target="_blank" rel="noopener noreferrer">Read More permissions setting from dokuwiki Website </a></p>
+</div>  </section>
+
+  <section id="access-control-lists-acl" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Access Control Lists (ACL)</h2><p>DokuWiki — like most wikis — is very open by default. Everyone is allowed to create, edit and delete pages. However ​sometimes it makes sense to restrict access to certain or all pages. This is when the Access Control List (ACL) comes into play. This page gives an overview of how ACLs work in DokuWiki and how they are configured.</p>
+<p>Read more:<a href="https://www.dokuwiki.org/acl" target="_blank" rel="noopener noreferrer">https://www.dokuwiki.org/acl</a></p>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-create-a-new-page" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to create a new page?</h2><p>In DokuWiki, pages are created as in every other wiki,Simply create a link from an existing page to a non-existing page, follow this link, and click on Create this page (on right menu in the default template). This is the most common and recommended way. It ensures all your pages are linked together correctly and you don&#8217;t create orphans anywhere.</p>
+<p>There have another effective method for creating new page.You may enter the name of a new page directly in the search field, and click the “Search” button and can choose Create this page (on right menu in the default template) of the results page. The new page will be named after your query.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dokuwiki-createnewpage-websoft9.png" width="1036" height="528" /></p>
+</div>  </section>
+
+  <section id="how-to-create-a-new-namespace" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to create a new namespace?</h2><p>A namespace is similar to a directory or folder, while pages are similar to files. In DokuWiki you can use namespaces to categorize your pages. For names of namespaces the same restrictions hold as for pagenames.</p>
+<p>A default DokuWiki installation comes with the built-in namespaces: wiki and namespaces.</p>
+<p>You don&#8217;t need to create namespaces separately; simply create pages with colons in the pagename. The token after the last colon will be the name of the page itself, while all other tokens are namespaces. All namespaces used in your pagename that don&#8217;t exist already will be created by DokuWiki automatically.</p>
+<p>A namespace can be created in the media manager after having selected a file on the local computer and adding a <code>name:</code> (of namespace wanted) just before the media file name and then clicking <code>upload</code>. This will create on the fly the namespace (folder) for the file media, visible after a refresh of the windows.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dokuwiki/dokuwiki-createnamespaces-websoft9.png" width="1238" height="391" /></p>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>I</span></span></code></pre>
+</div>  </section>
+
+  <section id="dokuwiki-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>DokuWiki Link</h2><h3 class="steps-header">Links</h3>
+<ul>
+<li><a href="https://www.dokuwiki.org" target="_blank" rel="noopener noreferrer">Open Source | DokuWiki</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 1.0.0</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

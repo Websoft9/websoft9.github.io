@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Roller Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='http://roller.apache.org/' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#roller-stack-components">Roller Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-roller">Getting Started with Roller</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#will-be-used-usernames-and-passwords">Will be used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#roller-faq">Roller FAQ</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-start-or-stop-the-services">How to start or stop the services?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-configure-domain">How to configure domain?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-database-connection-of-roller">How to modify the Database Connection of Roller?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-configure-ssl">How to configure SSL?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#more-roller-help-link">More Roller Help Link</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#postscript">Postscript</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Roller Image Guide</h1>
+                              <div class="version"> Version 5.1.2</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Roller stack is a pre-configured, ready to run image for running Roller on Alibaba Cloud.</p>
+<p>Apache Roller is a Java-based, full-featured, multi-user and group-blog server suitable for blog sites large and small.Roller was originally written by Dave Johnson as an example application for an article on open source Java development tools. The article, titled Building an Open Source J2EE Weblogger, was published on O&#8217;Reilly&#8217;s Java.com site in April, 2002. Roller became an Apache Project in 2007, see the committer list for present-day maintainers of Roller.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="roller-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Roller Stack Components</h2><p><strong>Application Software(Roller5.2.1)</strong><br />
+Roller install directory: <em>/var/lib/tomcat8/webapp/roller<br />
+</em>Roller configuration directory<em>:/var/lib/tomcat8/lib/roller-custom.properties</em><em><br />
+</em></p>
+<p><strong>Infrastructure(Nginx 1.10,Tomcat8)</strong><br />
+Nginx configuration file: <em>/etc/nginx/sites-available/default</em><br />
+Nginx log files: <em>/ var/log/nginx<br />
+</em>Tomcat configuration file directory:<em> /etc/tomcat8/</em><br />
+Tomcat directory: <em>/var/lib/tomcat8<br />
+</em>Tomcat manager: http://Internet IP Address/manager</p>
+<p><strong>Database(MYSQL5.7)</strong><br />
+Database data directory:  <em>/data/mysql</em><br />
+Database Configuration File: <em>/etc/mysql/mysql.conf.d/mysqld.cnf<br />
+</em>Database log files:<em> / var/log/mysql<br />
+</em>Default username and password is in the file<em><b> </b>/root/password.txt<br />
+</em>Note:It&#8217;s randomly generated when installing the Image<em><br />
+</em></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the Roller&#8217;s start page directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-roller" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Roller</h2><p>First please complete the domain resolution if you want to use domain for this application (Add an A record to the Internet IP Address of Server from Domain Control Panel),then access the installation page and complete the installation wizard for the following steps:</p>
+<ol>
+<li>Using local Chrome or Firefox to visit <em><strong>http://domain</strong></em> or <em><strong>http://Inernet IP Address</strong></em>,go to the installation Wizard.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-installcretb-websoft9.png" width="960" height="164" /></li>
+<li>Click the button &#8220;Yes-create tables now&#8221;,then you will get the successful informaiton feedback<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-installcretbs-websoft9.png" width="960" height="164" /><strong><br />
+</strong></li>
+<li>Click the &#8220;here&#8221;,then you will go to the following step<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-createadmin-websoft9.png" width="960" height="340" /><strong><br />
+</strong></li>
+<li>Filling your Account information<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-createadmins-websoft9.png" width="960" height="761" /></li>
+<li>You new user account has beend created<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-createadminss-websoft9.png" width="960" height="261" /></li>
+<li>Log in to the backend-&gt;Server administration,set the absolute URL to site(it is very important)
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-urlset-websoft9.png" width="960" height="500" /></li>
+<li>Then create a Weblog for you account<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/roller/roller-createblog-websoft9.png" width="960" height="500" /><br />
+Note:the same letters are not allowed in the Name,e.g.&#8221;dd&#8221;,&#8221;ff&#8221;,otherwise your blog can&#8217;t not been visted and display 304 error</li>
+</ol>
+</div>  </section>
+
+  <section id="will-be-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Will be used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<ol>
+<li><strong>Roller:</strong>Username and Password is<strong> </strong>created by youself when installation,</li>
+<li><strong>Tomcat:</strong>Default username and password is <em><span style="color: #ff0000;">admin/123456<br />
+</span></em>Tomcat manager URL: http://Internet IP Address/manager,you can modify the accout from:<em>/etc/tomcat8/tomcat-users.xml</em></li>
+<li><strong>MySQL Database:</strong>Default username and password is <span style="color: #ff0000;"><em>root/123456 </em></span> and you can modify the password by the following command<em><em><br />
+</em></em></p>
+<pre><code class="language-markup">root@iZuf68djk0smqc7aiy3sh1Z:~# mysqladmin -uroot -p123456 password "you password"</code></pre>
+</li>
+<li><strong>Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net/" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</li>
+</ol>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the “yes”<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="roller-faq" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Roller FAQ</h2><p>Come soon</p>
+</div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the services?</h2><p>You can use the command to manage the services for Server.Please choose the corresponding command mode according to different types of operating system</p>
+<ul>
+<li>Ngnix Service
+<pre class=" language-markup"><code class=" language-markup">~# systemctl restart nginx</code></pre>
+</li>
+<li>MySQL Service
+<pre><code class="language-markup">~# systemctl restart mysql</code></pre>
+</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-configure-domain" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure domain?</h2><p>Use domain you should complete the following steps:</p>
+<p>If you want use Domain for this application,you should complete below steps:</p>
+<ol>
+<li>Domain resolution if you want to use (Add an A record to the Internet IP Address of Server from your Domain Control Panel).e.g,If you using the AliCloud Domain product,you should log in to your Domain Console Panel<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alicloud-domains.png" width="960" height="308" /></li>
+<li>Modiy the Apache configuration file:<em> /etc/nginx/sites-available/default<br />
+</em></p>
+<pre class="line-numbers"><code class="language-markup">server {
+    listen 80 default_server;
+    server_name yourserver.com;
+    location / {
+      proxy_pass http://localhost:8080;
+    }
+......</code></pre>
+</li>
+<li>Restart the services
+<pre><code class="language-markup">root@iZuf65n6gzuzce01ma4usiZ:~# systemctl restart nginx</code></pre>
+</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-modify-the-database-connection-of-roller" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the Database Connection of Roller?</h2><p>This connection configuration is in the file: <em>/var/lib/tomcat8/lib/roller-custom.properties</em></p>
+<pre><code class="language-markup">database.jdbc.username=root
+database.jdbc.password=123456
+</code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-configure-ssl" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure SSL?</h2><p>Coming soon</p>
+</div>  </section>
+
+  <section id="more-roller-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>More Roller Help Link</h2><ul>
+<li><a href="http://roller.apache.org" target="_blank" rel="noopener noreferrer">roller.apache.org</a></li>
+<li><a href="https://cwiki.apache.org/confluence/display/ROLLER/PoweredByRoller" target="_blank" rel="noopener noreferrer">Roller Wiki</a></li>
+</ul>
+</div>  </section>
+
+  <section id="postscript" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Postscript</h2><p>This document is original from Websoft9.In order to ensure the seriousness and usability of the documentation, no one may misappropriate or modify the second distribution. The need for friends reproduced please mark the source, otherwise we reserve the right to give legal action.</p>
+<p>We will periodically update the documentation. Please visit the online documentation for the latest version</p>
+<p>This document URL: <a href="http://en.websoft9.com/xdocs/apacheroller-image-guide/" target="_blank" rel="noopener noreferrer">http://en.websoft9.com/xdocs/apacheroller-image-guide/</a><br />
+Support &amp; Partnership: <a href="http://www.websoft9.com/">http://www.websoft9.com</a></p>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 5.1.2</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

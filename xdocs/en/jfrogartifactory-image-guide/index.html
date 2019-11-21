@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JFrog Artifactory Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://www.jfrog.com/open-source/' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#jfrog-artifactory-stack-components">JFrog Artifactory Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#start-to-use-jfrog-artifactory">Start to use JFrog Artifactory</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#frequently-used-usernames-and-passwords">Frequently used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup">Backup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a><li class=""><a href="#backup-interface">Backup Interface</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-a-domain-to-jfrog-artifactory">How to Add a domain to JFrog Artifactory?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-configure-mail-server">How to configure Mail Server?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-manage-database">How to manage database?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-start-or-stop-the-services">How to start or stop the services?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#ubuntu-linux">Ubuntu Linux</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#jfrog-artifactory-help-links">JFrog Artifactory Help Links</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#postscript">Postscript</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>JFrog Artifactory Image Guide</h1>
+                              <div class="version"> Version 5.4</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 JFrog Artifactory is a pre-configured, ready to run image for running JFrog Artifactory on Alibaba Cloud.</p>
+<p>JFrog’s Artifactory open source project was created to speed up development cycles using binary repositories. It’s the world’s most advanced repository manager, creating a single place for teams to manage all their binary artifacts efficiently.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogArtifactory-ui-websoft9.png" width="700" height="452" /></p>
+<p><img class="size-medium aligncenter" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogArtifactory-ui-websoft.png" width="700" height="452" /></p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="jfrog-artifactory-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>JFrog Artifactory Stack Components</h2><p><strong>Application Software(JFrog Artifactory5.4)</strong><br />
+JFrog Artifactory application directory: <em>/opt/jfrog</em><br />
+JFrog Artifactory logs directory: <em>/var/opt/jfrog/artifactory/access/logs</em><br />
+JFrog Artifactory data directory: <em>/var/opt/jfrog/artifactory/data</em><br />
+JFrog Artifactory configuration file path：<em>/etc/opt/jfrog/artifactory</em><br />
+JFrog Artifactory script directory: <em>/opt/jfrog/artifactory/bin/artifactory.sh</em></p>
+<p><strong>Application Server(Nginx1.10,JAVA1.8)</strong><br />
+Nginx Configuration Files: /etc/nginx/sites-available/default</p>
+<p><strong>Database(Derby)</strong><br />
+Derby is a opensourse database writing by Java and running on memory</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the Start Installation page of this Image</li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="start-to-use-jfrog-artifactory" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Start to use JFrog Artifactory</h2><p>Using Chrome or Firefox to visit: <em>http://Internet IP Address/</em> to start using this application.Following is the steps:</p>
+<ol>
+<li><strong>Visit <em>http://Internet IP Address </em></strong><em> </em>to enter the installation page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogArtifactory-backend-websoft9.png" width="960" height="655" /></li>
+<li>Click the &#8220;Next&#8221; to the step of &#8220;Set Admin Password&#8221; and then go to the next step<br />
+<span style="color: #ff0000;"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogArtifactory-installsetpw-websoft9.png" width="960" height="655" /><br />
+</span></li>
+<li>Then,Configure a Proxy Server<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogartifactory-configprox.png" width="960" height="655" /></li>
+<li>Then,Create Repositories yourselft</li>
+<li>The latest step,Filish the configuration wizard<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogartifactory-filishconf.png" width="960" height="655" /></li>
+</ol>
+</div>  </section>
+
+  <section id="frequently-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Frequently used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, and application maintenance:</p>
+<p><strong>1、JFrog Artifactory:</strong>Username is <span style="color: #ff0000;">admin</span> and password need need your own settings<br />
+<strong>2、Derby Database:</strong>No usename and password,you can set it by yourselft<br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by yourself when buying.You can reset the password through console and restart the Server if you have forgotten it.Please Using the <strong><em>Putty</em></strong> for Remote and <strong><em>WinSCP</em></strong> for SFTP</p>
+</div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup and manual local backup in two ways, both of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the &#8220;snapshot&#8221; function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div><div id='backup-interface' class='step-content clearfix'><h3 class='steps-header'><a href='#backup-interface'>Backup Interface</a></h3><p>You can use Backup Interface as following steps:</p>
+<ol>
+<li>Login as Administrator,go to Admin-&gt;Backups,<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogartifactory-backup-web.png" width="960" height="615" /></li>
+<li>You can set the Backup strategy and run the backup now<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogartifactory-backup2-websoft9.png" width="960" height="378" /></li>
+</ol>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>Before upgrade you should put the site down for maintenance and always Backup your code, data and config files.</p>
+<p>It is highly recommended to temporarily disable application before upgrading. Don’t forget to empty your browser cache if you experience weird bugs right after upgrading.</p>
+<p>Note that you should upgrade to the latest version available, installing intermediate releases sequentially is not needed.</p>
+<p>Upgrade solution,please read the documentation:<a href="https://www.jfrog.com/confluence/display/RTF/Upgrading+Artifactory" target="_blank" rel="noopener noreferrer">https://www.jfrog.com/confluence/display/RTF/Upgrading+Artifactory</a></p>
+</div>  </section>
+
+  <section id="how-to-add-a-domain-to-jfrog-artifactory" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to Add a domain to JFrog Artifactory?</h2><p>If you want use Domain for this application,you should complete below steps:</p>
+<ul>
+<li>Domain resolution if you want to use (Add an A record to the Internet IP Address of Server from your Domain Control Panel)</li>
+<li>Modiy the Apache configuration file:<em> /etc/nginx/sites-available/default<em><br />
+</em></em></p>
+<pre><code class="language-markup">server {
+...
+        listen 80 default_server;
+        server_name _;//add you domain here
+...
+}
+</code></pre>
+</li>
+<li>Restart the services</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-configure-mail-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure Mail Server?</h2><p>Artifactory supports sending mail to notify administrators and other users for significant events that happen in your system.</p>
+<p>Some examples are:</p>
+<ul>
+<li>Watch notifications</li>
+<li>Alerts for backup warnings and errors</li>
+<li>License violation notifications</li>
+</ul>
+<p>To enable mail notifications, you need to configure Artifactory with your mail server details as described below.</p>
+<p>To access the mail server configuration, in the <strong>Admin</strong> module select <strong>Configuration | Mail</strong>.</p>
+<p>Setup is straightforward and can be verified by sending a test message. Simply click &#8220;Send Test Mail&#8221; in the <strong>Configure Mail</strong> screen. <br class="atl-forced-newline" /><br class="atl-forced-newline" /><img class="alignnone size-medium" src="http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/Websoft9/DocsPicture/en/jfrogartifactory/jfrogartifactory-MailServerSettings.jpg" width="1073" height="780" /></p>
+<div class="table-wrap">
+<table class="wrapped confluenceTable">
+<colgroup>
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td class="confluenceTd" colspan="1">
+<h5 id="MailServerConfiguration-Enabled">Enabled</h5>
+</td>
+<td class="confluenceTd" colspan="1">When set, mail notifications are enabled</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-Host">Host</h5>
+</td>
+<td class="confluenceTd">The host name of the mail server</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-Port">Port</h5>
+</td>
+<td class="confluenceTd">The port of the mail server</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-Username">Username</h5>
+</td>
+<td class="confluenceTd">The username for authentication with the mail server</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-Password">Password</h5>
+</td>
+<td class="confluenceTd">The password for authentication with the mail server</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-From(optional)">From (optional)</h5>
+</td>
+<td class="confluenceTd">The &#8220;from&#8221; address header to use in all outgoing mails.</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-SubjectPrefix">Subject Prefix</h5>
+</td>
+<td class="confluenceTd">A prefix to use for the subject of all outgoing mails</td>
+</tr>
+<tr>
+<td class="confluenceTd" colspan="1">
+<h5 id="MailServerConfiguration-ArtifactoryURL(optional)">Artifactory URL (optional)</h5>
+</td>
+<td class="confluenceTd" colspan="1">The Artifactory URL to use in all outgoing mails to denote links to Artifactory.</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-UseTLS">Use TLS</h5>
+</td>
+<td class="confluenceTd">When set, uses Transport Layer Security when connecting to the mail server</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-UseSSL">Use SSL</h5>
+</td>
+<td class="confluenceTd">When set, uses a secure connection to the mail server</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<h5 id="MailServerConfiguration-TestMessageRecipient">Test Message Recipient</h5>
+</td>
+<td class="confluenceTd">The email address of a recipient to receive a test message</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>  </section>
+
+  <section id="how-to-manage-database" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to manage database?</h2><p>Websoft9 Jfrog Artifactory Image  comes with a built-in embedded Derby database that can be reliably used to store data (metadata) for production-level repositories up to hundreds of gigabytes in size.</p>
+<p>Recommend using the documentation: <a href="https://www.jfrog.com/confluence/display/RTF/Configuring+the+Database" target="_blank" rel="noopener noreferrer">https://www.jfrog.com/confluence/display/RTF/Configuring+the+Database</a></p>
+</div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the services?</h2><p>You can use the command to manage the services for Server.Please choose the corresponding command mode according to different types of operating system</p>
+<div id='ubuntu-linux' class='step-content clearfix'><h3 class='steps-header'><a href='#ubuntu-linux'>Ubuntu Linux</a></h3><p>Nginx Restart</p>
+<pre><code class="language-markup">~# systemctl restart nginx
+</code></pre>
+<p>Start or stop Artifactory using</p>
+<pre><code class="language-markup">~# service artifactory &lt;start | stop&gt;
+</code></pre>
+<p>JFrog Artifactory script directory: <em>/opt/jfrog/artifactory/bin/artifactory.sh</em></p>
+<pre><code class="language-markup"> </code></pre>
+</div></div>  </section>
+
+  <section id="jfrog-artifactory-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>JFrog Artifactory Help Links</h2><ul id="menu-support-footer" class="menu">
+<li class="menu-customer-zone"><a href="https://www.jfrog.com/support-service/customers-zone/">Customer Zone</a></li>
+<li class="menu-get-support"><a href="https://www.jfrog.com/support-service/support/">Get Support</a></li>
+<li class="menu-resources"><a href="https://www.jfrog.com/support-service/resources/">Resources</a></li>
+<li class="menu-user-guide"><a href="https://www.jfrog.com/confluence/pages/viewpage.action?pageId=46107472" target="_blank" rel="noopener noreferrer">User Guide</a></li>
+<li class="menu-screencasts"><a href="https://www.jfrog.com/video/one-minute-artifactory/">Screencasts</a></li>
+<li class="menu-training"><a href="https://www.jfrog.com/support-service/training/">Training</a></li>
+<li class="menu-webinars"><a href="https://www.jfrog.com/support-service/webinars-upcoming/">Webinars</a></li>
+<li class="menu-white-papers"><a href="https://www.jfrog.com/support-service/whitepapers/">White Papers</a></li>
+</ul>
+</div>  </section>
+
+  <section id="postscript" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Postscript</h2><p>This document is original from Websoft9.In order to ensure the seriousness and usability of the documentation, no one may misappropriate or modify the second distribution. The need for friends reproduced please mark the source, otherwise we reserve the right to give legal action.</p>
+<p>We will periodically update the documentation. Please visit the online documentation for the latest version</p>
+<p>This document URL: <a href="http://en.websoft9.com/xdocs/jfrogartifactory-image-guide/" target="_blank" rel="noopener noreferrer">http://en.websoft9.com/xdocs/jfrogartifactory-image-guide/</a><br />
+Support &amp; Partnership: <a href="http://www.websoft9.com">http://www.websoft9.com</a></p>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 5.4</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Joomla! Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/joomla/joomla-cms' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#joomla-stack-components">Joomla Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-joomla">Getting Started with Joomla!</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#frequently-used-usernames-and-passwords">Frequently used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-extension">Using Extension</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#components">Components</a><li class=""><a href="#modules">Modules</a><li class=""><a href="#plugins">Plugins</a><li class=""><a href="#templates">Templates</a><li class=""><a href="#languages">Languages</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup-restore">Backup & Restore</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a><li class=""><a href="#using-akeeba-backupjoomla-component-for-backup">Using Akeeba Backup(Joomla component) for Backup</a><li class=""><a href="#manual-backup">Manual Backup</a><li class=""><a href="#how-to-restore-backups">How to restore backups?</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#upgrading">Upgrading</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#live-update">Live Update</a><li class=""><a href="#update-configurations">Update Configurations</a><li class=""><a href="#upload-updatenot-recommended">Upload & Update(Not recommended)</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#useful-php-ini-settings">Useful PHP.ini Settings</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a><li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-start-or-stop-the-services">How to start or stop the Services?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-configure-domain">How to configure domain?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step-onedomain-resolution">Step One:Domain resolution</a><li class=""><a href="#step-onemodify-the-vhost-file">Step One:Modify the Vhost file</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-reset-admin-password">How to reset admin password?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#method-1-configuration-php-file">Method 1: configuration.php file</a><li class=""><a href="#method-2-direct-editing-of-database">Method 2: Direct Editing of Database</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-enable-joomla-cache-settings">How to Enable Joomla Cache Settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-new-applicaton">How to add new applicaton?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#all-joomla-help-sites">All Joomla Help Sites</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Joomla! Image Guide</h1>
+                              <div class="version"> Version 3.8.1</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <div id="container">
+<div id="lowerContainer">
+<div id="content">
+<div class="module_table" style="text-align: left;" align="center"></div>
+<div class="module_table" style="text-align: left;" align="center">Websoft9 Joomla is a pre-configured, ready to run image for running Joomla on Alibaba Cloud.</div>
+<div class="module_table" style="text-align: left;" align="center"></div>
+<div class="module_table" style="text-align: left;" align="center">Joomla! is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications. Many aspects, including its ease-of-use and extensibility, have made Joomla! the most popular Web site software available. Best of all, Joomla! is an open source solution that is freely available to everyone.</div>
+</div>
+</div>
+</div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="joomla-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Joomla Stack Components</h2><p><strong>Application Software(Joomla3.8.1)</strong><br />
+Software directory: <em>/data/wwwroot/joomla</em></p>
+<p><strong>Infrastructure(PHP7.0,APACHE2.4)</strong><br />
+PHP Configuration File: <em>/etc/php.ini</em><br />
+Default Apache Vhost Configuration File: <em>/etc/httpd/conf.d/vhost.conf</em><br />
+Apache Vhost Configuration directory: <em>/etc/httpd/conf.d</em><br />
+Apache Log Files: <em>/var/log/httpd</em></p>
+<p><strong>Database(MYSQL5.7)</strong><br />
+Database install directory: <em>/usr/share/mysql</em><br />
+Database data directory:  <em>/data/mysql</em><br />
+Database Configuration File: <em>/etc/my.cnf</em><br />
+PhpMyAdmin install directory: <em>/usr/share/phpmyadmin</em></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the installation page directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-joomla" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Joomla!</h2><p>Using Chrome or Firefox to visit: <strong><em>http://Internet IP Address</em></strong> to start the application installation process.It is recommended to complete two steps before the installation:</p>
+<ul>
+<li>Domain resolution if you want to use domain for this application (Add an A record to the Internet IP Address of Server from Domain Control Panel)</li>
+<li>Modify the MySQL password of r<em>oot</em> through <strong><em>http://Internet IP Address/phpmyadmin</em></strong></li>
+</ul>
+<p>Then access the installation page and complete the installation wizard for the following steps:</p>
+<ol>
+<li>Local Chrome or Firefox to visit <strong><em>http://yourdomain</em></strong> or <strong><em>http://Internet IP Address</em></strong>,you will enter the configuration inerface of installation<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installconf-websoft9.png" width="960" height="900" /></li>
+<li>Set the site information and Super User Account Details,then Cick “next” button</li>
+<li>Flowing step you should complete the Database Configuration below(Database type is &#8220;MySQLi&#8221;,hostname is &#8220;localhost&#8221; and usename/password please refer to the relevant section of documentation:<strong><em>Frequently used Usernames and Passwords</em></strong>)<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installdb-websoft9.png" width="960" height="900" /></li>
+<li>Click the &#8220;next&#8221; button when complete the Database Configuration,the wizard will start to install.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installss-websoft9.png" width="960" height="766" /></li>
+<li>Please delete the &#8220;installation folder&#8221; by Putty below.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-installdel-websoft9.png" width="960" height="452" /></li>
+<li>Click the &#8220;Administrator&#8221; button to enter the login page of Joomla now,Log in as administator account which you have set in the first step of installation<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-login-websoft9.png" width="960" height="452" /></li>
+<li>You can use the Joomla Backend to setup your site now<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-backend-websoft9.png" width="960" height="671" /></li>
+</ol>
+</div>  </section>
+
+  <section id="frequently-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Frequently used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、Joomla:</strong>Username and Password is<strong> </strong>set by youself when installation,<br />
+Backend URL:<em>http://youdomain.com/administrator</em><br />
+<strong>2、MySQL Database:</strong>Default username and password is<strong> </strong><span style="color: #ff0000;"><em>root/123456</em></span><br />
+Control Panel URL:<em>http://Internet IP Address/phpmyadmin</em><br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</p>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the &#8220;yes&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the <em>http://Internet IP Address/phpMyAdmin</em>,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div>  </section>
+
+  <section id="using-extension" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Extension</h2><p>Joomla! already is a rich featured content management system, but if you&#8217;re building a website with Joomla! and you need extra features which aren&#8217;t available in Joomla! by default, you can easily extend it with extensions. There are five types of extensions for Joomla!: Components, Modules, Plugins, Templates, and Languages. Each of these extensions handle specific functionality (some built-in features of Joomla! are implemented using extensions).</p>
+<p>An extension is a software package that extends your Joomla! installation in some way. A small selection of extensions is included with the default Joomla! installation but many more are available from the <a class="external text" href="http://extensions.joomla.org/" target="_blank" rel="noopener noreferrer">Joomla! Extensions Directory</a>.</p>
+<p>The term <i>extension</i> is generic and the following specific extension types are available:</p>
+<ul>
+<li><a title="Component" href="https://docs.joomla.org/Component">Component</a> (since <a class="image" title="Joomla 1.0" href="https://docs.joomla.org/File:Compat_icon_1_0.png"><img src="https://docs.joomla.org/images/4/43/Compat_icon_1_0.png" alt="Joomla 1.0" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – adds custom functions to your site that can be selected from menus</li>
+<li><a title="Language" href="https://docs.joomla.org/Language">Language</a> (since <a class="image" title="Joomla 1.0" href="https://docs.joomla.org/File:Compat_icon_1_0.png"><img src="https://docs.joomla.org/images/4/43/Compat_icon_1_0.png" alt="Joomla 1.0" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – defines an additional language for your site</li>
+<li><a title="Library" href="https://docs.joomla.org/Library">Library</a> (since <a class="image" title="Joomla 2.5" href="https://docs.joomla.org/File:Compat_icon_2_5.png"><img src="https://docs.joomla.org/images/5/53/Compat_icon_2_5.png" alt="Joomla 2.5" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – provides functions to be used by other extensions</li>
+<li><a title="Module" href="https://docs.joomla.org/Module">Module</a> (since <a class="image" title="Joomla 1.0" href="https://docs.joomla.org/File:Compat_icon_1_0.png"><img src="https://docs.joomla.org/images/4/43/Compat_icon_1_0.png" alt="Joomla 1.0" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – shows nonessential data in a side box, possibly on multiple pages</li>
+<li><a title="Package" href="https://docs.joomla.org/Package">Package</a> (since <a class="image" title="Joomla 2.5" href="https://docs.joomla.org/File:Compat_icon_2_5.png"><img src="https://docs.joomla.org/images/5/53/Compat_icon_2_5.png" alt="Joomla 2.5" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – bundles related extensions</li>
+<li><a title="Plugin" href="https://docs.joomla.org/Plugin">Plugin</a> (since <a class="image" title="Joomla 1.5" href="https://docs.joomla.org/File:Compat_icon_1_5.png"><img src="https://docs.joomla.org/images/c/c8/Compat_icon_1_5.png" alt="Joomla 1.5" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – modifies content in articles or provides functions to extend other extensions</li>
+<li><a title="Template" href="https://docs.joomla.org/Template">Template</a> (since <a class="image" title="Joomla 1.0" href="https://docs.joomla.org/File:Compat_icon_1_0.png"><img src="https://docs.joomla.org/images/4/43/Compat_icon_1_0.png" alt="Joomla 1.0" width="40" height="17" data-file-width="40" data-file-height="17" /></a>) – define the look, feel, and navigation capabilities of your site</li>
+</ul>
+<p>For an overview of the most important extension types and the functionality they provide, see <a title="Extension types (general definitions)" href="https://docs.joomla.org/Extension_types_(general_definitions)">Extension types (general definitions)</a>.</p>
+<p>There are 4 methods of installing an extension. You can upload an extension, install from a directory, install from a URL or install from web.</p>
+<dl>
+<dd><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-Installing-template-upload-package-file-en-websoft9.png" width="729" height="320" /></dd>
+</dl>
+<div id='components' class='step-content clearfix'><h3 class='steps-header'><a href='#components'>Components</a></h3><p>Components are the largest and most complex extensions of them all; they can be seen as mini-applications. Most components have two parts: a site part and an administrator part. Every time a Joomla! page is requested, <i>one</i> component is called to render the body of the page. For example, Content (com_content) is the component which handles the display of content; users can view at the frontend of your site and, as an administrator, you can edit the content. Components are the major portion of your page because a component is driven by a menu item and every menu item runs a component.</p>
+<p><b>Examples:</b> Content (com_content), Banners (com_banners), Contacts (com_contact), News Feeds (com_newsfeeds) and Web Links (com_weblinks)</p>
+<p><b>Management feature:</b> <i>Admin head menu</i> &gt; “Components” &gt; (“Contacts” for com_contact)</p>
+</div><div id='modules' class='step-content clearfix'><h3 class='steps-header'><a href='#modules'>Modules</a></h3><p>Modules are more lightweight and flexible extensions used for page rendering. These modules are mostly known as the “boxes” that are arranged around a component, for example: the login module. The Footer is a module. Modules are assigned per menu item. So, you can decide to show or hide the login module depending on which menu item the user is viewing. Sometimes modules are linked to components such as the “Latest News” module which links to the com_content and displays links to the newest content items. However, modules do not need to be linked to components, as a matter of fact they don&#8217;t even need to be linked to anything and can be just static HTML or text.</p>
+<p><b>Examples:</b> Banners (mod_banners), Menus (mod_menu), Who&#8217;s Online (mod_whosonline)</p>
+<p><b>Management feature:</b> <i>Admin head menu</i> &gt; “Extensions” &gt; “Module Manager”</p>
+</div><div id='plugins' class='step-content clearfix'><h3 class='steps-header'><a href='#plugins'>Plugins</a></h3><p>Plugins are more advanced extensions and are in essence event handlers. In the execution of any part of Joomla, be it the core, a module or a component, an event can be triggered. When an event is triggered, plugins that are registered with the application to handle that event execute. For example, a plugin could be used to intercept user-submitted articles and filter out bad words.</p>
+<p><b>Examples:</b> Content &#8211; Load Modules, Editor &#8211; TinyMCE</p>
+<p><b>Management feature:</b> <i>Admin head menu</i> &gt; “Extensions” &gt; “Plugin Manager”</p>
+</div><div id='templates' class='step-content clearfix'><h3 class='steps-header'><a href='#templates'>Templates</a></h3><p>A template is basically the design of your Joomla! powered website. With a template you can change the look and feel of your website. Templates have certain fields in which the component (just one) and modules (as many as you like) will be shown. Templates are easy to build or customize and they provide maximum flexibility in how you style your site.</p>
+<p><b>Management feature:</b> <i>Admin head menu</i> &gt; “Extensions” &gt; “Template Manager”</p>
+</div><div id='languages' class='step-content clearfix'><h3 class='steps-header'><a href='#languages'>Languages</a></h3><p>Probably the most basic extensions are languages. Languages can be packaged in two ways: either as a core package or as an extension package. In essence, both the core and the extension language package files consist of key/value pairs, which provide the translation of static text strings, assigned within the Joomla! source code. These language packs will affect both the front and administrator side of your Joomla site. Note: these language packs also include an XML meta file which describes the language.</p>
+<p><b>Management feature:</b> <i>Admin head menu</i> &gt; “Extensions” &gt; “Language Manager”</p>
+</div></div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup and manual local backup in two ways, both of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the “snapshot” function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div><div id='using-akeeba-backupjoomla-component-for-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#using-akeeba-backupjoomla-component-for-backup'>Using Akeeba Backup(Joomla component) for Backup</a></h3><p>Akeeba Backup Core is the most widely used open-source backup component for the Joomla! CMS. Its mission is simple: create a site backup that can be restored on any Joomla!-capable server, making it ideal not only for backups but also for site transfers or even deploying sites to your clients&#8217; servers. Akeeba Backup creates a full backup of your site in a single archive. The archive contains all the files, a database snapshot and an installer similar in function to the standard Joomla! installer. The backup and restore process is AJAX powered to avoid server timeouts, even with huge sites. Alternatively, you can make a backup of only your database, or only your files. Akeeba Backup is the reliable, easy to use, open source backup solution for your Joomla! site.</p>
+<p>Features:</p>
+<ul>
+<li>The Configuration Wizard configures itself for optimal operation with your site, automatically.</li>
+<li>The fastest and most reliable native PHP backup engine.</li>
+<li>One click backup.</li>
+<li>Integrated restoration for same server restoration.</li>
+<li>Site transfer wizard. Transfer your site between servers fast and easily.</li>
+<li>Restore with Akeeba Kickstart (free of charge script): restore extracting the backup directly on the server; no need to upload thousands of files by FTP!</li>
+<li>Choose between standard ZIP or highly efficient JPA archive format.</li>
+<li>Exclude specific files, folders.</li>
+<li>Exclude specific database tables or their contents.</li>
+<li>Unattended backup mode (CRON job scheduling), fully compatible with Webcron.org</li>
+<li>Archives can be restored on any host. Useful for transferring your site between subdomains/hosts or even to/from your local testing server (e.g. XAMPP, WAMPServer, MAMP, etc).</li>
+</ul>
+<p>How to use it?</p>
+<ol>
+<li>Download from<a href="https://www.akeebabackup.com/download.html" target="_blank" rel="noopener noreferrer"> Akeedba website<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-akeebadl-websoft9.png" width="1201" height="606" /><br />
+</a></li>
+<li>Dashboard-&gt;Extensions-&gt;Manage-&gt;Install,Upload Package File</li>
+<li>Complete the installation of Akeeda</li>
+<li>Dashboard-&gt;System-&gt;Control Panel,you can find the link &#8221; Backup is up-to-date&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-backup-websoft9.png" width="805" height="603" /></li>
+<li>Enter the Akeeba Backup panel,and please do the &#8220;Configuration Wizard&#8221;</li>
+<li>Click the button &#8220;Backup Now&#8221;</li>
+</ol>
+</div><div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><ol>
+<li>Download the entire Joomla file in you root dictionary by FTP or other tools</li>
+<li>Visit http://&lt; Internet IP Address &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-mysql-backup-websoft9.png" width="635" height="444" /></li>
+<li>Click “go” button,then download the SQL backup file</li>
+</ol>
+</div><div id='how-to-restore-backups' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-restore-backups'>How to restore backups?</a></h3><p>Restore backups is very easy if you have used the Akeeba</p>
+<p>Select the check box next to a backup entry. Now click on the <em>Restore</em> button in the toolbar.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-restore-websoft9.png" width="1104" height="456" /></p>
+<p>&nbsp;</p>
+</div></div>  </section>
+
+  <section id="upgrading" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrading</h2><p>Keeping Joomla up to date is important to make sure that your Joomla is as safe and as awesome as possible.</p>
+<p>Do you need to update your Joomla installation? If an update is available there will be a message indicating an update with a button to press.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update001-websoft9.PNG" width="450" height="261" /></p>
+<p>You will also see a notice in the &#8216;left sidebar&#8217; at the bottom.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update002-websoft9.PNG" width="229" height="209" /></p>
+<div class="alert-box" data-alert="">Joomla will notify you on your Administrator home page (control panel) when an update is available. It will not automatically do the update for you. It is the responsibility of the administrator to start and verify the update was successful.</div>
+<p>The following are the recommended steps needed to complete an update to your Joomla CMS installation.</p>
+<p>&nbsp;</p>
+<div id='live-update' class='step-content clearfix'><h3 class='steps-header'><a href='#live-update'>Live Update</a></h3><p>Not only is this the recommended method, it is the easiest method of updating the Joomla CMS. Sometimes this method is referred to as a <i><b>One click update</b></i>. If you are unable to use this method because of specific use cases (distributions, languages, host speed), you can update the Joomla CMS using the install method update</p>
+<dl>
+<dt>This method is suitable for</dt>
+</dl>
+<ul>
+<li>All Joomla CMS <b>3.x.x</b> to <b>3.x.x</b> &#8211; updates (maintenance update)</li>
+</ul>
+<dl>
+<dt>This method is not suitable for</dt>
+</dl>
+<ul>
+<li>Joomla CMS <b>3.1.2</b> to <b>≥ 3.1.3</b> &#8211; see <a title="Special:MyLanguage/J3.x:Detailed instructions for updating from 3.1.2 to 3.1.4" href="https://docs.joomla.org/Special:MyLanguage/J3.x:Detailed_instructions_for_updating_from_3.1.2_to_3.1.4">Special Instructions for Version 3.1.2 Upgrades</a></li>
+</ul>
+<h3><span id="Step_1:_Backup" class="mw-headline">Step 1: Backup</span></h3>
+<p>Make sure you have a <b>CURRENT BACKUP</b> of your site! In many cases, your host will make periodic site backups. <b>DO NOT</b> rely on these backups! It is <b>STRONGLY RECOMMENDED</b> you preform your own backup.</p>
+<h3><span id="Step_2:_The_Update_Component" class="mw-headline">Step 2: The Update Component</span></h3>
+<p>You will need to navigate to the update component. Click the update &#8216;button&#8217; or the &#8216;sidebar link&#8217; previously shown above or use the main menu, select and click <b>Components </b>→<b> </b><b>Joomla! Update</b>. You will now see the below image.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update003-websoft9.PNG" width="975" height="389" /></p>
+<p>Select, &#8216;Write files directly&#8217; (default) or &#8216;Write files using FTP&#8217; as the method of uploading the new core files to your installation. Did you backup? See Step 1 above.</p>
+<h3><span id="Step_3:_Start_the_Update" class="mw-headline">Step 3: Start the Update</span></h3>
+<p>Click the &#8220;Install the Update&#8221; button and the updating will begin.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update004-websoft9.PNG" width="787" height="390" /></p>
+<p>When the update has completed, you will see a success notice with the new version.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update005-websoft9.PNG" width="659" height="301" /></p>
+<p>Note:When the update has completed you may need to empty your browser cache to adjust for any template CSS changes.</p>
+</div><div id='update-configurations' class='step-content clearfix'><h3 class='steps-header'><a href='#update-configurations'>Update Configurations</a></h3><p>In most cases you will not have to change these settings. The default choices make sure your Joomla CMS installation is always being checked against the correct update server and the appropriate person with administrator access can update the installation.</p>
+<p>The options screen is reached by clicking the &#8216;options&#8217; button on the main Joomla! Update screen. Once you click the &#8216;options&#8217; button, you will see the following image.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update006-websoft9.PNG" width="818" height="438" /></p>
+<h3><span id="Setting_Update_Server" class="mw-headline">Setting Update Server</span></h3>
+<p>The update notice you will see on the home administrator depends on the setting of the Update Server and caching.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update007-websoft9.PNG" width="459" height="260" /></p>
+<p>The first option shows the latest update of the major release in use (default). The second option shows the latest update of the latest major. Caching may cause not detecting an available update and you must purge the cache.</p>
+<h3><span id="Permissions" class="mw-headline">Permissions</span></h3>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-update008-websoft9.PNG" width="846" height="494" /></p>
+</div><div id='upload-updatenot-recommended' class='step-content clearfix'><h3 class='steps-header'><a href='#upload-updatenot-recommended'>Upload & Update(Not recommended)</a></h3><p>You can use this feature to update Joomla if your server is behind a firewall or otherwise unable to contact the update servers. First download the Joomla Upgrade Package in ZIP format from the official Joomla download page. Then use the fields below to upload and install it.</p>
+<p>Read more from online doc of Joomla:<a title="Special:MyLanguage/J3.x:Updating Joomla (Install Method)" href="https://docs.joomla.org/Special:MyLanguage/J3.x:Updating_Joomla_(Install_Method)">Updating Joomla CMS 3.x.x (Install Method)</a></p>
+</div></div>  </section>
+
+  <section id="useful-php-ini-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Useful PHP.ini Settings</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient when running your application,The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 128M <b>Recommended:</b> 512M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># systemctl restart httpd</span></code></pre>
+<div id='how-to-modify-the-allowed-limit-for-upload' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-modify-the-allowed-limit-for-upload'>How to modify the allowed limit for upload?</a></h3><p>Modify the  /etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># systemctl restart httpd</span></code></pre>
+</div><div id='how-to-change-the-max_execution_time' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-change-the-max_execution_time'>How to change the max_execution_time?</a></h3><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div></div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the Services?</h2><p>Apache http service</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl start httpd
+~# systemctl stop httpd
+~# systemctl restart httpd
+</code></pre>
+<p>MySQL  service</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl start mysqld
+~# systemctl stop mysqld
+~# systemctl restart mysqld</code></pre>
+</div>  </section>
+
+  <section id="how-to-configure-domain" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure domain?</h2><p>Use domain you should complete the following steps:</p>
+<div id='step-onedomain-resolution' class='step-content clearfix'><h3 class='steps-header'><a href='#step-onedomain-resolution'>Step One:Domain resolution</a></h3><p>e.g,If you using the AliCloud Domain product,you should log in to your Domain Console Panel</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alicloud-domains.png" width="960" height="308" /></p>
+<p>And find the domain name resolution interface,then add an A record to the Internet IP Address of Server from Domain Control Panel.</p>
+</div><div id='step-onemodify-the-vhost-file' class='step-content clearfix'><h3 class='steps-header'><a href='#step-onemodify-the-vhost-file'>Step One:Modify the Vhost file</a></h3><ol>
+<li>Using SFTP to edit the <em>/ect/httpd/conf.d/vhost.conf</em></li>
+<li>Modify the domain related information like below,then save it
+<pre><code class="language-markup">&lt;VirtualHost *:80&gt;
+ServerName www.mydomain.com
+ServerAlias mydomain.com</code></pre>
+</li>
+<li>Using putty to run the command &#8220;systemctl restart httpd&#8221;</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 0644/ folder 0755 Permissions Users and groups apache/apache<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">~# chown -R apache.apache /data/wwwroot/joomla
+~# find /data/wwwroot/joomla -type d -exec chmod 755 {} \;
+~# find /data/wwwroot/joomla -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-reset-admin-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to reset admin password?</h2><p>Normally, you can add, edit and delete users and passwords from the back-end User Manager. To do this, you must be logged in as a member of the Super Administrator group.</p>
+<p>In some situations, this may not be possible. For example, your site may have been &#8220;hacked&#8221; and had the passwords or users changed. Or perhaps the person who knew the passwords is no longer available. Or maybe you have forgotten the password that was used.</p>
+<p>In these cases, it is still possible to alter the Joomla! database so you can log back in as a Super Administrator. These are the possible methods available to Joomla! administrators.</p>
+<div id='method-1-configuration-php-file' class='step-content clearfix'><h3 class='steps-header'><a href='#method-1-configuration-php-file'>Method 1: configuration.php file</a></h3><p>If you have access to your <code>configuration.php</code> file for the Joomla installation on your server, then you can recover the password using the following method.</p>
+<p>1. Using an FTP program connect to your site. Find the configuration.php file and look at the file permissions. If the permissions are 444 or some other value, then change the permissions of the configuration.php file to 644. This will help prevent issues when uploading the changed configuration.php file later in this process.</p>
+<p>2. Download the configuration file.</p>
+<p>3. Open the configuration.php file that was downloaded in a text editor such as notepad++ and add this line</p>
+<pre>public $root_user='myname';
+</pre>
+<p>to the bottom of the list where myname is a username with administrator access that you know the password for. An username that is Author level or higher can also be used in place of a username with administrator access.</p>
+<p>4. Save the configuration.php file and upload it back to the site. You may leave the permissions on the configuration.php file at 644.</p>
+<p>This user will now be a temporary super administrator.</p>
+<p>5. Login to the back end and change the password of the administrator user you don&#8217;t have the password for or create a new super admin user. If you create the new user you may want to block or delete the old user depending on your circumstances.</p>
+<p>6. When finished, make sure to use the &#8220;Click here to try to do it automatically&#8221; link that appears in the alert box to remove the line that was added to the configuration.php file. If using the link was not successful, then go back and delete the added line from your configuration.php file using a text editor. Upload the configuration.php file back to the site.</p>
+<p>7. Using your FTP program verify the file permissions of the configuration.php file, they should be 444. If you manually removed the added line, then change the file permissions on the configuration.php file to 444.</p>
+<p>If you have no users who know their passwords and you can&#8217;t utilize front end registration you may need to make a change in your database as outlined below in this document.</p>
+</div><div id='method-2-direct-editing-of-database' class='step-content clearfix'><h3 class='steps-header'><a href='#method-2-direct-editing-of-database'>Method 2: Direct Editing of Database</a></h3><p>If the methods above did not work, you have two other options, both of which require working with the MySQL database directly.</p>
+<p>Read more from Joomla&#8217;s doc website:<a title="Special:MyLanguage/How do you recover or reset your admin password?" href="https://docs.joomla.org/Special:MyLanguage/How_do_you_recover_or_reset_your_admin_password%3F">Password Recovery</a></p>
+</div></div>  </section>
+
+  <section id="how-to-enable-joomla-cache-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to Enable Joomla Cache Settings?</h2><p>Enabling the cache will boost the overall performance of your installation. You can enable easily the caching system through the administrator panel of Joomla!</p>
+<p><strong>Open the Cache</strong></p>
+<ol>
+<li>Dashboard-&gt;System-&gt;Global Configuration,and go the System Tab,find the Cache Setting item<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/joomla/joomla-opencache-websoft9.png" width="1102" height="696" /></li>
+<li>Change cache setting to &#8220;ON &#8211; Conservative Caching&#8221;</li>
+</ol>
+<p><strong>Activate the Cache Plugin</strong></p>
+<p>Go to &#8220;Extensions -&gt; Plugin Manager&#8221; tab, search for &#8220;cache&#8221; and enable the &#8220;System &#8211; Cache&#8221; extension.</p>
+<p><strong>Page Caching</strong></p>
+<ul>
+<li><b>Configuration</b>: Built-in Plugin (Extensions -&gt; Plugin Manager -&gt; System &#8211; Page Cache)</li>
+<li><b>Caches</b>: each whole page of your site</li>
+<li><b>Based on</b>: URL</li>
+<li><b>More info</b>:
+<ul>
+<li>Optional browser caching: Also caches on your visitors&#8217; browser/computer</li>
+<li>Only caches pages for guest visitors (not for logged in visitors). Be careful using this plugin if you have an interactive site where you want to server content based on session/cookie information rather than on the plain URL only. Features like a shopping cart will not work.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Module Caching</strong></p>
+<ul>
+<li><b>Configuration</b>: Global Config-&gt;Cache</li>
+<li><b>Caches</b>: each module (individually customized via each module&#8217;s Advanced Parameters)</li>
+<li><b>More info</b>: You must disable it on some modules to avoid problems</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-add-new-applicaton" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to add new applicaton?</h2><p>This Image supports the deployment of multiple applications (Web sites), following is the steps for adding new application:</p>
+<ol>
+<li>Using the SFTP to add new folder named &#8220;<strong>NewSite</strong> &#8221; and upload the entire codes of application to <em><strong>/data/wwwroot/newsite</strong></em></li>
+<li>Change the permissions of filesytem for <strong>NewSite </strong>folder</li>
+<li>Using SFTP to enter the <em>/ect/httpd/conf.d</em> directory,add new conf file,e.g. File name is <strong>www.newsite.com.conf</strong></li>
+<li>Copy the following content to <strong>www.newsite.com.conf</strong> and modify the the domain part if needed,then save it</li>
+</ol>
+<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token punctuation">&lt;</span>VirtualHost <span class="token attr-name"><span class="token namespace">*:</span>80</span><span class="token punctuation">&gt;</span></span>
+ServerName www.newsite.com
+ServerAlias newsite.com
+DocumentRoot "/data/wwwroot/default/newsite"
+ErrorLog "/var/log/httpd/www.newsite.com_error_apache.log"
+CustomLog "/var/log/httpd/www.newste.com_apache.log" common
+&lt;Directory "/data/wwwroot/default/newsite"&gt;
+Options Indexes FollowSymlinks
+AllowOverride All
+Require all granted
+<span class="token tag"><span class="token punctuation">&lt;/</span>Directory<span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token punctuation">&lt;/</span>VirtualHost<span class="token punctuation">&gt;</span></span></code></pre>
+<p>If you have no domain or you don&#8217;t want to use domain,you should copy the following contents to conf file on step&#8221;4&#8243;:</p>
+<pre class=" language-markup"><code class=" language-markup">Alias /mysite "/data/wwwroot/default/newsite"   
+ &lt;Directory "/data/wwwroot/default/newsite"&gt;
+	        Options Indexes FollowSymlinks
+	        AllowOverride All
+	        Require all granted
+	    <span class="token tag"><span class="token punctuation">&lt;/</span>Directory<span class="token punctuation">&gt;</span></span></code></pre>
+<p>Run the &#8220;systemctl restart httpd &#8221; command,visit the URL http://www.newsite.com or http://ip/newsite to run Installation Wizard of new site</p>
+<p>Note：Apache configuration rules and syntax is very flexible, the above is for reference only</p>
+</div>  </section>
+
+  <section id="all-joomla-help-sites" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>All Joomla Help Sites</h2><ul>
+<li><a href="http://forum.joomla.org/" target="_blank" rel="noopener noreferrer">Official Support Forum</a></li>
+<li><a href="http://forum.joomla.org/viewforum.php?f=511" target="_blank" rel="noopener noreferrer">Official Language Forums</a></li>
+<li><a href="https://docs.joomla.org/" target="_blank" rel="noopener noreferrer">Documentation Wiki</a></li>
+<li><a href="https://extensions.joomla.org/" target="_blank" rel="noopener noreferrer">Joomla! Extensions</a></li>
+<li><a href="https://community.joomla.org/translations.html" target="_blank" rel="noopener noreferrer">Joomla! Translations</a></li>
+<li><a href="http://resources.joomla.org/" target="_blank" rel="noopener noreferrer">Joomla! Resources</a></li>
+<li><a href="https://community.joomla.org/" target="_blank" rel="noopener noreferrer">Community Portal</a></li>
+<li><a href="https://developer.joomla.org/security-centre.html" target="_blank" rel="noopener noreferrer">Security Centre</a></li>
+<li><a href="https://developer.joomla.org/" target="_blank" rel="noopener noreferrer">Developer Resources</a></li>
+<li><a href="https://joomla.stackexchange.com/" target="_blank" rel="noopener noreferrer">Stack Exchange</a></li>
+<li><a href="https://community.joomla.org/the-joomla-shop.html" target="_blank" rel="noopener noreferrer">Joomla! Shop</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 3.8.1</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

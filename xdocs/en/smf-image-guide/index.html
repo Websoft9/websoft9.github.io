@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Machines Forum Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/SimpleMachines' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#environment-description">Environment description</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#getting-started-with-smf">Getting Started with SMF</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-smf">Step3. Install SMF</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#backup-restore">Backup & Restore</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#updating">Updating</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#converting-smf">Converting SMF</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#upgrading">Upgrading</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#language-settting">Language Settting</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#installing-a-new-language-pack">Installing a New Language Pack</a><li class=""><a href="#creating-your-own-language">Creating Your Own Language</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-install-a-new-theme">How to Install a New Theme?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-administrator-password">How To Change Administrator Password?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-reset-the-password-of-an-admin-user">How to Reset the Password of an Admin User?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-deal-with-spam">How to deal with spam?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#smf-help-link">SMF Help Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Simple Machines Forum Image Guide</h1>
+                              <div class="version"> Version 2.1</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Simple Machines Forum is a pre-configured, ready to run image for running Simple Machines Forum on Alibaba Cloud.</p>
+<p>Simple Machines Forum — SMF in short — is a free, professional grade software package that allows you to set up your own online community within minutes.Its powerful custom made template engine puts you in full control of the layout of your message board and with our unique SSI &#8211; or Server Side Includes &#8211; function you can let your forum and your website interact with each other.</p>
+<p>&nbsp;</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="environment-description" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Environment description</h2><p><strong>Software Version:</strong> Simple Machines Forum 2.1<br />
+<strong>Software directory:</strong> /data/wwwroot/default/smf</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+PHP Configuration File: /usr/local/php/etc/php.ini<br />
+Virtual host Configuration File directory: /usr/local/apache/conf/vhost<br />
+Virtual host Configuration Command: /root/oneinstack/vhost.sh</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf-bootpage-websoft9.png" width="688" height="396" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-smf" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with SMF</h2><div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><code>mysql -uroot –p </code>                               #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p><code>MySQL [(none)]&gt; create database mydbname;</code></p>
+<p><code>MySQL [(none)]&gt; show databases;</code></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p><code>MySQL [(none)]&gt; grant all privileges on mydbname.* to username@'localhost' identified by 'userpassword';</code></p>
+<p><code>MySQL [(none)]&gt; flush privileges;</code></p>
+<p><code>MySQL [(none)]&gt; exit;</code></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:<br />
+</strong><span style="font-family: Consolas;"><code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /root/oneinstack</code><br />
+<code>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# ./vhost.sh</code></span><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf00.png" alt="" /></a></p>
+</div><div id='step3-install-smf' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-smf'>Step3. Install SMF</a></h3><p>Open<strong> your domain name </strong>via browser:<br />
+<strong>1. Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf01.png" alt="" /></a><br />
+<strong>2. Enter your database configuration, Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf02.png" alt="" /></a><br />
+<strong>3. Set your Forum configuration, Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf03.png" alt="" /></a><br />
+<strong>4. Set your administrator account, Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf04.png" alt="" /></a><br />
+<strong>5. Congratulations, the installation process is complete! Now you can see your newly installed forum and begin to use it. </strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf05.png" alt="" /></a><br />
+<strong>6. This is your newly installed forum: </strong><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf06.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p>It is essential to back up your forum. If your database gets corrupted you will lose everything. Having a backup means that you have a previous version of your database to fall back on should your forum be hacked, or should you make changes to it which you subsequently wish to revert.</p>
+<p>SMF&#8217;s Admin section has a built-in database backup function. <b>Do not use it</b>! It does work in some cases, but not in others, so it should not be used, unless you have no other way to acquire the backup of the database.</p>
+<ol>
+<li>Backing up your Database with phpMyAdmin,login in phpMyAdmin as root,find you database,On the next page, find &#8220;View dump (schema) of database&#8221;, and you will see &#8220;Export&#8221;,Just below that, click &#8220;Select all&#8221;.At the bottom of the page, ensure that &#8220;Save as file&#8221; is checked.Finally, click &#8220;Go&#8221;.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf-exportdb-websoft9.png" width="940" height="558" /></li>
+<li>Download all you files and folder of SMF using FTP,smf root folder like <em>/data/wwwroot/default/smf</em></li>
+</ol>
+<p>To restore your backed-up database, you do exactly the same as to back up, except that instead of clicking &#8220;Export&#8221;, you click &#8220;Import&#8221;. You then navigate to your backup file by clicking &#8220;Choose&#8221; under &#8220;Location of the text file&#8221;.</p>
+<p>Please be aware that if you have large databases, it may be not possible to back up using phpMyAdmin, as phpMyAdmin has some file size limits.</p>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="updating" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Updating</h2><p>Updating is the same with Patching in SMF,it  is moving from an earlier version of SMF to the next version in the same series (e.g. from 2.0 to 2.0.1). If you are moving up more than one version in the same series, (e.g. 1.1.10 to 1.1.13) you must repeat patching for each version update.</p>
+<p>If patching reports errors or if you need to move to a newer major version of SMF then you should use the Upgrading procedure. If you want to install a Forum from scratch, please see the instructions on Installing SMF.</p>
+<ol>
+<li>Go to the downloads page for patches on the SMF website and download the patch you need.</li>
+<li>Once you have downloaded the patch to your computer, go to: Administration &gt; Main &gt; Package manager &gt; Download Packages and upload the patch.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf-addpackage-websoft9.png" width="1105" height="684" /></li>
+<li>Click the link Install Mod.</li>
+<li>On the next page you will be notified of any problems. If no errors are reported, selecting the button &#8220;Install Now&#8221; will start the actual patching procedure. Once finished you will be informed that the package has been installed successfully.</li>
+</ol>
+</div>  </section>
+
+  <section id="converting-smf" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Converting SMF</h2><p>will wipe out any existing SMF data, but it will not change the forum you are converting from.</p>
+<p>If you run into problems, you can get start a topic on the <a class="external text" href="https://wiki.simplemachines.org/smf/Converting" rel="nofollow">Converting to SMF</a> board at SMF&#8217;s official support. Converting to SMF from almost any forum software can be done in five fast and simple steps.</p>
+</div>  </section>
+
+  <section id="upgrading" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrading</h2><p>Upgrading is moving to a more recent version of SMF by getting a fresh set of all necessary files. It is necessary when moving from an earlier major version to a more recent one (SMF 1.1.x to SMF 2.0.x, for example). If you want a clean start with the same version you have now, take a look at <a title="How to upload a fresh set of files" href="https://wiki.simplemachines.org/smf/How_to_upload_a_fresh_set_of_files">How to upload a fresh set of files</a>.</p>
+<p>If you are moving from an older version of SMF (for example 1.1.1) to a newer version in the same series (for example 1.1.2) and you want to avoid uninstalling your mods, you may consider <a title="Patching" href="https://wiki.simplemachines.org/smf/Patching">patching</a>. If you want to install a forum from scratch, please see the instructions on <a title="Installing" href="https://wiki.simplemachines.org/smf/Installing">installing</a> SMF.</p>
+<p>Upgrading an SMF forum can be done in six quick and simple steps:</p>
+<ol>
+<li>Download the latest SMF large upgrade package on the &#8220;<a class="external text" href="http://download.simplemachines.org/" rel="nofollow">Download</a>&#8221; page of our SMF</li>
+<li>Upload The SMF upgrade archive to the same location where the current forum is located, and overwrite all of the existing files with new files.</li>
+<li>Set File and Directory Permissions(<a href="http://en.websoft9.com/xdocs/simple-machines-forum-image-guide/#how-to-change-the-permissions-of-filesytem" target="_blank" rel="noopener noreferrer">How to modify the allowed limit for upload?</a>)</li>
+<li>The final step in upgrading SMF, is to run the upgrading tool. Navigate with your browser to the upgrade.php file (it can be found in the directory where SMF is located) and run the upgrade, for example: www.yourdomain.com/forum/upgrade.php.</li>
+</ol>
+<p><a href="https://wiki.simplemachines.org/smf/Upgrading" target="_blank" rel="noopener noreferrer">More about upgrading</a></p>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="language-settting" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Language Settting</h2><p>SMF supports multiple languages, offering language packs available for download, which are located on the <a class="external text" href="http://download.simplemachines.org/?smflanguages" rel="nofollow">Languages Packs</a> page of the <i>SMF Downloads</i> section. Just locate the language that you want to include on your forum and tick the box. You will notice that there are two packages which you can download for each language. One of them includes <i>-utf8</i> at the end of the package name. This is the UTF-8 version of the language pack. Note that while this version, in many cases, works best for many languages, it should only be used if your forum is using the UTF-8 character set. Go to <i><a title="SMF2.0:Administration Center" href="https://wiki.simplemachines.org/smf/SMF2.0:Administration_Center">Admin</a> &gt; <a title="SMF2.0:Forum Maintenance" href="https://wiki.simplemachines.org/smf/SMF2.0:Forum_Maintenance">Forum Maintenance</a> &gt; <a title="SMF2.0:Forum Maintenance" href="https://wiki.simplemachines.org/smf/SMF2.0:Forum_Maintenance#Routine">Routine</a></i> and check <i>Convert the database and data to UTF-8</i> to see whether you are using the UTF-8 character set.</p>
+<div id='installing-a-new-language-pack' class='step-content clearfix'><h3 class='steps-header'><a href='#installing-a-new-language-pack'>Installing a New Language Pack</a></h3><p>Administrators using SMF 2.0.x can install a new language directly from the administration panel in <i>Admin &gt; Configuration &gt; Languages &gt; Add Languages</i>.</p>
+<p>Once you have selected and downloaded the language that you want to install, extract the content somewhere on your computer, and then upload the contents via an FTP program, so that the actual language files (for example: <i>index.languagename.php</i>) are located in <i>/Themes/default/languages</i>.</p>
+<p><b>ote:</b> You do <b>not</b> need to create another directory within the <i>languages</i> one. Just upload the <i>Themes</i> directory included in the language package as the parent directory over the existing <i>Themes</i> directory, located in the root directory of your forum. This will <b>not</b> overwrite any existing theme or language files, but will add the extra files that were not previously there, in this case the new language files.</p>
+<p>Assuming that you have activated <i>Enable user-selectable language support</i> in <i>Admin &gt; Configuration &gt; Languages &gt; Settings</i>, users should now be able to select this language in their profile, on the <i>Profile features &gt; Account Settings</i> page. Also, administrators should now be able to make this the default language if desired by going to <i>Admin &gt; Configuration &gt; Languages &gt; Settings</i> and selecting it in the <i>Default Forum Language</i> dropdown box.</p>
+</div><div id='creating-your-own-language' class='step-content clearfix'><h3 class='steps-header'><a href='#creating-your-own-language'>Creating Your Own Language</a></h3><p>If the Language Packs page does not contain the language you are looking for, there might still be a translation in progress for your language. In order to find out if there is anyone already working on the language you want, you can contact the SMF Localization Team via languages@simplemachines.org. You can also ask to become a member of the official translation team and gain access to the online translation system.</p>
+<p>If you want to start translating by manually editing the actual php files, first notice how the language system works. The English language resides in the <i>/Themes/default/languages</i> directory of your forum directory, which is the default language used by SMF. The contents of that directory are basically the text strings you see all over the forum. For simplicity, they have been divided into many files, representing the section or sections where they are used.</p>
+<p>To know which file is related to which section, check the filename. It is composed according to the template <i>[Section].[language].php</i>. So <i>Login.english.php</i> contains all texts needed for the login function in your forum: the first part (<i>Login</i>) defines the section and the second part (<i>english</i>) defines the language used in that file. Note that the most important file is <i>index.english.php</i>. This file contains some of the most frequently used language strings which appear in more than one section or in the forum header or footer.</p>
+<h4><span id="How_to_Make_a_New_Language" class="mw-headline">How to Make a New Language</span></h4>
+<p>Simply open the files mentioned above one by one in any code editor, such as Notepad++, Context, or PhpEdit, and translate the strings in them. For example:</p>
+<div class="code">
+<pre>$txt[637] = 'with ' . $context['forum_name'] . '.';
+$txt['invalid_activation_retry'] = 'Activation code';
+</pre>
+</div>
+<p>In the first one you only need to translate &#8220;with&#8221; and leave the rest as it is; in the second one you need to translate &#8220;Activation code&#8221;. After you have finished, save your file like this: <i>Login.(name of the language).php</i> (i.e. <i>Login.arabic.php</i>).</p>
+<p><b>Note:</b> it is very important to look at the comments in the language files as they contain very important information about the rules for translating the strings properly.</p>
+</div></div>  </section>
+
+  <section id="how-to-install-a-new-theme" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to Install a New Theme?</h2><p>The Manage and Install page is the default page loaded in the Themes and Layout section of the Administration Center. Here you can select whether the SMF default theme can be chosen, which Theme guests will use, as well as other options. The following are all the options shown on this page:</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf-addthemes-websoft9.png" width="1177" height="486" /></p>
+<p>This section provides three ways to install a new theme.</p>
+<ul>
+<li><b>From a file</b> &#8212; a theme archive file, such as can be found on the Simple Machines Theme Site
+<ol>
+<li>Find a theme archive file in the Simple Machines Theme Site and download the file to your desktop. Be certain that this theme is compatible with your version of SMF. The version is also listed on the page where you downloaded the theme. Themes for 1.1.* will not work on 2.0.* and 2.0.* themes will not work on 1.1.*.</li>
+<li>Click the &#8220;Browse&#8221; button to the right of the &#8220;from a file&#8221; label.</li>
+<li>From the pop-up, navigate to the theme file (still compressed as a .zip or .tar.gz file) on your computer.</li>
+<li>Click Install and confirm if you want to install the theme in the popup</li>
+<li>Installation will take a few seconds. If all goes well, the installer will tell you that the theme &#8220;&#8230; was installed successfully.&#8221;</li>
+<li>From your profile, select the theme, to test it.</li>
+<li>If you have any difficulties with the theme, switch back to the SMF default theme by using <b>theme=1</b> in your query string (example: http://www.simplemachines.org/community/index.php?theme=1)</li>
+</ol>
+</li>
+</ul>
+<hr />
+<ul>
+<li><b>From a directory on the server</b> &#8212; If the files are not packed into an archive
+<ol>
+<li>Make sure the files are already arranged in directories, just as SMF expects to find them. Keeping them in subdirectories of your forum&#8217;s Themes/ directory will make them easiest to keep track of</li>
+<li>Be certain that these theme files are compatible with your version of SMF, and that they include a file called theme_info.xml (for more on theme_info.xml, please read Packaging a Theme). The version is also listed on the page where you downloaded the theme. Themes for 1.1.* will not work on 2.0.* and 2.0.* themes will not work on 1.1.*.</li>
+<li>Select the &#8220;Install&#8221; button.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<ul>
+<li><b>Create a copy of Default named</b> &#8212; To create a new copy you can customize yourself
+<ol>
+<li>In the input box, enter a name for your new theme.</li>
+<li>Select the &#8220;Install&#8221; button.</li>
+</ol>
+</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/smf
+find /data/wwwroot/default/smf -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/smf -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient for SMF to install.</p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 64M <b>Recommended:</b> 128M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Joomla Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-change-administrator-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How To Change Administrator Password?</h2><p>For security, it is recommended that you change the default administrator password as soon as possible. Follow the steps below:</p>
+<ol>
+<li>Log in to the application as an administrator.</li>
+<li>Select the &#8220;Profile -&gt; Account Settings&#8221; menu item.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/smf/smf-modifypw-websoft9.png" width="1444" height="615" /></li>
+<li>Enter your new password in the &#8220;Choose password&#8221; and &#8220;Verify password&#8221; fields, and your old password in the &#8220;Current password&#8221; field.</li>
+<li>Click &#8220;Change profile&#8221; to save your changes.<br />
+<section id="change_language"></section>
+</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-reset-the-password-of-an-admin-user" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to Reset the Password of an Admin User?</h2><p>If you have not remeber you password,how to reset it?follow these instructions:</p>
+<ol>
+<li>Use phpMyAdmin (or similar) to locate (within the &#8220;_members&#8221; table) the member whose password is to be reset.</li>
+<li>In the database field entitled &#8220;passwd&#8221;, enter a new password using plain text.</li>
+<li>Clear out (erase) any existing content in the database field entitled &#8220;password_salt&#8221;.</li>
+</ol>
+<p>The next time the member logs in (using the new password), SMF will automatically re-encrypt the user&#8217;s credentials.</p>
+</div>  </section>
+
+  <section id="how-to-deal-with-spam" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to deal with spam?</h2><p>Spam &#8211; my forum is flooded with spam, what can I do?</p>
+<h3><span id="Default_Spam_Prevention" class="mw-headline">Default Spam Prevention</span></h3>
+<p>SMF, by default, offers three tools to help you keeping spammers out of your forum:</p>
+<ol>
+<li><b><a title="SMF2.0:Registration" href="https://wiki.simplemachines.org/smf/SMF2.0:Registration#Settings" target="_blank" rel="noopener noreferrer">Account Activation</a></b> &#8211; Administrators can decide to either ask their new members to visit an activation link sent to a newly registered member by email or to put all the newly registered members in the approval queue, and then personally activate only the non-spammer accounts.</li>
+<li><b><a title="SMF2.0:Security and Moderation" href="https://wiki.simplemachines.org/smf/SMF2.0:Security_and_Moderation#Anti-Spam" target="_blank" rel="noopener noreferrer">The Captcha</a></b> &#8211; Administrators can set a verification code (also known as a &#8216;captcha&#8217;) that users have to decipher in order to be able to proceed with the registration.</li>
+<li><b><a title="SMF2.0:Security and Moderation" href="https://wiki.simplemachines.org/smf/SMF2.0:Security_and_Moderation#Verification_Questions" target="_blank" rel="noopener noreferrer">Verification Questions</a></b> &#8211; Administrators can introduce a number of custom questions and answers. Users that are registering have to answer correctly to allow registration.</li>
+</ol>
+<p>The first measure is available through the Administration Center: <i>Admin &gt; Registration &gt; Settings</i>.</p>
+<p>Here you can enable several different methods of registration employed for new members, as you can see in the first drop down.</p>
+<p>The second and the third can be configured in the Administration Center: <i>Admin &gt; Security and Moderation &gt; Anti-Spam</i>.</p>
+<p>The level of complexity for a verification code can be set from <i>none</i> (no verification code displayed) to <i>extreme</i> (the letters are extremely distorted and it should be very difficult to decipher for the automated spammers). <b>Be aware that the CAPTCHA has been broken for many years and causes real users more of a headache than the spammers.</b></p>
+<p>There is the box used to configure <b>verification questions</b>. Usually this is the most efficient anti-spam method provided by SMF due to its forum specific nature. There are a few things to note about this method to increase its efficiency:</p>
+<ul>
+<li>Automated registration bots are usually quite good at mathematics, so avoid using questions like: <i>what&#8217;s the result of 2+2?</i></li>
+<li>International audiences may not understand local slang or terminology, so ensure that questions do not alienate potential members and the member base.</li>
+<li>The system is not case sensitive, so questions requiring upper case answers will still be accepted if lower case is typed.</li>
+</ul>
+<p>Be sure to put in the number of verification questions a user must answer under the configure verification methods category <b>above</b> the verification questions.</p>
+<p>From the Administration Center it is possible to set as many questions you wish, and also the number of questions that each user will be asked to answer during the registration. If you configure ten questions and then set to show two in the registration page, SMF will show two random questions from the ten configured each time a new member tries to register. Having a good bank of questions will stop automated bots from building a set of &#8220;known answers&#8221;.</p>
+<h3><span id="Mods_to_Prevent_Spam" class="mw-headline">Mods to Prevent Spam</span></h3>
+<p>One of the most important SMF features is its ability to be modified, and at the mod site there is an entire category dedicated to Spam Prevention mods.</p>
+<p>Some examples of very clever anti-spam mods that have been created by our community are (in alphabetical order):</p>
+<ul>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=2502" target="_blank" rel="nofollow noopener noreferrer">Bad Behavior</a></li>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=2815" target="_blank" rel="nofollow noopener noreferrer">Forum Firewall</a></li>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=2155" target="_blank" rel="nofollow noopener noreferrer">httpBL</a></li>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=3685" target="_blank" rel="nofollow noopener noreferrer">Misc Anti Spam</a></li>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=3896" target="_blank" rel="nofollow noopener noreferrer">Multiple QA &#8211; supports multiple questions, multiple answers, multiple languages</a></li>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=1519" target="_blank" rel="nofollow noopener noreferrer">Stop Forum Spam</a></li>
+<li><a class="external text" href="http://custom.simplemachines.org/mods/index.php?mod=1547" target="_blank" rel="nofollow noopener noreferrer">Stop Spammer</a></li>
+</ul>
+</div>  </section>
+
+  <section id="smf-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>SMF Help Link</h2><p>Links</p>
+<ul>
+<li><a href="http://www.simplemachines.org" target="_blank" rel="noopener noreferrer">Simple Machines Forum &#8211; Free &amp; open source community software</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 2.1</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

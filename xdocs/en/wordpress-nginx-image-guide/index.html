@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WordPress Image Guide(Nginx)</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://wordpress.org' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-envelope'></i></a></li><li><a target='_blank' href='http://community.websoft9.com/' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#wordpress-stack-components">WordPress Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-wordpress">Getting Started with WordPress</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#will-be-used-usernames-and-passwords">Will be used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup">Backup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a><li class=""><a href="#manual-backup">Manual Backup</a><li class=""><a href="#using-plugin-automatic-backup">Using Plugin Automatic Backup</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#update">Update</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#one-click-update">One-click update</a><li class=""><a href="#manual-update">Manual Update</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-themes">Using Themes</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#adding-new-themes">Adding New Themes</a><li class=""><a href="#update-theme">Update Theme</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-plugins">Using Plugins</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#adding-new-plugins">Adding New Plugins</a><li class=""><a href="#update-plugins">Update Plugins</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#useful-php-ini-settings">Useful PHP.ini Settings</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a><li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#wordpress-faq">WordPress FAQ</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-configure-domain">How to configure domain?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step-onedomain-resolution">Step One:Domain resolution</a><li class=""><a href="#step-twomodify-the-vhost-file">Step Two:Modify the Vhost file</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-a-new-wordpress-site">How to add a new Wordpress site?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-start-or-stop-the-services">How to start or stop the Services?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#more-wordpress-help-link">More WordPress Help Link</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#postscript">Postscript</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>WordPress Image Guide(Nginx)</h1>
+                              <div class="version"> Version 4.8.1</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 WordPress is a pre-configured, ready to run image for running WordPress on Alibaba Cloud.</p>
+<p>WordPress is open source software you can use to create a beautiful website, blog, or app.There 28% of the web uses WordPress, from hobby blogs to the biggest news sites online in the world.Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.Extend WordPress with over 45,000 plugins to help your website meet your needs. Add an online store, galleries, mailing lists, forums, analytics, and much more.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="wordpress-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>WordPress Stack Components</h2><p><strong>Application Software(WordPress)</strong><br />
+Software directory: <em>/data/wwwroot/wordpress</em></p>
+<p><strong>Infrastructure(PHP7.0,Nginx1.12.1)</strong><br />
+Nginx configure file:/etc/nginx/nginx.conf<br />
+Nginx vhost configure file:/etc/nginx/conf.d<br />
+PHP directory:/etc/php.d<br />
+PHP configure file:/etc.php.ini<br />
+php-fpm directory: /etc/php-fpm.d<br />
+php-fpm configure file:/etc/php-fpm.d/www.conf<br />
+log directory:/var/log/nginx</p>
+<p><strong>Database(MYSQL5.6)</strong><br />
+Database install directory: <em>/usr/share/mysql</em><br />
+Database data directory:  <em>/data/mysql</em><br />
+Database Configuration File: <em>/etc/my.cnf</em><br />
+PhpMyAdmin install directory: <em>/usr/share/phpmyadmin</em></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the installation page directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-wordpress" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with WordPress</h2><p>It is recommended to complete two steps before the the installation:</p>
+<ul>
+<li>Domain resolution if you want to use domain for this application (Add an A record to the Internet IP Address of Server from Domain Control Panel)</li>
+<li>Modify the MySQL password of r<em>oot</em> through <strong><em>http://Internet IP Address/phpmyadmin</em></strong></li>
+</ul>
+<p>Then access the installation page and complete the installation wizard for the following steps:</p>
+<ol>
+<li>Local Chrome or Firefox to visit <strong><em>http://yourdomain</em></strong> or <strong><em>http://Internet IP Address</em></strong>,you will enter the configuration inerface of installation,Select the language,Click &#8220;Continue&#8221;;<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp01.png" alt="wp01" /></a></li>
+<li>Click &#8220;Les&#8217;s go!&#8221;<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp02.png" alt="wp02" /></a></li>
+<li>Fill in your database user, password, and database name;Click &#8220;Submit&#8221;<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp04.png" alt="wp04" /></a></li>
+<li>Click &#8220;Run the install&#8221;<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp05.png" alt="wp05" /></a></li>
+<li>Set administrator user, password and mail;Click &#8220;Install WordPress&#8221;<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp06.png" alt="wp06" /></a></li>
+<li><span class="">OK, it has been installed successfully.</span></li>
+<li>Use <strong><em>http://&lt;domain name&gt;/wp-admin</em></strong>  to login to your administration.<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wp07.png" alt="wp07" /></a></li>
+</ol>
+</div>  </section>
+
+  <section id="will-be-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Will be used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、WordPress:</strong>Username and Password is<strong> </strong>set by youself when installation,<br />
+Backend URL:<em>http://youdomain.com/wp-admin</em><br />
+<strong>2、MySQL Database:</strong>Default username and password is<strong> </strong><span style="color: #ff0000;"><em>root/123456</em></span><br />
+Control Panel URL:<em>http://Internet IP Address/phpmyadmin</em><br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net/" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</p>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the “yes”<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the <em>http://Internet IP Address/phpMyAdmin</em>,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup,manual local backup,using plugin to backup in three ways, three of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the “snapshot” function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div><div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><ol>
+<li>Download the entire WordPress file in you root dictionary by FTP or other tools</li>
+<li>Visit http://&lt; Public net IP &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-mysql-backup-websoft9.png" width="635" height="444" /></li>
+<li>Click “go” button,then download the backup file</li>
+</ol>
+<p>&nbsp;</p>
+</div><div id='using-plugin-automatic-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#using-plugin-automatic-backup'>Using Plugin Automatic Backup</a></h3><p>Automatic Backup is very useful and efficient for your system maintenance.</p>
+<p>You can use the &#8220;UpdraftPlus WordPress Backup Plugin&#8221; to implement the Automatic Backup. UpdraftPlus simplifies backups (and restoration). Backup into the cloud (Amazon S3 (or compatible), Dropbox, Google Drive, Rackspace Cloud, DreamObjects, FTP, Openstack Swift, UpdraftPlus Vault and email) and restore with a single click. Backups of files and database can have separate schedules. The paid version also backs up to Microsoft OneDrive, Microsoft Azure, Google Cloud Storage, SFTP, SCP, and WebDAV.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-backup001-websoft9.png" width="772" height="250" /></p>
+<ol>
+<li>Administration Screen &gt; Plugins &gt; Installed Plugins</li>
+<li>Search the &#8220;UpdraftPlus&#8221;,install it and active it</li>
+<li>Now you’re ready to set up your backups – what you want to configure, when, how, etc. Just find the right page, and you’re away<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-backup002-websoft9.png" width="264" height="300" /></li>
+</ol>
+<p>&nbsp;</p>
+</div></div>  </section>
+
+  <section id="update" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Update</h2><p>You should always update WordPress to the latest version. When a new version of WordPress is available you will receive an update message in your WordPress Admin Screens. To update WordPress, click the link in this message.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-upgrade-websoft9.png" width="208" height="200" /></p>
+<p>There are two methods for updating &#8211; the easiest is the one-click update, which will work for most people. If it doesn&#8217;t work, or you just prefer to be more hands-on, you can follow the manual update process.</p>
+<p>&nbsp;</p>
+<div id='one-click-update' class='step-content clearfix'><h3 class='steps-header'><a href='#one-click-update'>One-click update</a></h3><p>Going to the Dashboard &gt; Updates screen. Once you are on the &#8220;Update WordPress&#8221; page, click the button &#8220;Update Now&#8221; to start the process off. You shouldn&#8217;t need to do anything else and, once it&#8217;s finished, you will be up-to-date.</p>
+<p>One-click updates work on most servers. If you have any problems, it is probably related to permissions issues on the filesystem.</p>
+<p>&nbsp;</p>
+</div><div id='manual-update' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-update'>Manual Update</a></h3><p>Manual update is more complicated than One-click update,you should check out the <a class="mw-redirect" title="Upgrading WordPress Extended" href="https://codex.wordpress.org/Upgrading_WordPress_Extended">extended upgrade instructions</a> before you update.</p>
+<p><strong>Step one</strong></p>
+<ol>
+<li>Get the <a class="external text" href="http://wordpress.org/download/" rel="nofollow">latest WordPress</a> zip (or tar.gz) file.</li>
+<li>Unpack the zip file that you downloaded.</li>
+<li>Deactivate plugins.</li>
+<li>Delete the old <code>wp-includes</code> and <code>wp-admin</code> directories on your web host (through your FTP or shell access).</li>
+<li>Using FTP or your shell access, upload the new <code>wp-includes</code> and <code>wp-admin</code> directories to your web host, in place of the previously deleted directories.</li>
+<li>Upload the individual files from the new <code>wp-content</code> folder to your existing <code>wp-content</code> folder, overwriting existing files. Do NOT delete your existing <code>wp-content</code> folder. Do NOT delete any files or folders in your existing <code>wp-content</code> directory (except for the one being overwritten by new files).</li>
+<li>Upload all new loose files from the root directory of the new version to your existing wordpress root directory</li>
+</ol>
+<p>NOTE &#8211; you should replace all the old WordPress files with the new ones in the wp-includes and wp-admin directories and sub-directories, and in the root directory (such as index.php, wp-login.php and so on). Don&#8217;t worry &#8211; your wp-config.php will be safe.</p>
+<p>Be careful when you come to copying the wp-content directory. You should make sure that you only copy the files from inside this directory, rather than replacing your entire wp-content directory. This is where your themes and plugins live, so you will want to keep them. If you have customized the default or classic themes without renaming them, make sure not to overwrite those files, otherwise you will lose your changes. (Though you might want to compare them for new features or fixes..)</p>
+<p>Lastly you should take a look at the wp-config-sample.php file, to see if any new settings have been introduced that you might want to add to your own wp-config.php.</p>
+<p><strong>Step two</strong></p>
+<p>Visit your main WordPress admin page at /wp-admin. You may be asked to login again. If a database upgrade is necessary at this point, WordPress will detect it and give you a link to a URL like <code>http://example.com/wordpress/wp-admin/upgrade.php</code>. Follow that link and follow the instructions. This will update your database to be compatible with the latest code. You should do this as soon as possible after step 1.</p>
+<p>Don&#8217;t forget to reactivate plugins!</p>
+<p><strong>Step three</strong></p>
+<p>f you have caching enabled, clear the cache at this point so the changes will go live immediately. Otherwise, visitors to your site (including you) will continue to see the old version (until the cache updates).</p>
+<p>Your WordPress installation is successfully updated. That&#8217;s as simple as we can make it without Updating WordPress Using Subversion.</p>
+<p>Consider rewarding yourself with a blog post about the update, reading that book or article you&#8217;ve been putting off, or simply sitting back for a few moments and letting the world pass you by.</p>
+<p><strong>Final Steps</strong></p>
+<p>Your update is now complete, so you can go in and enable your Plugins again. If you have issues with logging in, try clearing cookies in your browser.</p>
+<p>note:If anything has gone wrong, then the first thing to do is go through all the steps in our <a class="mw-redirect" title="Upgrading WordPress Extended" href="https://codex.wordpress.org/Upgrading_WordPress_Extended">extended upgrade instructions</a>. That page also has information about some of the most common problems we see.</p>
+<p>&nbsp;</p>
+</div></div>  </section>
+
+  <section id="using-themes" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Themes</h2><p>A WordPress Theme is a collection of files that work together to produce a graphical interface with an underlying unifying design for a weblog. These files are called template files. A Theme modifies the way the site is displayed, without modifying the underlying software. Themes may include customized template files, image files (*.jpg, *.gif), style sheets (*.css), custom Pages, as well as any necessary code files (*.php). For an introduction to template files, see Stepping Into Templates.</p>
+<p>You can get you theme by /content/themes</p>
+<p>After default installation,WordPress comes with three themes for you: the default Twenty Fifteen theme, and previous defaults Twenty Fourteen theme and Twenty Thirteen theme. You can switch between Themes using the Appearance admin panel. Themes that you add to the theme directory will appear in the Administration Screen &gt; Appearance &gt; Themes as additional selections.</p>
+<div id='adding-new-themes' class='step-content clearfix'><h3 class='steps-header'><a href='#adding-new-themes'>Adding New Themes</a></h3><ol>
+<li>Download or prepare a theme which has been packaged and the suffix of the package is zip</li>
+<li>Login to the WordPress,go to Administration Screen &gt; Appearance&gt;Themes&gt;Add new<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/WordPress-add-themes001-websoft9.png" width="922" height="405" /></li>
+<li>upload Themes or one Click the online themes,you can install the theme<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/WordPress-add-themes002-websoft9.png" width="1393" height="603" /></li>
+<li>After installation of theme,you should active it by Administration Screen &gt; Appearance &gt; Themes</li>
+<li>From the Themes panel, roll over the Theme thumbnail image for the Theme to activate the Theme click the Activate button.</li>
+</ol>
+<p>Note:If you have any problems, it is probably related to permissions issues on the file system.</p>
+<p>&nbsp;</p>
+</div><div id='update-theme' class='step-content clearfix'><h3 class='steps-header'><a href='#update-theme'>Update Theme</a></h3><p>You can get the update guide for theme from the theme provider,but there also have a general update method</p>
+<ol>
+<li>Backup all you data and files of WordPress site</li>
+<li>delete the your theme by FTP or Linux shell or Panel</li>
+<li>upload your theme and unzip it</li>
+<li>file system permission setting</li>
+<li>active the themes</li>
+<li>complete the more updating process of  you theme</li>
+</ol>
+<p>&nbsp;</p>
+</div></div>  </section>
+
+  <section id="using-plugins" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Plugins</h2><p>Plugins are ways to extend and add to the functionality that already exists in WordPress.</p>
+<p>For instructions and information on downloading, installing, upgrading, troubleshooting, and managing your WordPress Plugins, see <a title="Managing Plugins" href="https://codex.wordpress.org/Managing_Plugins">Managing Plugins</a>. If you want to develop your own plugin, there is a comprehensive list of resources in <a title="Plugin Resources" href="https://codex.wordpress.org/Plugin_Resources">Plugin Resources</a>.</p>
+<div id='adding-new-plugins' class='step-content clearfix'><h3 class='steps-header'><a href='#adding-new-plugins'>Adding New Plugins</a></h3><p>Add new plugins is very easy and similar with the add new themes</p>
+<ol>
+<li>Administration Screen &gt; Plugins &gt; Add New<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/WordPress-add-plugins001-websoft9.png" width="1306" height="735" /></li>
+<li>Search the plugins which you want,and install it,active it</li>
+<li>you can also add plugins by upload you package of zip</li>
+</ol>
+</div><div id='update-plugins' class='step-content clearfix'><h3 class='steps-header'><a href='#update-plugins'>Update Plugins</a></h3><p>There have two method for update plugins</p>
+<p>Method One</p>
+<ol>
+<li>Administration Screen &gt; Plugins &gt; Installed Plugins<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/WordPress-add-plugins002-websoft9.png" width="1402" height="495" /></li>
+<li>You can update Plugins by one-click &#8220;update now&#8221; if there have new version for plugin</li>
+</ol>
+<p>&nbsp;</p>
+<p>Method Two</p>
+<ol>
+<li>Backup all you data and files of WordPress site</li>
+<li>Deactivate the plugin</li>
+<li>delete the plugin by FTP or Linux shell or Panel</li>
+<li>upload your plugin and unzip it if necessary</li>
+<li>check you file system permission setting</li>
+<li>active the plugin</li>
+</ol>
+</div></div>  </section>
+
+  <section id="useful-php-ini-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Useful PHP.ini Settings</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient when running your application,The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 128M <b>Recommended:</b> 512M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment">~# systemctl restart nginx
+~# systemctl restart php-fpm
+</span></code></pre>
+<div id='how-to-modify-the-allowed-limit-for-upload' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-modify-the-allowed-limit-for-upload'>How to modify the allowed limit for upload?</a></h3><p>Modify the  /etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment">~# systemctl restart nginx
+~# systemctl restart php-fpm</span></code></pre>
+</div><div id='how-to-change-the-max_execution_time' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-change-the-max_execution_time'>How to change the max_execution_time?</a></h3><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div></div>  </section>
+
+  <section id="wordpress-faq" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>WordPress FAQ</h2><p>Coming Soon&#8230;</p>
+</div>  </section>
+
+  <section id="how-to-configure-domain" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure domain?</h2><p>Use domain you should complete the following steps:</p>
+<div id='step-onedomain-resolution' class='step-content clearfix'><h3 class='steps-header'><a href='#step-onedomain-resolution'>Step One:Domain resolution</a></h3><p>e.g,If you using the AliCloud Domain product,you should log in to your Domain Console Panel</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alicloud-domains.png" width="960" height="308" /></p>
+<p>And find the domain name resolution interface,then add an A record to the Internet IP Address of Server from Domain Control Panel.</p>
+</div><div id='step-twomodify-the-vhost-file' class='step-content clearfix'><h3 class='steps-header'><a href='#step-twomodify-the-vhost-file'>Step Two:Modify the Vhost file</a></h3><ol>
+<li>Using SFTP to edit the <em>/etc/nginx/conf.d/default.conf</em></li>
+<li>Modify the domain related information like below,then save it
+<pre class=" language-markup"><code class=" language-markup">ServerName www.mydomain.com
+</code></pre>
+</li>
+<li>Using putty to restart the services
+<pre class=" language-markup"><code class=" language-markup">[root@iZm5ejevtfomfw3dfdf6jmr078Z ~]# systemctl restart nginx
+[root@iZm5ejevtfomfw3dfdf6jmr078Z ~]# systemctl restart php-fpm</code></pre>
+</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When update the WordPress new version or themes and plugins is not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<p><em>chown -R www.www /data/wwwroot/default/wordpress<br />
+find /data/wwwroot/default/wordpress -type d -exec chmod 755 {} \;<br />
+find /data/wwwroot/default/wordpress -type f -exec chmod 644 {} \;</em></p>
+</div>  </section>
+
+  <section id="how-to-add-a-new-wordpress-site" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to add a new Wordpress site?</h2><p>You can add more WordPress site by the following step:</p>
+<ol>
+<li>uploading the WordPress_version.zip file to /data/wwwroot</li>
+<li>unzip the zip file</li>
+<li>rename the floder, ex. abc.com</li>
+<li>set the permission:file 644， folder 755 ，Permissions Users and groups www</li>
+<li>new database and database user</li>
+<li>set you domain to mapping the /data/wwwroot/default/abc.com</li>
+<li>add new the configuration file in the /etc/httpd/conf.d/</li>
+<li>use chrome or firefox to visit http://youdomain/ and start intallation</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the Services?</h2><p>Nginx http service</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl restart nginx
+~# systemctl restart php-fpm
+</code></pre>
+<p>MySQL  service</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl start mysqld
+~# systemctl stop mysqld
+~# systemctl restart mysqld</code></pre>
+</div>  </section>
+
+  <section id="more-wordpress-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>More WordPress Help Link</h2><p>WordPress official website has a wealth of resources:</p>
+<p><a href="https://wordpress.org" target="_blank" rel="noopener">Wordpess.org</a></p>
+</div>  </section>
+
+  <section id="postscript" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Postscript</h2><p>This document is original from Websoft9.In order to ensure the seriousness and usability of the documentation, no one may misappropriate or modify the second distribution. The need for friends reproduced please mark the source, otherwise we reserve the right to give legal action.</p>
+<p>We will periodically update the documentation. Please visit the online documentation for the latest version</p>
+<p>This document URL: <a href="http://en.websoft9.com/xdocs/wordpress-image-guide/" target="_blank" rel="noopener noreferrer">http://en.websoft9.com/xdocs/wordpress-image-guide/</a><br />
+Support &amp; Partnership: <a href="http://en.websoft9.com/">http://en.websoft9.com</a></p>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 4.8.1</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

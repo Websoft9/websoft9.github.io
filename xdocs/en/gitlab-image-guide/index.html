@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GitLab Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/gitlabhq/omnibus-gitlab' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#gitlab-stack-components">GitLab Stack Components</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#why-omnibus-package">Why Omnibus package?</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-gitlab">Getting Started with GitLab</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#will-be-used-usernames-and-passwords">Will be used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup">Backup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#gitlab-faq">GitLab FAQ</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#why-502-error">Why 502 error?</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-configure-domain">How to configure domain?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step-onedomain-resolution">Step One:Domain resolution</a><li class=""><a href="#step-onemodify-the-vhost-file">Step One:modify the vhost file</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-https">How to use https?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-start-or-stop-the-services">How to start or stop the Services?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#more-gitlab-help-link">More GitLab Help Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>GitLab Image Guide</h1>
+                              <div class="version"> Version CE10.1.0</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 GitLab Stack is a pre-configured, ready to run image for running GitLab on Alibaba Cloud.</p>
+<p>GitLab Inc. is a company based on the GitLab open-source project. GitLab is an integrated product that unifies issues, code review, CI and CD into a single UI. GitLab Inc. offers self hosted products and SaaS plans for GitLab.com. GitLab is an open source project with a large community. Over 1700 people worldwide have contributed to GitLab! GitLab Inc. is an active participant in this community, see our stewardship of GitLab CE for more information. For a more customer focused overview see our pitches. We have a lot of information available online, see the primer for a good start.</p>
+<p><img src="https://oss.aliyuncs.com/netmarket/product/0d81ea6a-5d87-46fe-aea9-6806065b2c17.png" /></p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="gitlab-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>GitLab Stack Components</h2><p>This Gitlab Image is used the Omnibus package for installation,it includes:Ruby,Gitlab-Rails,Gitlab-CI,Nginx,Postgresql..（You can view the version from:/opt/gitlab/version-manifest.txt）。</p>
+<p>GitLab&#8217;s installation directory and settings（you can edit the:/etc/gitlab/gitlab.rb for more settting of Gitlab）</p>
+<table>
+<thead>
+<tr>
+<th>Default location</th>
+<th>Permissions</th>
+<th>Ownership</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/var/opt/gitlab/git-data</code></td>
+<td>0700</td>
+<td>git:root</td>
+<td>Holds repositories directory</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/git-data/repositories</code></td>
+<td>2770</td>
+<td>git:git</td>
+<td>Holds git repositories</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/gitlab-rails/shared</code></td>
+<td>0751</td>
+<td>git:gitlab-www</td>
+<td>Holds large object directories</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/gitlab-rails/shared/artifacts</code></td>
+<td>0700</td>
+<td>git:root</td>
+<td>Holds CI artifacts</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/gitlab-rails/shared/lfs-objects</code></td>
+<td>0700</td>
+<td>git:root</td>
+<td>Holds LFS objects</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/gitlab-rails/uploads</code></td>
+<td>0700</td>
+<td>git:root</td>
+<td>Holds user attachments</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/gitlab-rails/shared/pages</code></td>
+<td>0750</td>
+<td>git:gitlab-www</td>
+<td>Holds user pages</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/gitlab-ci/builds</code></td>
+<td>0700</td>
+<td>git:root</td>
+<td>Holds CI build logs</td>
+</tr>
+<tr>
+<td><code>/var/opt/gitlab/.ssh</code></td>
+<td>0700</td>
+<td>git:git</td>
+<td>Holds authorized keys</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<div id='why-omnibus-package' class='step-content clearfix'><h3 class='steps-header'><a href='#why-omnibus-package'>Why Omnibus package?</a></h3><p>We strongly recommend the Omnibus package installation since it is quicker to install, easier to upgrade, and it contains features to enhance reliability not found in other methods. We also strongly <a title="" href="https://docs.gitlab.com/ce/install/requirements.html#cpu">recommend at least 4GB of free memory</a> to run GitLab.</p>
+</div></div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the GitLab login page directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-gitlab" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with GitLab</h2><p>You can use the Chrome or Firefox to visit the <strong><em>http://Internet IP Address/ </em></strong> after the Verify the Image step</p>
+<p>Below is the Wizard of installation:</p>
+<ol>
+<li>Enter the start page,input you new password and confirm it,then click the button&#8221;Change your password&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-createpw-websoft9.png" width="960" height="419" /></li>
+<li>Log in to Gitlab(usename is <em><span style="color: #ff0000;">root</span>,</em>password is set by yourself in previous step)<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png" width="960" height="419" /></li>
+<li>Log in successfully,you can see the welcome information below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png" width="960" height="419" /></li>
+</ol>
+<p>Remark:The memory of running the Gitlab need more than 4G,otherwise you can see the 502 error</p>
+</div>  </section>
+
+  <section id="will-be-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Will be used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、GitLab:</strong>Username is <span style="color: #ff0000;"><em>root</em></span>, Password is set by yourself<br />
+<strong>2、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net/" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</p>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the “yes”<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>Coming soon</p>
+</div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup and manual local backup in two ways, both of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the “snapshot” function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div></div>  </section>
+
+  <section id="gitlab-faq" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>GitLab FAQ</h2><div id='why-502-error' class='step-content clearfix'><h3 class='steps-header'><a href='#why-502-error'>Why 502 error?</a></h3><p>Some times you may see the 502 error below</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-502-websoft9.png" width="960" height="512" /></p>
+<p>Please don&#8217;t worry,the  most likely reason is the lack of memory,you should add more memory or add swap for your Server.</p>
+<p>Another reason,when retart Server or after the installation of Image,please wait for 5 minutes if you get 502 error</p>
+</div></div>  </section>
+
+  <section id="how-to-configure-domain" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure domain?</h2><p>Use domain you should complete the following steps:</p>
+<div id='step-onedomain-resolution' class='step-content clearfix'><h3 class='steps-header'><a href='#step-onedomain-resolution'>Step One:Domain resolution</a></h3><p>e.g,If you using the AliCloud Domain product,you should log in to your Domain Console Panel</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alicloud-domains.png" width="960" height="308" /></p>
+<p>And find the domain name resolution interface,then add an A record to the Internet IP Address of Server from Domain Control Panel.</p>
+</div><div id='step-onemodify-the-vhost-file' class='step-content clearfix'><h3 class='steps-header'><a href='#step-onemodify-the-vhost-file'>Step One:modify the vhost file</a></h3><ol>
+<li>Using SFTP to open the <em>/etc/gitlab/gitlab.rb</em></li>
+<li>Add a line content:<em>external_url “http://gitlab.example.com” </em>to the gitlab.rb,then save it</li>
+<li>Using putty to run the command
+<pre class=" language-markup"><code class=" language-markup">sudo gitlab-ctl reconfigure”</code></pre>
+</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-use-https" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use https?</h2><p>Please read:<a href="https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https" target="_blank" rel="noopener">https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https</a></p>
+</div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the Services?</h2><p>Omnibus GitLab have it own command set:</p>
+<div class="highlight">
+<pre class="highlight shell"><code><span class="c"># Start all GitLab components</span>
+<span class="nb">sudo </span>gitlab-ctl start
+
+<span class="c"># Stop all GitLab components</span>
+<span class="nb">sudo </span>gitlab-ctl stop
+
+<span class="c"># Restart all GitLab components</span>
+<span class="nb">sudo </span>gitlab-ctl restart
+
+<span class="c"># Restart Nginx</span>
+<span class="nb">sudo gitlab-ctl restart nginx</span>
+</code></pre>
+</div>
+<p>Note that on a single-core server it may take up to a minute to restart Unicorn and Sidekiq. Your GitLab instance will give a 502 error until Unicorn is up again.</p>
+<p>It is also possible to start, stop or restart individual components.</p>
+<div class="highlight">
+<pre class="highlight shell"><code><span class="nb">sudo </span>gitlab-ctl restart sidekiq
+</code></pre>
+</div>
+<p>Unicorn supports zero-downtime reloads. These can be triggered as follows:</p>
+<div class="highlight">
+<pre class="highlight shell"><code><span class="nb">sudo </span>gitlab-ctl hup unicorn
+</code></pre>
+</div>
+<p>Note that you cannot use a Unicorn reload to update the Ruby runtime.</p>
+<p>更多命令：<a href="https://docs.gitlab.com/omnibus/maintenance/README.html#starting-and-stopping" target="_blank" rel="noopener">https://docs.gitlab.com/omnibus/maintenance/README.html#starting-and-stopping</a></p>
+</div>  </section>
+
+  <section id="more-gitlab-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>More GitLab Help Link</h2><ul>
+<li><a href="https://about.gitlab.com/events/">Events</a></li>
+<li><a href="http://contributors.gitlab.com/">Contributors</a></li>
+<li><a href="https://docs.gitlab.com/">Documentation</a></li>
+<li><a href="https://about.gitlab.com/getting-help/">Getting Help</a></li>
+<li><a href="https://about.gitlab.com/contributing/">Contributing</a></li>
+<li><a href="https://about.gitlab.com/applications/">Applications</a></li>
+<li><a href="https://about.gitlab.com/mvp/">Hall of Fame</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version CE10.1.0</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

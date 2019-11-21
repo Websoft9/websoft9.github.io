@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MySQL Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/mysql' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#environment-description">Environment description</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#default-settings">Default Settings</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#mysql-version">MySQL Version</a><li class=""><a href="#mysql-process-identification-number">MySQL Process Identification Number</a><li class=""><a href="#mysql-port">MySQL Port</a></ul>                </li>
+
+              
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>MySQL Image Guide</h1>
+                              <div class="version"> Version 5.7.17</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <div class="trans-left">
+<p>Websoft9 MySQL is a pre-configured, ready to run image for running MySQL on Alibaba Cloud.</p>
+<p>MySQL is the world&#8217;s most popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications. It is intend to provide a high reliable database management system.Many of the world&#8217;s largest and fastest-growing organizations including Facebook, Google, Adobe, Alcatel Lucent and Zappos rely on MySQL to save time and money powering their high-volume Web sites, business-critical systems and packaged software.</p>
+</div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="environment-description" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Environment description</h2><p>This Stack is just intall the mysql<strong><br />
+MySQL version:</strong> MySQL5.7.17<br />
+<strong>MySQL directory:</strong> /usr/local/mysql<br />
+<strong>MySQL configuration file:</strong> /etc/my.cnf<br />
+<strong>MySQL data directory:</strong> /data/mysql</p>
+</div>  </section>
+
+  <section id="default-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Default Settings</h2><p>The grant tables define the initial MySQL user accounts and their access privileges. The default configuration consists of:</p>
+<ul>
+<li>A privileged account with a username of <em>root</em>. The <em>root</em> user has remote access to the database.</li>
+<li>An anonymous user without remote access to the database server. This user can only connect from the local machine and it is only intended for testing.</li>
+<li>A <em>test</em> database only intended for testing.</li>
+</ul>
+<div id='mysql-version' class='step-content clearfix'><h3 class='steps-header'><a href='#mysql-version'>MySQL Version</a></h3><p><strong>Log on database to view database version:</strong></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql01.png" alt="" /></a></p>
+</div><div id='mysql-process-identification-number' class='step-content clearfix'><h3 class='steps-header'><a href='#mysql-process-identification-number'>MySQL Process Identification Number</a></h3><p>The MySQL <em>.pid</em> file allows other programs to find out the PID (Process Identification Number) of a running script. Find it at data<em>/mysql/mysql.pid</em>.</p>
+<div data-unique="mysql-error-log"></div>
+</div><div id='mysql-port' class='step-content clearfix'><h3 class='steps-header'><a href='#mysql-port'>MySQL Port</a></h3><p>The default port for MySQ</p>
+</div></div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 5.7.17</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

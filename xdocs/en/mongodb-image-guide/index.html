@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MongoDB Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+    
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#environment-description">Environment description</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#mongodb-command-list">MongoDB command list</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#open-mongodb-administration-page">Open MongoDB administration page</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#more">More...</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>MongoDB Image Guide</h1>
+                              <div class="version"> Version 1.0.0</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p><strong>MongoDB</strong> for GIANT Ideas &#8211; Build innovative modern applications that create a competitive advantage.</p>
+<p><strong>This is the installation guide of  the software image powered by Websoft9.<br />
+</strong> For more technical support, please go to <a href="http://en.websoft9.com/support/" target="_blank">http://en.websoft9.com/support</a></p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="environment-description" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Environment description</h2><p><strong>MongoDB version: </strong>MongoDB3.4.2<br />
+<strong>MongoDB </strong><strong>directory:</strong> /usr/local/mongodb<br />
+<strong>MongoDB </strong><strong>data file:</strong> /data/mongo_data<br />
+<strong>MongoDB automatic startup script file</strong><strong>: </strong><em>/etc/rc.local</em></p>
+<p><strong>Other basic software environment (LAMP) guide:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank"><span style="color: #3c8dbc;">Click here</span></a></p>
+</div>  </section>
+
+  <section id="mongodb-command-list" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>MongoDB command list</h2><p>root@iZbp1i4rjdsy216yq7lgucZ:~#<code> mongod -h</code><br />
+Options:</p>
+<p>General options:<br />
+-h [ &#8211;help ]                         show this usage information<br />
+&#8211;version                             show version information<br />
+-f [ &#8211;config ] arg                   configuration file specifying<br />
+additional options<br />
+-v [ &#8211;verbose ] [=arg(=v)]           be more verbose (include multiple times<br />
+for more verbosity e.g. -vvvvv)<br />
+&#8211;quiet                               quieter output<br />
+&#8211;port arg                            specify port number &#8211; 27017 by default<br />
+&#8211;bind_ip arg                         comma separated list of ip addresses to<br />
+listen on &#8211; all local ips by default<br />
+&#8211;ipv6                                enable IPv6 support (disabled by<br />
+default)<br />
+&#8211;maxConns arg                        max number of simultaneous connections<br />
+&#8211; 1000000 by default<br />
+&#8211;logpath arg                         log file to send write to instead of<br />
+stdout &#8211; has to be a file, not<br />
+directory<br />
+&#8211;syslog                              log to system&#8217;s syslog facility instead<br />
+of file or stdout<br />
+&#8211;syslogFacility arg                  syslog facility used for mongodb syslog<br />
+message<br />
+&#8211;logappend                           append to logpath instead of<br />
+over-writing<br />
+&#8211;logRotate arg                       set the log rotation behavior<br />
+(rename|reopen)<br />
+&#8211;timeStampFormat arg                 Desired format for timestamps in log<br />
+messages. One of ctime, iso8601-utc or<br />
+iso8601-local<br />
+&#8211;pidfilepath arg                     full path to pidfile (if not set, no<br />
+pidfile is created)<br />
+&#8211;keyFile arg                         private key for cluster authentication<br />
+&#8211;noauth                              run without security<br />
+&#8211;setParameter arg                    Set a configurable parameter<br />
+&#8211;httpinterface                       enable http interface<br />
+&#8211;transitionToAuth                    For rolling access control upgrade.<br />
+Attempt to authenticate over outgoing<br />
+connections and proceed regardless of<br />
+success. Accept incoming connections<br />
+with or without authentication.<br />
+&#8211;clusterAuthMode arg                 Authentication mode used for cluster<br />
+authentication. Alternatives are<br />
+(keyFile|sendKeyFile|sendX509|x509)<br />
+&#8211;nounixsocket                        disable listening on unix sockets<br />
+&#8211;unixSocketPrefix arg                alternative directory for UNIX domain<br />
+sockets (defaults to /tmp)<br />
+&#8211;filePermissions arg                 permissions to set on UNIX domain<br />
+socket file &#8211; 0700 by default<br />
+&#8211;fork                                fork server process<br />
+&#8211;networkMessageCompressors arg       Comma-separated list of compressors to<br />
+use for network messages<br />
+&#8211;auth                                run with security<br />
+&#8211;jsonp                               allow JSONP access via http (has<br />
+security implications)<br />
+&#8211;rest                                turn on simple rest api<br />
+&#8211;slowms arg (=100)                   value of slow for profile and console<br />
+log<br />
+&#8211;profile arg                         0=off 1=slow, 2=all<br />
+&#8211;cpu                                 periodically show cpu and iowait<br />
+utilization<br />
+&#8211;sysinfo                             print some diagnostic system<br />
+information<br />
+&#8211;noIndexBuildRetry                   don&#8217;t retry any index builds that were<br />
+interrupted by shutdown<br />
+&#8211;noscripting                         disable scripting engine<br />
+&#8211;notablescan                         do not allow table scans<br />
+&#8211;shutdown                            kill a running server (for init<br />
+scripts)</p>
+<p>Replication options:<br />
+&#8211;oplogSize arg                       size to use (in MB) for replication op<br />
+log. default is 5% of disk space (i.e.<br />
+large is good)</p>
+<p>Master/slave options (old; use replica sets instead):<br />
+&#8211;master                              master mode<br />
+&#8211;slave                               slave mode<br />
+&#8211;source arg                          when slave: specify master as<br />
+&lt;server:port&gt;<br />
+&#8211;only arg                            when slave: specify a single database<br />
+to replicate<br />
+&#8211;slavedelay arg                      specify delay (in seconds) to be used<br />
+when applying master ops to slave<br />
+&#8211;autoresync                          automatically resync if slave data is<br />
+stale</p>
+<p>Replica set options:<br />
+&#8211;replSet arg                         arg is &lt;setname&gt;[/&lt;optionalseedhostlist<br />
+&gt;]<br />
+&#8211;replIndexPrefetch arg               specify index prefetching behavior (if<br />
+secondary) [none|_id_only|all]<br />
+&#8211;enableMajorityReadConcern           enables majority readConcern</p>
+<p>Sharding options:<br />
+&#8211;configsvr                           declare this is a config db of a<br />
+cluster; default port 27019; default<br />
+dir /data/configdb<br />
+&#8211;shardsvr                            declare this is a shard db of a<br />
+cluster; default port 27018</p>
+<p>SSL options:<br />
+&#8211;sslOnNormalPorts                    use ssl on configured ports<br />
+&#8211;sslMode arg                         set the SSL operation mode<br />
+(disabled|allowSSL|preferSSL|requireSSL<br />
+)<br />
+&#8211;sslPEMKeyFile arg                   PEM file for ssl<br />
+&#8211;sslPEMKeyPassword arg               PEM file password<br />
+&#8211;sslClusterFile arg                  Key file for internal SSL<br />
+authentication<br />
+&#8211;sslClusterPassword arg              Internal authentication key file<br />
+password<br />
+&#8211;sslCAFile arg                       Certificate Authority file for SSL<br />
+&#8211;sslCRLFile arg                      Certificate Revocation List file for<br />
+SSL<br />
+&#8211;sslDisabledProtocols arg            Comma separated list of TLS protocols<br />
+to disable [TLS1_0,TLS1_1,TLS1_2]<br />
+&#8211;sslWeakCertificateValidation        allow client to connect without<br />
+presenting a certificate<br />
+&#8211;sslAllowConnectionsWithoutCertificates<br />
+allow client to connect without<br />
+presenting a certificate<br />
+&#8211;sslAllowInvalidHostnames            Allow server certificates to provide<br />
+non-matching hostnames<br />
+&#8211;sslAllowInvalidCertificates         allow connections to servers with<br />
+invalid certificates<br />
+&#8211;sslFIPSMode                         activate FIPS 140-2 mode at startup</p>
+<p>Storage options:<br />
+&#8211;storageEngine arg                   what storage engine to use &#8211; defaults<br />
+to wiredTiger if no data files present<br />
+&#8211;dbpath arg                          directory for datafiles &#8211; defaults to<br />
+/data/db<br />
+&#8211;directoryperdb                      each database will be stored in a<br />
+separate directory<br />
+&#8211;noprealloc                          disable data file preallocation &#8211; will<br />
+often hurt performance<br />
+&#8211;nssize arg (=16)                    .ns file size (in MB) for new databases<br />
+&#8211;quota                               limits each database to a certain<br />
+number of files (8 default)<br />
+&#8211;quotaFiles arg                      number of files allowed per db, implies<br />
+&#8211;quota<br />
+&#8211;smallfiles                          use a smaller default file size<br />
+&#8211;syncdelay arg (=60)                 seconds between disk syncs (0=never,<br />
+but not recommended)<br />
+&#8211;upgrade                             upgrade db if needed<br />
+&#8211;repair                              run repair on all dbs<br />
+&#8211;repairpath arg                      root directory for repair files &#8211;<br />
+defaults to dbpath<br />
+&#8211;journal                             enable journaling<br />
+&#8211;nojournal                           disable journaling (journaling is on by<br />
+default for 64 bit)<br />
+&#8211;journalOptions arg                  journal diagnostic options<br />
+&#8211;journalCommitInterval arg           how often to group/batch commit (ms)</p>
+<p>WiredTiger options:<br />
+&#8211;wiredTigerCacheSizeGB arg           maximum amount of memory to allocate<br />
+for cache; defaults to 1/2 of physical<br />
+RAM<br />
+&#8211;wiredTigerStatisticsLogDelaySecs arg (=0)<br />
+seconds to wait between each write to a<br />
+statistics file in the dbpath; 0 means<br />
+do not log statistics<br />
+&#8211;wiredTigerJournalCompressor arg (=snappy)<br />
+use a compressor for log records<br />
+[none|snappy|zlib]<br />
+&#8211;wiredTigerDirectoryForIndexes       Put indexes and data in different<br />
+directories<br />
+&#8211;wiredTigerCollectionBlockCompressor arg (=snappy)<br />
+block compression algorithm for<br />
+collection data [none|snappy|zlib]<br />
+&#8211;wiredTigerIndexPrefixCompression arg (=1)<br />
+use prefix compression on row-store<br />
+leaf pages</p>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="open-mongodb-administration-page" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Open MongoDB administration page</h2><p>NOTE: Use following URL to open MongoDB administration pagepage:</p>
+<p><strong><code>http://&lt; Public net IP &gt;:28017</code> </strong></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/mongodb/mg01.png" target="_blank"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mongodb/mg01.png" alt="" /></a></p>
+</div>  </section>
+
+  <section id="more" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>More...</h2><h3 class="steps-header">Links</h3>
+<ul>
+<li><a href="https://www.mongodb.com" target="_blank"><span style="color: #3c8dbc;"><strong>MongoDB</strong> | for GIANT Ideas </span></a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 1.0.0</div>
+               </div>
+
+      </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drupal Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/drupal/drupal' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#drupal-stack-components">Drupal Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#getting-started-with-drupal">Getting Started with Drupal</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-drupal">Step3. Install Drupal</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-modules">Using Modules</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#install-module">Install Module</a><li class=""><a href="#enable-module">Enable Module</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-themes">Using Themes</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#install-themes">Install Themes</a><li class=""><a href="#complete-theme-installtaon">Complete Theme Installtaon</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup">Backup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#manual-backup">Manual Backup</a><li class=""><a href="#using-modulebackup-and-migrate">Using Module:Backup and Migrate</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#update-upgrade">Update & Upgrade</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#update">Update</a><li class=""><a href="#upgrade">Upgrade</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#more-drupal-help-link">More Drupal Help Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Drupal Image Guide</h1>
+                              <div class="version"> Version 8.2.6</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Drupal is a pre-configured, ready to run image for running Drupal on Alibaba Cloud.</p>
+<p>Drupal is content management software. It&#8217;s used to make many of the websites and applications you use every day. Drupal has great standard features, like easy content authoring, reliable performance, and excellent security. But what sets it apart is its flexibility; modularity is one of its core principles. Its tools help you build the versatile, structured content that dynamic web experiences need.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="drupal-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Drupal Stack Components</h2><p><strong>Software Version:</strong> Drupal8.2.6<br />
+<strong>Software directory:</strong> /data/wwwroot/default/drupal</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+<strong>PHP Configuration File:</strong> /usr/local/php/etc/php.ini<br />
+<strong>Virtual host Configuration File directory:</strong> /usr/local/apache/conf/vhost.sh<br />
+<strong>Virtual host Configuration Command:</strong> /root/oneinstack/vhost</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-bootpage-websoft9.png" width="688" height="486" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="getting-started-with-drupal" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Drupal</h2><div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><em>mysql -uroot –p</em>                      #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p>MySQL [(none)]&gt; <em>create database mydbname;</em></p>
+<p>MySQL [(none)]&gt; <em>show databases;</em></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p>MySQL [(none)]&gt; <em>grant all privileges on mydbname.* to username@&#8217;localhost&#8217; identified by &#8216;userpassword&#8217;;</em></p>
+<p>MySQL [(none)]&gt; <em>flush privileges;</em></p>
+<p>MySQL [(none)]&gt; <em>exit;</em></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p>[root@iZbp1i4rjdsy216yq7lgucZ ~]# <em>cd /root/oneinstack</em></p>
+<p>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# <em>./vhost.sh</em></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp00.png" alt="" /></a></p>
+</div><div id='step3-install-drupal' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-drupal'>Step3. Install Drupal</a></h3><p><strong>Open your domain name via browser:</strong><br />
+<strong>1. Choose a language,Click “Save and continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp01.png" alt="" /></a><br />
+<strong>2. Click “Save and continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp02.png" alt="" /></a><br />
+<strong>3. Fill in your Database configuration, Click “Save and continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp03.png" alt="" /></a><br />
+<strong>4. The page appears, please wait a moment;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp04.png" alt="" /></a><br />
+<strong>5. Fill in your Site configuration, Click “Save and continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp05.png" alt="" /></a><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp06.png" alt="" /></a><br />
+<strong>6. <span class="">OK, it has been installed successfully.</span></strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/dp07.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="using-modules" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Modules</h2><p>Modules provide functionality to your site, and the &#8216;core modules&#8217;, which are included in a standard installation, provide all of the basic functions that most sites need.</p>
+<p>Some of the core modules, however, are not enabled (turned on) by default. Therefore, you might want to examine the module list on the &#8216;Extend&#8217; page of your site to see whether or not some functionality you seek is available from a core module that is not enabled, before you spend time investigating contrib modules.</p>
+<div id='install-module' class='step-content clearfix'><h3 class='steps-header'><a href='#install-module'>Install Module</a></h3><ol>
+<li>Enter the <a href="https://www.drupal.org/project/project_module" target="_blank" rel="noopener noreferrer">Module page</a> of Drupal,search the Module suitable for the core compatibility<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-searchformodule-websoft9.png" width="652" height="405" /></li>
+<li>Get one Module&#8217;s url address or download it.<br />
+e.g.https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.19.tar.gz<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-dlmodule-websoft9.png" width="652" height="291" /></li>
+<li>Go to your &#8216;Extend&#8217; page, and near the page-top, just under the word &#8216;Extend&#8217;, you should see the button/link &#8220;Install new module&#8221;.<br />
+<img class="alignnone size-medium" src="http:///libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-extend-websoft9.png" width="970" height="438" /></li>
+<li>Paste the URL, which you have &#8216;copied&#8217;, into the box for: &#8216;Install from a URL&#8217;.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-install_manager_module-websoft9.png" width="423" height="232" /></li>
+<li>or upload the module file *.tar.gz file, or the *.zip file. (Windows: use *.zip) and click the &#8220;Install&#8221; button</li>
+<li>On the next page that loads, you will see &#8220;Installation was completed successfully.&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-moduleinstalled-websoft9.png" width="778" height="420" /></li>
+<li>Click the link &#8220;Enable newly added modules&#8221; to return to the Drupal &#8216;Extend&#8217; page.</li>
+</ol>
+<p>note:If you do not see the button/link &#8220;Install new module&#8221; at the top of the &#8216;Modules&#8217; page, return above to this page&#8217;s section Enable the Drupal core module &#8216;Update manager&#8217; ⤴ and carefully follow all of the steps outlined there.</p>
+</div><div id='enable-module' class='step-content clearfix'><h3 class='steps-header'><a href='#enable-module'>Enable Module</a></h3><p>You should enable the module after the installation of module</p>
+<ol>
+<li>go to Administration-&gt;Manage-&gt;Extend,you can see the modules list</li>
+<li>select the module which you want to enable<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-enablemodule-websoft9.png" width="1012" height="609" /></li>
+<li>Click the &#8220;Install&#8221; button,you will receive the message like &#8220;2 modules have been enabled: Admin Toolbar, Admin Toolbar Extra Tools.&#8221;</li>
+</ol>
+</div></div>  </section>
+
+  <section id="using-themes" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Themes</h2><p>Drupal places all core code and themes under a directory named /core/ and all contrib or custom themes in webroot directory /themes. /sites/all/themes</p>
+<div id='install-themes' class='step-content clearfix'><h3 class='steps-header'><a href='#install-themes'>Install Themes</a></h3><p>You can install the themes online that similar with the Module&#8217;s installation</p>
+<ol>
+<li>Enter the <a href="https://www.drupal.org/project/project_theme" target="_blank" rel="noopener noreferrer">Themes page</a> of Drupal,search the Module suitable for the core compatibility</li>
+<li>Get one Theme’s URL address or download it.<br />
+e.g.https://ftp.drupal.org/files/projects/adminimal_theme-8.x-1.3.tar.gz</li>
+<li>Administration-&gt;Appearance,sytem list all the themes for you.Click the &#8220;Install the theme&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-installthemes-websoft9.png" width="949" height="684" /></li>
+<li>Paste the URL, which you have ‘copied’, into the box for: ‘Install from a URL’.</li>
+<li>or upload the Theme file *.tar.gz file, or the *.zip file. (Windows: use *.zip) and click the “Install” button</li>
+<li>On the next page that loads, you will see “Installation was completed successfully.”</li>
+</ol>
+<p>&nbsp;</p>
+</div><div id='complete-theme-installtaon' class='step-content clearfix'><h3 class='steps-header'><a href='#complete-theme-installtaon'>Complete Theme Installtaon</a></h3><p>You should enable the module after the installation of module</p>
+<ol>
+<li>go to Administration-&gt;Appearance,you can see the modules list</li>
+<li>Find the &#8220;Uninstalled themes&#8221;,and the &#8220;install&#8221; link on the your theme<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-completeinstall-theme-websoft9.png" width="955" height="441" /></li>
+<li>then select one theme as &#8220;Set as default&#8221;</li>
+</ol>
+</div></div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>You must do some backups for any restore later,it is very import.</p>
+<p>Any backup method of Drupal,you should backup program files and databases.</p>
+<p>&nbsp;</p>
+<div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><ol>
+<li>Download the entire Drupal file in you root dictionary by FTP or other tools</li>
+<li>Visit http://&lt; Public net IP &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-mysql-backup-websoft9.png" width="635" height="444" /></li>
+<li>Click “go” button,then download the backup file</li>
+</ol>
+</div><div id='using-modulebackup-and-migrate' class='step-content clearfix'><h3 class='steps-header'><a href='#using-modulebackup-and-migrate'>Using Module:Backup and Migrate</a></h3><p><a href="https://www.drupal.org/project/backup_migrate" target="_blank" rel="noopener noreferrer">Backup and Migrate</a> is a very popular Module for Backup of Drupal.It can back up and restore your Drupal MySQL database, code, and files or migrate a site between environments. Backup and Migrate supports gzip, bzip and zip compression as well as automatic scheduled backups.</p>
+<p>With Backup and Migrate you can dump some or all of your database tables to a file download or save to a file on the server or offsite, and to restore from an uploaded or previously saved database dump. You can choose which tables and what data to backup and cache data is excluded by default.</p>
+<p>How to use it?</p>
+<ul>
+<li>Install Backup and Migrate online</li>
+<li>go to Administrator-&gt;Configuration-&gt;Development,open the &#8220;Backup and Migrate&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-backupnow-websoft9.png" width="700" height="492" /></li>
+<li>Use the backup policy settings and backup capabilities</li>
+</ul>
+<p>&nbsp;</p>
+</div></div>  </section>
+
+  <section id="update-upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Update & Upgrade</h2><p>Update and upgrade are different in Drupal</p>
+<p><strong>&#8216;Update&#8217; Drupal Core: a &#8216;minor&#8217; version change</strong></p>
+<p>Strictly speaking, &#8216;updating&#8217; refers to taking your site from one &#8216;minor&#8217; version to another, as for example, from Drupal 7 version d7.1, to d7.2; or from Drupal 8 version d8.0.0 to d8.1.3, etc.<br />
+&#8216;<strong>Upgrade&#8217; Drupal Core: a &#8216;major&#8217; version change</strong></p>
+<p>The difference between Drupal 6, Drupal 7, and Drupal 8 is that each of those are considered a different &#8216;Major&#8217; version of Drupal.</p>
+<p>Upgrade: Switching from Drupal 6 to Drupal 7, or from Drupal 6 to Drupal 8, or from Drupal 7 to Drupal 8 is an &#8216;upgrade&#8217;.</p>
+<div id='update' class='step-content clearfix'><h3 class='steps-header'><a href='#update'>Update</a></h3><p>When you get the Update tips like &#8221; There is a security update available for your version of Drupal. To ensure the security of your server, you should update immediately! See the available updates page for more information and to install your missing updates.&#8221;You should consider the updating of Drupal.</p>
+<p>go to Administrator-&gt;update,get the accurate version update information</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/drupal/drupal-update-websoft9.png" width="1060" height="456" /></p>
+<p>How to update?please read the document below</p>
+<ul>
+<li><a href="https://www.drupal.org/node/2550801" rel="nofollow">Updating Drupal using Drush</a></li>
+<li><a href="https://www.drupal.org/node/359234" rel="nofollow">Updating Drupal using a patch file</a></li>
+</ul>
+<p>Follow these instructions:</p>
+<ol>
+<li>Make a backup of your Drupal instance (database). (For ex: with MySQL)</li>
+<li>Download the latest release of your current Drupal version.</li>
+<li>Extract the [tar ball or zip] Drupal package.</li>
+<li>Set your site on maintenance mode (For ex: How on D7)</li>
+<li>Delete all the files &amp; folders inside your original Drupal instance except for <em>/sites and its sub-folders. This assumes that all of your custom work &#8211; including themes &#8211; is in the recommended spot &#8211; the /sites folder tree. If you have made custom changes elsewhere you will need to either preserve them or plan to replace them later. Warning: If your Drupal installation is built from a distribution your site will break if you delete the /profiles folder. Don&#8217;t delete the profile folder that corresponds to the distribution you installed, for example /profiles/kickstart if you installed Drupal Commerce Kickstart.</em></li>
+<li>Copy all the folders and files except <em>/sites</em> from inside the extracted Drupal package [tar ball or zip package] into your original Drupal instance location.</li>
+<li>Some updates do not include changes to setting.php and some do. If the update release includes changes to <em>settings.php </em>you will need to replace your old settings.php in <em>&#8230;/sites/default/</em> with the new one, and then edit the site-specific entries (eg database name, user, and password) in the setting file.</li>
+<li>If you have modified files such as .htaccess or robots.txt re-apply those changes to the new files.</li>
+<li>If you have a favicon.ico file that was deleted replace it too</li>
+<li>Login to your site as administrator or as user no 1</li>
+<li>Run update.php by navigating to <em>http://yourdrupalsitename/update.php</em> and follow the process to update your Drupal instance</li>
+<li>Disable maintenance mode</li>
+</ol>
+</div><div id='upgrade' class='step-content clearfix'><h3 class='steps-header'><a href='#upgrade'>Upgrade</a></h3><p>The process of upgrading to the latest version of Drupal can vary in difficulty depending on the complexity of your current installation. This guide aims to help you plan for and complete a successful upgrade regardless of the size or complexity of your current site.</p>
+<p>Any Drupal upgrade has four general steps: Planning, Preparing your current site for upgrade, Upgrading, and Testing.</p>
+<p>Read more from <a href="https://www.drupal.org/docs/8/upgrade" target="_blank" rel="noopener noreferrer">Upgrade to Drupal 8</a></p>
+</div></div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new Module from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre><code class="language-markup">chown -R www.www /data/wwwroot/default/drupal
+find /data/wwwroot/default/drupal -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/drupal -type f -exec chmod 644 {} \;</code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p><span style="color: #000000;">There are some PHP settings that need to be sufficient for Drupal</span></p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 128M <b>Recommended:</b> 256M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Joomla Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="more-drupal-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>More Drupal Help Link</h2><h3 class="steps-header">Links</h3>
+<ul>
+<li><a href="https://www.drupal.org/" target="_blank" rel="noopener noreferrer">Drupal &#8211; Open Source CMS | Drupal.org</a></li>
+<li><a href="https://www.drupal.org/documentation" target="_blank" rel="noopener noreferrer">https://www.drupal.org/documentation</a></li>
+</ul>
+<pre></pre>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 8.2.6</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Magento Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/magento' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#magento-stack-components">Magento Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#getting-started-with-magento">Getting Started with Magento</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-magento">Step3. Install Magento</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#component-manager">Component Manager</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup-restore">Backup & Restore</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#to-schedule-backups">To schedule backups</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-flush-the-cache">How To Flush The Cache?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-disable-the-cache">How To Disable The Cache?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-generate-the-access-keys">How to generate the Access Keys?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-use-cdn">How to use CDN?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#magento-help-link">Magento Help Link</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Magento Image Guide</h1>
+                              <div class="version"> Version 2.1.5</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <div class="trans-left">Websoft9 Magento is a pre-configured, ready to run image for running Magento on Alibaba Cloud.</div>
+<div class="trans-left"></div>
+<div class="trans-left">Magento is the World’s #1 Commerce Platform,it is the most popular commerce platform in the world, with more than 250,000 merchants around the globe selling more and driving innovation. Just check out our customer stories to find out how the Magento Advantage really works.</div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="magento-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Magento Stack Components</h2><p><strong>Software Version:</strong> Magento 2.1.5<br />
+<strong>Software directory:</strong> /data/wwwroot/default/magento2</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+<strong>PHP Configuration File:</strong> /usr/local/php/etc/php.ini<br />
+<strong>Virtual host Configuration File directory:</strong> /usr/local/apache/conf/vhost<br />
+<strong>Virtual host Configuration Command:</strong> /root/oneinstack/vhost.sh</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-bootpage-websoft9.png" width="844" height="540" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="getting-started-with-magento" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Magento</h2><div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><code>mysql -uroot –p </code>                                #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p>&nbsp;</p>
+<p><code>MySQL [(none)]&gt; create database mydbname; </code></p>
+<p><code>MySQL [(none)]&gt; show databases;</code></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p><code>MySQL [(none)]&gt; grant all privileges on mydbname.* to username@'localhost' identified by 'userpassword'; </code></p>
+<p><code>MySQL [(none)]&gt; flush privileges; </code></p>
+<p><code>MySQL [(none)]&gt; exit;</code></p>
+<p>&nbsp;</p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /root/oneinstack </code></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# ./vhost.sh</code></p>
+<p>&nbsp;</p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg00.png" alt="" /></a></p>
+</div><div id='step3-install-magento' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-magento'>Step3. Install Magento</a></h3><p><strong>Open your domain name via browser:</strong><br />
+<strong>1. Click “Agree and Setup Magento”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg01.png" alt="" /></a><br />
+<strong>2. Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg02.png" alt="" /></a><br />
+<strong>3. Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg03.png" alt="" /></a><br />
+<strong>4. Fill in your database configuration,Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg04.png" alt="" /></a><br />
+<strong>5. Customize your store, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg05.png" alt="" /></a><br />
+<strong>6. Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg06.png" alt="" /></a><br />
+<strong>7. Set Admin Account, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg07.png" alt="" /></a><br />
+<strong>8. Click “Install Now”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg08.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg08.png" alt="" /></a><br />
+<strong>9. OK, it has been installed successfully，The page displays the installed site information. Click &#8220;Magento Admin Address&#8221;.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg09.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg09.png" alt="" /></a><br />
+<strong>10. Fill in Admin User and Password, Click “Sign in”; Icon is not displayed on the page.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg10.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg10.png" alt="" /></a><br />
+<strong>11. Use SSH Command to install static content;</strong><br />
+<code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /data/wwwroot/default/magento2/bin </code></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ bin]# php magento setup:static-content:deploy</code><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg11.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg11.png" alt="" /></a><br />
+<strong>11. Refresh web pages with F5; The page display normal.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg12.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg12.png" alt="" /></a></p>
+<p>Use <strong><em>http://&lt;domain name&gt;/</em></strong>  to go to your index page.<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg13.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg13.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="component-manager" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Component Manager</h2><p>Installing an extension is a three-step process that should take place during off-peak hours. Before the extension is installed, your store is put into maintenance mode, checked for readiness, and backed up. After the extension is installed, it must be configured for your store according to the developer’s instructions.</p>
+<p>How to intall component?<a href="http://docs.magento.com/m2/ce/user_guide/system/component-manager.html" target="_blank" rel="noopener noreferrer">http://docs.magento.com/m2/ce/user_guide/system/component-manager.html</a></p>
+</div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>Your Magento installation can be upgraded from the Admin of your store, using the Web Setup Wizard. However, developers who work from the command line usually prefer to upgrade Magento using Composer.</p>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>1.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;1.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Log in to the Admin of your Store as the primary Admin user.</td>
+</tr>
+</tbody>
+</table>
+<p class="noteAfterNumber">To ensure the fastest upgrade, verify that Cron is configured to run every minute.</p>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>2.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;2.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">On the Admin sidebar, tap <b class="Command">System</b>. Then under <b class="Command">Tools</b>, choose <b class="Command">Web Setup Wizard</b>.</td>
+</tr>
+</tbody>
+</table>
+<div class="Image"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-upgrade001-websoft9.png" width="1144" height="520" /><br />
+Web Setup Wizard</div>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>3.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;3.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Tap <b class="Command">System Upgrade</b>.</td>
+</tr>
+</tbody>
+</table>
+<div class="Image"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-upgrade002-websoft9.png" width="1725" height="736" /><br />
+System Upgrade</div>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>4.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;4.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">If available, your <b class="Command">Public Access Key</b> appears in the form. Follow the instructions to paste the matching<b class="Command">Private Access Key</b> from the Markeplace tab of your Magento account.</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>5.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;5.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Tap <span class="btn">Submit</span>, and do the following:</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>a.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;a.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">During Step 1 of the system upgrade, your current installation is analyzed. If your installation includes extensions and <b class="Command">Other Components</b>, select the “Yes” option.</td>
+</tr>
+</tbody>
+</table>
+<p class="IndentAfterAlpha">If a more recent version is available, you will continue to the next step.</p>
+<div class="Image"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-upgrade003-websoft9.png" width="1727" height="617" /><br />
+Step 1: Select Version</div>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>b.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;b.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">During the Readiness Check, the environment is verified for the required PHP version, settings, and extensions, and file permissions.</td>
+</tr>
+</tbody>
+</table>
+<p class="IndentAfterAlpha">If your system passes the Readiness check, click <b class="Command">Next</b> to continue.</p>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>c.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;c.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Continue to follow the prompts to create a backup of your system, and to upgrade your Magento installation.</td>
+</tr>
+</tbody>
+</table>
+</div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p><span class="MyVariablesProduct">Magento </span>gives you the ability to back up different parts of the system—such as the file system, database, and media files—and to rollback automatically. A record for each backup appears in the grid on the Backups page. Deleting a record from the list deletes the archived file as well. Database backup files are compressed using the .GZ format. For the system backups and database and media backups, the .TGZ format is used. As a best practice, you should restrict access to backup tools, and back up before installing extensions and updates.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-backup-websoft9.png" width="1523" height="712" /></p>
+<p>1.On the Admin sidebar, tap System. Then under Tools, choose Backups.<br />
+2.In the upper-right corner, tap the button for the type of backup you want to create:<br />
+System Backup:Creates a complete backup of the database and the file system. During the process, you can choose to include the media folder in the backup.<br />
+Database and Media Backup:Creates a backup of the database and the media folder.<br />
+Database Backup:Creates a backup of the database.</p>
+<p>3.To put the store into maintenance mode during the backup, mark the checkbox. When the backup is complete, maintenance mode is turned off automatically.<br />
+4.For a system backup, mark the Include Media folder to System Backup checkbox if you want to include the media folder. Then when prompted, confirm the action.</p>
+<div id='to-schedule-backups' class='step-content clearfix'><h3 class='steps-header'><a href='#to-schedule-backups'>To schedule backups</a></h3><table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>1.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;1.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">On the Admin sidebar, tap <b class="Command">Stores</b>. Then under <b class="Command">Settings</b>, choose <b class="Command">Configuration</b>.</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>2.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;2.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">In the panel on the left under <b class="Command">Advanced</b>, choose <b class="Command">System</b>.</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>3.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;3.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Expand <img class="Inline" src="http://docs.magento.com/m2/ce/user_guide/Resources/Images/btn-expand.png" /> the <b class="Command">Scheduled Backup Settings</b> section, and do the following:</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>4.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;4.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">When complete, tap <span class="btn">Save Config</span>.</td>
+</tr>
+</tbody>
+</table>
+</div></div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Magento Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-flush-the-cache" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How To Flush The Cache?</h2><p>In order to purge out-of-date items from the cache, you can clean or flush cache types:</p>
+<ul>
+<li>Cleaning a cache type deletes all items from enabled Magento cache types only. In other words, this option does not affect other processes or applications because it only cleans the cache used by Magento. Disabled cache types are not cleaned.</li>
+<li>Flushing a cache type purges the cache storage, which might affect other processes applications that are using the same storage.</li>
+</ul>
+<p>Flush cache types if you&#8217;ve already tried cleaning the cache and you still have unresolved issues.</p>
+<div data-unique="flush-the-cache-using-the-command-line">You can flush the Cache using The Web Interface</div>
+<div data-unique="flush-the-cache-using-the-command-line">
+<p>Flushing all cache types:</p>
+<ol>
+<li>Open the Administration panel and click on &#8220;System-&gt; Tools-&gt; Cache Management&#8221;.</li>
+<li>Select all cache types and &#8220;Refresh&#8221; action in the drop down box located on the top left margin.</li>
+<li>Click both buttons &#8220;Flush Magento Cache&#8221; and &#8220;Flush Cache Storage&#8221;.</li>
+</ol>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-flushcache-websoft9.png" width="952" height="420" /></p>
+<div data-unique="how-to-disable-the-cache"></div>
+</div>
+</div>  </section>
+
+  <section id="how-to-disable-the-cache" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How To Disable The Cache?</h2><p>Go to &#8220;System -&gt; Tools -&gt; Cache Management&#8221;, mark all cache types and select &#8220;Disable&#8221; in the action box. Click the &#8220;Submit&#8221; button.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-discache-websoft9.png" width="952" height="297" /></p>
+</div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/magento
+find /data/wwwroot/default/magento -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/magento -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient for Magento to install.</p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 64M <b>Recommended:</b> 128M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="how-to-generate-the-access-keys" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to generate the Access Keys?</h2><p>1.Go to your <a href="https://marketplace.magento.com/" target="_blank" rel="noopener noreferrer">Magento Marketplace account page</a>.<br />
+2.Click the Marketplace tab. Then under My Products, click My Access Keys.<br />
+3.On the Magento 2 tab, click Create a New Access Key.<br />
+4.Assign a name for the key, and tap Generate New.<br />
+5.At the top of the My Access Keys page, click My Account to return to your Magento account.</p>
+</div>  </section>
+
+  <section id="how-to-use-cdn" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use CDN?</h2><p>Storing media files in a CDN is another alternative supported in Magento. There is no full integration with a specific CDN, and you are responsible for choosing and configuring a CDN on your own.</p>
+<p>After configuring the CDN, you must complete the configuration from the Admin. The changes can be made at either the global or website level. When a CDN is used for media storage, all paths to media on store pages are changed to the CDN paths that are specified in the configuration.</p>
+<p class="ToDo">To configure a content delivery network:</p>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>1.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;1.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">On the Admin <a class="MCTextPopup MCTextPopupHotSpot MCTextPopupHotSpot_ #text MCTextPopup_Closed" data-mc-state="closed">sidebar</a>, tap <b class="Command">Stores</b>. Then under <b class="Command">Settings</b>, choose <b class="Command">Configuration</b>.</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>2.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;2.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">In the panel on the left under <b class="Command">General</b>, choose <b class="Command">Web</b>.</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>3.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;3.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">In the upper-left corner, set <b class="Command">Store View</b> as needed.</td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>4.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;4.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Expand <img class="Inline" src="http://docs.magento.com/m2/ce/user_guide/Resources/Images/btn-expand.png" /> the <b class="Command">Base URLs</b> section. Then, do the following:</td>
+</tr>
+</tbody>
+</table>
+<div class="Image"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-cdn001-websoft9.png" width="1529" height="523" /><br />
+<a href="http://docs.magento.com/m2/ce/user_guide/configuration/general/web.html#BaseUrls">Base URLs</a></div>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>a.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;a.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Update the <b class="Command">Base <a class="MCTextPopup MCTextPopupHotSpot MCTextPopupHotSpot_ #text MCTextPopup_Closed" data-mc-state="closed">URL</a> for Static View Files</b> with the URL of the location on the CDN where static view files are stored.<a name="kanchor493"></a></td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>b.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;b.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Update the <b class="Command">Base URL for User Media Files</b> with the URL of the JavaScript files on the CDN.</td>
+</tr>
+</tbody>
+</table>
+<p class="IndentAfterAlpha">Both these fields can be left blank, or can start with the placeholder: <code>{{unsecure_base_url}}</code></p>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>5.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;5.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Expand the <b class="Command">Base URLs (Secure)</b> section.</td>
+</tr>
+</tbody>
+</table>
+<div class="Image"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-cdn002-websoft9.png" width="1523" height="801" /><br />
+<a href="http://docs.magento.com/m2/ce/user_guide/configuration/general/web.html#BaseUrlsSecure">Base URLs (Secure)</a></div>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>a.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;a.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Update the <b class="Command">Secure Base URL for Static View Files</b> with the URL of the location on the CDN where static view files are stored.<a name="kanchor494"></a></td>
+</tr>
+</tbody>
+</table>
+<table class="AutoNumber_p_Alpha1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Alpha12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>b.</b></span></span></td>
+<td class="AutoNumber_p_Alpha1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 24px; font-family: Arial; vertical-align: baseline; left: 58px;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;b.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">Update the <b class="Command">Secure Base URL for User Media Files</b> with the URL of the JavaScript files on the CDN.</td>
+</tr>
+</tbody>
+</table>
+<p class="IndentAfterAlpha">Both these fields can be left blank, or can start with the placeholder: <code>{{unsecure_base_url}}</code></p>
+<table class="AutoNumber_p_Number1" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col /></colgroup>
+<tbody>
+<tr>
+<td valign="top"></td>
+<td class="AutoNumber_p_Number12" valign="top"><span class="mcFormatFamily"><span class="mcFormatColor"><b>6.</b></span></span></td>
+<td class="AutoNumber_p_Number1" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Arial; vertical-align: baseline; left: auto;" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;span style=&quot;color: #a84b27;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;6.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;">When complete,tap <span class="btn">Save Config</span>.</td>
+</tr>
+</tbody>
+</table>
+</div>  </section>
+
+  <section id="magento-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Magento Help Link</h2><h3 class="steps-header">Links</h3>
+<ul>
+<li><a href="http://www.magento.com" target="_blank" rel="noopener noreferrer">Open Source | Magento</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 2.1.5</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

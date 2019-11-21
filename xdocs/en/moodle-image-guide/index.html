@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moodle Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/moodle/moodle' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#moodle-stack-components">Moodle Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#start-to-install-moodle">Start to install Moodle</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-moodle">Step3.  Install Moodle</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#important-default-site-settings">Important default site settings</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-plugins">Using Plugins</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#plugins-type">Plugins Type</a><li class=""><a href="#installing-directly-from-the-moodle-plugins-directory">Installing directly from the Moodle plugins directory</a><li class=""><a href="#installing-via-uploaded-zip-file">Installing via uploaded ZIP file</a><li class=""><a href="#installing-manually-at-the-server">Installing manually at the server</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup">Backup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#site-backup">Site Backup</a><li class=""><a href="#automating-course-backups">Automating course backups</a><li class=""><a href="#backups-report">Backups report</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-a-new-language">How to add a new language?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-restore-from-course-and-category-management">How to restore from course and category management?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-repair-a-corrupted-moodle-database">How to repair a corrupted Moodle database?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-do-i-enable-disable-debugging">How do I enable/disable debugging?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#moodle-help-links">Moodle Help Links</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Moodle Image Guide</h1>
+                              <div class="version"> Version 3.2.1+</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Moodle is a pre-configured, ready to run image for running Moodle on Alibaba Cloud.</p>
+<p>Moodle is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments.Moodle is built by the Moodle project which is led and coordinated by Moodle HQ, an Australian company of 30 developers which is financially supported by a network of over 60 Moodle Partner service companies worldwide.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="moodle-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Moodle Stack Components</h2><p><strong>Software Version:</strong> Moodle3.2.1+<br />
+<strong>Moodle directory:</strong> /data/wwwroot/default/moodle</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+<strong>PHP Configuration File:</strong> /usr/local/php/etc/php.ini<br />
+<strong>Virtual host Configuration File directory:</strong> /usr/local/apache/conf/vhost.sh<br />
+<strong>Virtual host Configuration Command:</strong> /root/oneinstack/vhost</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-bootpage-websoft9.png" width="637" height="324" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="start-to-install-moodle" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Start to install Moodle</h2><p><strong>We will show you how to install Moodle :</strong><br />
+1.Create the database required for <strong>Moodle</strong>,<br />
+2.Add a virtual host required for <strong>Moodle</strong>,<br />
+3.Start to install <strong>Moodle</strong>.</p>
+<div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><em>mysql -uroot –p</em>                      #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p>MySQL [(none)]&gt; <em>create database mydbname;</em></p>
+<p>MySQL [(none)]&gt; <em>show databases;</em></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p>MySQL [(none)]&gt; <em>grant all privileges on mydbname.* to username@&#8217;localhost&#8217; identified by &#8216;userpassword&#8217;;</em></p>
+<p>MySQL [(none)]&gt; <em>flush privileges;</em></p>
+<p>MySQL [(none)]&gt; <em>exit;</em></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p>[root@iZbp1i4rjdsy216yq7lgucZ ~]# <em>cd /root/oneinstack</em></p>
+<p>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# <em>./vhost.sh</em></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md00.png" alt="" /></a></p>
+</div><div id='step3-install-moodle' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-moodle'>Step3.  Install Moodle</a></h3><p><strong>1. Open your domain name via browser;</strong></p>
+<p><strong>2. Choose a language,Click &#8220;Next&#8221;;</strong></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md01.png" alt="oc1" /></a></p>
+<p><strong>3.Click &#8220;Next&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md02.png" alt="oc2" /></a></p>
+<p><strong>4.Click &#8220;Next&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md03.png" alt="oc1" /></a></p>
+<p><strong>5.Fill in your database user, password, and database name;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md04.png" alt="oc1" /></a></p>
+<p><strong>6. Click &#8220;Continue&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md05.png" alt="oc1" /></a><br />
+<strong>7. Click &#8220;Continue&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md06.png" alt="oc1" /></a><br />
+<strong>8. Click &#8220;Continue&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md07.png" alt="oc1" /></a></p>
+<p><strong>9. Set administrator user, password,mail,etc.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md08.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md08.png" alt="oc1" /></a></p>
+<p><strong>10. Set site name,short name,front page summary,etc.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md09.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md09.png" alt="oc1" /></a><br />
+<strong><span class="">OK, it has been installed successfully.</span></strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md10.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/md10.png" alt="oc1" /></a></p>
+<div class="trans-right"></div>
+</div></div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Moodle Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://localhost/phpMyAdmin,you can enter the login page</li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="important-default-site-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Important default site settings</h2><p>Below is the very important default site settings for Moodle</p>
+<ol>
+<li>Set your default <a title="Language" href="https://docs.moodle.org/33/en/Language">language</a> in <i>Site administration &gt; Language &gt; Language settings</i>. Moodle defaults to common English; if you need US English or another language, add that in <i>Language &gt; Language pack</i> first then you can set it as the default.</li>
+<li>Set your default timezone and country in <i>Site administration &gt; Location &gt; Location settings</i>.</li>
+<li>Turn off public Guest access (unless you are sure you know how to use it) in <i>Site administration &gt; Plugins &gt; Enrolments &gt; Manage enrol plugins</i> and Hide its button in <i>Site administration &gt; Plugins &gt; Authentication &gt; Manage authentication &gt; Guest login button</i>.</li>
+<li>Adjust your minimum password if you need to in <i>Security &gt; Site policies &gt; Password policy</i>.</li>
+<li>Verify that <a title="Cron" href="https://docs.moodle.org/33/en/Cron">cron</a> is running when you set that up during install. Your site will not work properly without it. If the message &#8220;The cli/cron.php maintenance script has not been run for at least 24 hours.&#8221; shows up in <i>Site administration &gt; Notifications</i> then it is not running properly.</li>
+</ol>
+</div>  </section>
+
+  <section id="using-plugins" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Plugins</h2><p>Plugins enable you to add additional features and functionality to Moodle, such as new activities, new quiz question types, new reports, integrations with other systems and many more.Moodle has a list of the most favourite plugins, which might be worth considering for adding to your site.</p>
+<p>To install a plugin, its source code must be put (deployed) into the appropriate location inside the Moodle installation directory and the main administration page <i>Administration &gt; Site administration &gt; Notifications</i> must be visited. There are three ways how the plugin code can be deployed into Moodle.</p>
+<p>Plugin code may be deployed from within Moodle, either directly from the Moodle plugins directory or by uploading a ZIP file. The web server process has to have write access to the plugin type folder where the new plugin is to be installed in order to use either of these methods.</p>
+<p>Note: It is recommended that you proceed with caution and always try installing these plugins in a local experimental server before installing them in a production server.</p>
+<div id='plugins-type' class='step-content clearfix'><h3 class='steps-header'><a href='#plugins-type'>Plugins Type</a></h3><p>All the extend module for Moodle is plugin,below it the type of plugins</p>
+<ul>
+<li>Activities</li>
+<li>Blocks</li>
+<li>Themes</li>
+<li>Users</li>
+<li>Course formats</li>
+<li>Filters</li>
+<li>Reports</li>
+<li>Gradebook</li>
+<li>Admin tools</li>
+<li>General plugins (Local)</li>
+<li>Availability conditions</li>
+<li>Editors</li>
+<li>Caching</li>
+<li>Messaging outputs</li>
+<li>Repositories</li>
+<li>Portfolios</li>
+<li>Plagiarism</li>
+<li>Web service protocols</li>
+<li>Calendars</li>
+<li>Search engines</li>
+<li>Media players</li>
+<li>Document converters</li>
+<li>Data formats</li>
+<li>Antivirus</li>
+<li>MNet services</li>
+<li>Other</li>
+</ul>
+</div><div id='installing-directly-from-the-moodle-plugins-directory' class='step-content clearfix'><h3 class='steps-header'><a href='#installing-directly-from-the-moodle-plugins-directory'>Installing directly from the Moodle plugins directory</a></h3><ol>
+<li>Login as an admin and go to <i>Site administration &gt; Plugins &gt; Install plugins</i>. (If you can&#8217;t find this location, then plugin installation is prevented on your site.)<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-intallplugins001-websoft9.png" width="716" height="544" /></li>
+<li>Click the button &#8216;Install plugins from Moodle plugins directory&#8217;.</li>
+<li>To install a plugin directly on your Moodle site, you need to log in with your moodle.org account.</li>
+<li>Search for a plugin with an Install button, click the Install button then click Continue.</li>
+<li>Confirm the installation request</li>
+<li>Check the plugin validation report<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-plugincheck-websoft9.png" width="1159" height="657" /></li>
+</ol>
+</div><div id='installing-via-uploaded-zip-file' class='step-content clearfix'><h3 class='steps-header'><a href='#installing-via-uploaded-zip-file'>Installing via uploaded ZIP file</a></h3><ol>
+<li>Go to the <a class="external text" href="https://moodle.org/plugins" rel="nofollow">Moodle plugins directory</a>, select your current Moodle version, then choose a plugin with a Download button and download the ZIP file.</li>
+<li>Login to your Moodle site as an admin and go to <i>Administration &gt; Site administration &gt; Plugins &gt; Install plugins</i>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-intallplugins001-websoft9.png" width="716" height="544" /></li>
+<li>Upload the ZIP file. You should only be prompted to add extra details (in the Show more section) if your plugin is not automatically detected.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-intallplugins-uploadfile-websoft9.png" width="874" height="603" /></li>
+<li>If your target directory is not writeable, you will see a warning message.</li>
+<li>Check the plugin validation report</li>
+</ol>
+</div><div id='installing-manually-at-the-server' class='step-content clearfix'><h3 class='steps-header'><a href='#installing-manually-at-the-server'>Installing manually at the server</a></h3><p>If you can&#8217;t deploy the plugin code via the administration web interface, you have to copy it to the server file system manually (e.g. if the web server process does not have write access to the Moodle installation tree to do this for you).</p>
+<p>First, establish the correct place in the Moodle code tree for the plugin type. Common locations are:</p>
+<ul>
+<li>/path/to/moodle/theme/ &#8211; themes</li>
+<li>/path/to/moodle/mod/ &#8211; activity modules and resources</li>
+<li>/path/to/moodle/blocks/ &#8211; sidebar blocks</li>
+<li>/path/to/moodle/question/type/ &#8211; question types</li>
+<li>/path/to/moodle/course/format/ &#8211; course formats</li>
+<li>/path/to/moodle/admin/report/ &#8211; admin reports</li>
+</ul>
+<p>See <a class="extiw" title="dev:Plugins" href="http://docs.moodle.org/dev/Plugins">dev:Plugins</a> for the full list of all plugin types and their locations within the Moodle tree.</p>
+<ol>
+<li>Go to the <a class="external text" href="https://moodle.org/plugins" rel="nofollow">Moodle plugins directory</a>; select your current Moodle version, then choose a plugin with a Download button and download the ZIP file.</li>
+<li>Upload or copy it to your Moodle server.</li>
+<li>Unzip it in the right place for the plugin type (or follow the plugin instructions).</li>
+<li>In your Moodle site (as admin) go to <i>Settings &gt; Site administration &gt; Notifications</i> (you should, for most plugin types, get a message saying the plugin is installed).</li>
+</ol>
+<p>Note: The plugin may contain language files. They&#8217;ll be found by your Moodle automatically. These language strings can be customized using the standard <i>Settings &gt; Site administration &gt; Language</i> editing interface. If you get a &#8220;Database error&#8221; when you try to edit your language files, there is a strong chance that the language files included within the downloaded ZIP file of this plugin have a coding problem. If you delete the <i>plugin_name/lang/other_language_different_to_English/</i> folder with the new language strings and the database error disappears, this is indeed the case. Please notify the plugin maintainer, so that it can be fixed in future releases.</p>
+</div></div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>You should complete the backup job on a regular basis,includes the two backup methods:</p>
+<ul>
+<li>Site backup &#8211; for saving everything &#8211; data stored in the database, uploaded files, Moodle code</li>
+<li>Course backup &#8211; for saving selected activities, resources, blocks, filters, user data etc.</li>
+</ul>
+<div id='site-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#site-backup'>Site Backup</a></h3><p>A site backup allows a site administrator to save everything associated with a moodle site. These backups can be restored to bring a site back to the point in time when the backup was made.</p>
+<p>A Moodle system backup comprises three parts:</p>
+<ol>
+<li>The data stored in the database (For example, a MySQL database)</li>
+<li>The uploaded files (For example, site and course files uploaded via Moodle located in moodledata)</li>
+<li>The <b>Moodle code</b> (For example, everything in server/htdocs/moodle)</li>
+</ol>
+<p>You can confirm where all these things are located in a Moodle installation by checking the <b>config.php</b> file.</p>
+<dl>
+<dd>
+<ol>
+<li><b>$CFG-&gt;dbname</b> shows the database name</li>
+<li><b>$CFG-&gt;prefix</b> shows the the database table name prefix</li>
+<li><b>$CFG-&gt;dataroot</b> controls where the <i>uploaded files</i> are stored; and</li>
+<li><b>$CFG-&gt;wwwroot</b> points to where the <i>code</i> is stored.</li>
+</ol>
+</dd>
+</dl>
+<p>Backup database,you can use the phpMyAdmin<br />
+Backing up the Moodle code and uploaded files, please use the FTP</p>
+</div><div id='automating-course-backups' class='step-content clearfix'><h3 class='steps-header'><a href='#automating-course-backups'>Automating course backups</a></h3><p>Automated course backups runs the same functions as individual <a title="Course backup" href="https://docs.moodle.org/33/en/Course_backup">course backups</a>. It&#8217;s a good idea to schedule backups for when your server isn&#8217;t usually busy. Running the backup tool over all the courses can be processor-intensive, so you shouldn&#8217;t run it when there are a lot of students trying to access the server. You should always alert users with an announcement on the first page that if they log on during the backup hours they may notice a decrease in performance.</p>
+<p>In order to make scheduled backups, you have to set up CRON to run periodically. Please refer to the <a title="Cron" href="https://docs.moodle.org/33/en/Cron">cron instructions</a>.</p>
+<p>To set the backup schedule:</p>
+<ol>
+<li>Go to <i>Administration &gt; Site administration &gt; Courses &gt; Backups &gt; Automated backup setup</i>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-autocouresbackup-websoft9.png" width="1288" height="723" /></li>
+<li>Set backup_auto_active to enabled.</li>
+<li>Select the days of the week to run the backup.</li>
+<li>Set the execution time for the backup process. For most servers, early morning will be the best time. Keep in mind the time zone your server is using.</li>
+<li>Set the &#8220;Save to&#8230;&#8221; path. If you can, choose a backup path on another machine or on a different drive than the one Moodle is on. You don’t want to lose your backups at the same time you lose your Moodle site if the drive fails. If you leave the field blank, then backup zip files will be saved in the backup folder of each course files folder. On a Linux server the path might look like: /home/(your user or domain)/public_html/archive/ or if it&#8217;s below the publicly accessible folders: /home/(your user or domain)/archive/ if the path is not recognized a red X is shown after saving, otherwise a green check.</li>
+<li>Set all other options appropriately.</li>
+<li>Click the &#8220;Save changes&#8221; button.</li>
+</ol>
+<p><b>Tip</b>: To save disk space, you can choose to delete backups older than a specified number of days. If so, you should also specify a minimum number of backups to be kept. (The settings &#8216;Delete backups older than&#8217; and &#8216;Minimum number of backups kept&#8217; are new in Moodle 3.0 onwards.)</p>
+<p>Once you&#8217;ve set up your backup schedule, Moodle will automatically create archives of all the courses on the server at the time you specified. Once the backup is complete, Moodle will send you an email describing the status of the backup.</p>
+</div><div id='backups-report' class='step-content clearfix'><h3 class='steps-header'><a href='#backups-report'>Backups report</a></h3><p>A last execution log of scheduled course backups can be found in <i>Administration &gt; Site administration &gt; Reports &gt; Backups</i>. It displays a list of all course backups made, the time taken to create them, their status (see below), and the next scheduled automated backup execution time.</p>
+<p>Clicking the &#8216;View logs&#8217; icon next to the course name (1 in screenshot below) will display a detailed backup log for a particular course, including date, hour and minute when each step of the backup was performed (2). This log is useful for troubleshooting backup errors.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-backuplogs-websoft9.png" width="500" height="557" /></p>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>Start enjoying the cool features of the latest and greatest version of Moodle in four easy steps&#8230;</p>
+<h2><span id="Step_1:_Make_sure_that_your_server_can_run_Moodle_3.3" class="mw-headline">Step 1: Make sure that your server can run Moodle 3.3</span></h2>
+<p>(Note: You need to upgrade to Moodle 2.2 before upgrading to 3.3.)</p>
+<p>Go to <i>Settings &gt; Site administration &gt; Server &gt; Environment</i></p>
+<p>Status OK for everything? Great! Go to step 2&#8230;</p>
+<p>Any problems? You probably need to upgrade your server software (such as PHP) to a more recent version.</p>
+<h2><span id="Step_2:_Be_prepared.21" class="mw-headline">Step 2: Be prepared!</span></h2>
+<p>As usual with any large upgrade, you should always be prepared to &#8220;roll back&#8221; if there&#8217;s an issue with your data or some custom code you&#8217;ve added.</p>
+<dl>
+<dt>A test install</dt>
+<dd>We highly advise you make a copy of your production site to practice the upgrade on first. That way, if you run into any problems that need fixing you won&#8217;t affect your main site.</dd>
+</dl>
+<dl>
+<dt>Always make backups</dt>
+<dd>When upgrading your production instance, make sure you have copies of everything, just in case. Full instructions are here: <a title="Site backup" href="https://docs.moodle.org/33/en/Site_backup">Site backup</a>.</dd>
+</dl>
+<h2><span id="Step_3:_Replace_your_Moodle_code" class="mw-headline">Step 3: Replace your Moodle code</span></h2>
+<p>At this point you can replace the Moodle code on your server with the version you downloaded.</p>
+<dl>
+<dt>Check plugins</dt>
+<dd>Any plugins you have installed will also to be replaced with a version for your new Moodle version. If there is not yet an updated version of the plugin available, it will need to be uninstalled before upgrading your site.</dd>
+</dl>
+<h2><span id="Step_4:_Perform_the_upgrade.21" class="mw-headline">Step 4: Perform the upgrade!</span></h2>
+<p>Trigger the upgrade by <a title="Upgrading" href="https://docs.moodle.org/33/en/Upgrading#Finishing_the_upgrade">visiting the admin page</a>.</p>
+<p>If you have a large site this may take hours, so we recommend <a title="Administration via command line" href="https://docs.moodle.org/33/en/Administration_via_command_line#Upgrading_via_command_line">upgrading via command line</a>.</p>
+<p>Get details of upgrade,please read <a href="https://docs.moodle.org/33/en/Upgrading#Check_for_plugin_updates" target="_blank" rel="noopener noreferrer">https://docs.moodle.org/33/en/Upgrading#Check_for_plugin_updates</a></p>
+</div>  </section>
+
+  <section id="how-to-add-a-new-language" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to add a new language?</h2><ol>
+<li>Dashboard-&gt;Site administration-&gt;Language-&gt;Language packs<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-languagepack-websoft9.png" width="1189" height="723" /></li>
+<li>Then,you can get the message &#8220;Language pack .. was successfully installed&#8221;</li>
+<li>Go to Dashboard-&gt;Site administration-&gt;Language-&gt;Language settings,select you language and click the &#8220;Save changes&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-languagesettings-websoft9.png" width="1273" height="558" /></li>
+<li>Now you can use the new language you have intalled</li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-restore-from-course-and-category-management" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to restore from course and category management?</h2><p>Users with permission to access <i>Site administration &gt; Courses &gt; Manage courses and categories</i> or <i>Site administration,</i>you can restore courses very easy.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/moodle/moodle-courserestorecategory-websoft9.png" width="317" height="292" /></p>
+</div>  </section>
+
+  <section id="how-to-repair-a-corrupted-moodle-database" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to repair a corrupted Moodle database?</h2><p>Database corruption usually occurs as a result of a hardware (especially disk-based) failure, or when a disk becomes full. Typical symptoms are failure on login, with this message displayed:</p>
+<p><em>Session Replace: Table &#8216;./moodle/mdl_sessions2&#8217; is marked as crashed and should be repaired</em></p>
+<p>If you use MySQL,The problem can be repaired using the mysqlcheck command (the command you type is in bold and we assume the database name is &#8216;moodle&#8217; and its type is MySQL):</p>
+<pre><code class="language-markup">#mysqlcheck -u moodleuser -p --auto-repair moodle
+Enter password:
+moodle.adodb_logsql                      OK
+moodle.mdl_assignment                    OK
+moodle.mdl_assignment_submissions        OK
+...
+moodle.mdl_log
+error    : Table './moodle/mdl_log' is marked as crashed and should be repaired
+...
+moodle.mdl_sessions2
+error    : Table './moodle/mdl_sessions2' is marked as crashed and should be repaired
+
+Repairing tables
+moodle_18_latest.mdl_log                           OK
+moodle_18_latest.mdl_sessions2                     OK</code></pre>
+<p>Your mysql database server must be running when executing the mysqlcheck command. If there are problems with the tables, the auto-repair option will fix them as shown above. Note that the repair process can take a long time to complete. Re-run the command again to double-check that all is OK.</p>
+<p>Individual Moodle tables can be checked by using MySQL Admin/phpMyAdmin</p>
+<p>Individual Moodle tables may be repaired using MySQL Admin/PHPMyAdmin as follows:</p>
+<ol>
+<li>In the databases section, select the Moodle database.</li>
+<li>Click the SQL tab, then in the &#8220;Run SQL query/queries on database moodle&#8221; field type REPAIR TABLE mdl_tablename</li>
+<li>Click the Go button.</li>
+</ol>
+<p>For example, to repair the Moodle log tables, type REPAIR TABLE mdl_log In a similar manner to check the Moodle log table, type CHECK TABLE MDL_LOG. This will either say OK or tell you what is wrong. For example it may say &#8220;Table marked as crashed&#8221;.</p>
+</div>  </section>
+
+  <section id="how-do-i-enable-disable-debugging" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How do I enable/disable debugging?</h2><p>If you are getting a blank or partially complete page, or receive a page that presents a short error message that is not informative enough, you can turn on debugging to learn more details.</p>
+<p>Turning on debugging will let you see what the error message is, which may help you diagnose the problem. Set this in <i>Site administration &gt; Development &gt; Debugging</i> &#8211; see Debugging for more.</p>
+</div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/moodle
+find /data/wwwroot/default/moodle -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/moodle -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient to install.</p>
+<p>e.g The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 256M <b>Recommended:</b> 1G or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="moodle-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Moodle Help Links</h2><p>See &lt;<a href="https://docs.moodle.org" target="_blank" rel="noopener noreferrer">https://docs.moodle.org</a>&gt; for details of Moodle&#8217;s many features.</p>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 3.2.1+</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

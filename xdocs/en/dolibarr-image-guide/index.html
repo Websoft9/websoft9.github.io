@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dolibarr Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/Dolibarr/dolibarr' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#dolibarr-stack-components">Dolibarr Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#start-to-install-dolibarr">Start to install Dolibarr</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-dolibarr">Step3. Install Dolibarr</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#first-setup">First setup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#company-foundation">Company/Foundation</a><li class=""><a href="#modules">Modules</a><li class=""><a href="#menus">Menus</a><li class=""><a href="#display">Display</a><li class=""><a href="#other-boxes-alerts-security-limits-and-accuracy-emails-sms-dictionary-setup">Other (Boxes, Alerts, Security, Limits and accuracy, Emails, SMS, Dictionary setup...)</a><li class=""><a href="#users">Users</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup-restore">Backup & Restore</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup">Automatic Backup</a><li class=""><a href="#manual-backup">Manual Backup</a><li class=""><a href="#restore">Restore</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#main-modules-of-dolibarr">Main modules of Dolibarr</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-login-backend-of-dolibarr">How to login backend of Dolibarr?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#what-dolibarr-cant-do">What Dolibarr can't do?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#dolibarr-help-links">Dolibarr Help Links</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Dolibarr Image Guide</h1>
+                              <div class="version"> Version 5.0.1</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Dolibarr is a pre-configured, ready to run image for running Dolibarr on Alibaba Cloud.</p>
+<p>Dolibarr ERP &amp; CRM is an all-in-one suite and easy to use software package to manage your business (customers, invoices, orders, products, stocks, agenda, e-mailings, shipments&#8230;).you are able to setup the application to match your need and only your need. Integration between the features/modules you decide to use is ready &#8220;in-the-box&#8221;, so, even without customization, users are immediately ready to work and won&#8217;t have to make any double entry on your information system.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="dolibarr-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Dolibarr Stack Components</h2><p>Software Version: Dolibarr5.0.1<br />
+Software directory: /data/wwwroot/default/dolibarr</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+PHP Configuration File: /usr/local/php/etc/php.ini<br />
+Virtual host Configuration File directory: /usr/local/apache/conf/vhost<br />
+Virtual host Configuration Command: /root/oneinstack/vhost.sh</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-bootpage-websoft9.png" width="892" height="397" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="start-to-install-dolibarr" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Start to install Dolibarr</h2><div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><code>mysql -uroot –p </code>                               #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p><code>MySQL [(none)]&gt; create database mydbname;</code></p>
+<p><code>MySQL [(none)]&gt; show databases;</code></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p><code>MySQL [(none)]&gt; grant all privileges on mydbname.* to username@'localhost' identified by 'userpassword';</code></p>
+<p><code>MySQL [(none)]&gt; flush privileges;</code></p>
+<p><code>MySQL [(none)]&gt; exit;</code></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /root/oneinstack</code><br />
+<code>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# ./vhost.sh</code><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db00.png" alt="" /></a><br />
+Note: Input the derectory for your domain is <code>/data/wwwroot/default/dolibarr/htdocs</code></p>
+</div><div id='step3-install-dolibarr' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-dolibarr'>Step3. Install Dolibarr</a></h3><p>Open<strong> your domain name </strong>via browser:<br />
+<strong>1.  Click “</strong>Click here to finish Dolibarr install process &#8230;<strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db01.png" alt="" /></a><br />
+<strong>2.  Select a language, Click “Next step</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db02.png" alt="" /></a><br />
+<strong>3.  Click “Start</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db03.png" alt="" /></a><br />
+<strong>4.  Enter your database configuration,  Click “Next step</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db04.png" alt="" /></a><br />
+<strong>5.  Click “Next step</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db05.png" alt="" /></a><br />
+<strong>6.  Click “Next step</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db06.png" alt="" /></a><br />
+<strong>7.  Set your admin account, Click “Next step</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db07.png" alt="" /></a><br />
+<strong>8.  This installation is complete, Click “Go to Dolibarr&#8230;</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db08.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db08.png" alt="" /></a><br />
+<strong>9. Enter your admin account, Click “Connection</strong><strong>”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db09.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db09.png" alt="" /></a><br />
+<strong>10.  </strong><strong>This is the Dolibarr page.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db10.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/db10.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="first-setup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>First setup</h2><p>After Dolibarr installation, you must setup Dolibarr parameters to match your needs.</p>
+<div id='company-foundation' class='step-content clearfix'><h3 class='steps-header'><a href='#company-foundation'>Company/Foundation</a></h3><p>The first mandatory step is to define your company/foundation. For this, from home page, choose menu &#8220;<b>Home-&gt;Setup-&gt;Company/Foundation</b>&#8221; and edit informations for company or foundation you want to manage.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-setupcompany-websoft9.png" width="1279" height="537" /></p>
+<ul>
+<li><b>Name:</b> Name of your company or foundation</li>
+<li><b>Logo:</b> Add here a logo of your company (.png, .jpg or .gif). There is no recommended size but the image but the recommended format is png with NO transparent layer (Dolibarr use FPDF that does not support this format).</li>
+<li><b>Pays (country):</b> Don&#8217;t forget to define your country because some other options depends on it.</li>
+<li><b>VAT:</b> Also tell if you have to manage VAT or not.</li>
+</ul>
+</div><div id='modules' class='step-content clearfix'><h3 class='steps-header'><a href='#modules'>Modules</a></h3><p>Activation of modules is the second mandatory step. What modules you will activate depends on what you want to do with Dolibarr. In most cases, you may want to use all modules. You have to activate one by one each module you plan to use. For example, to manage a company, you might activate modules: Third party, Invoices and Products, but probably a lot of more modules.</p>
+<p>To activate a module you want, go to page &#8220;<b>Home-&gt;Setup-&gt;Modules</b>&#8221; and click the button &#8216;on/off&#8217; in the &#8220;Status&#8221; column to enable it.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-setupmodules-websoft9.png" width="1093" height="543" /></p>
+<p>If you are not sure of the meaning of a module, you can activate it one by one and see what new menu appears in Dolibarr (the horizontal bar, also, after activating a module, check that you grant to yourself permissions on new features that were enabled). You can activate or deactivate a module when you want.</p>
+<p>Once a module has been activated, some of them may need a particular setup (click on the setup icon that appears on the right of module line if a module needs its own setup). See <a title="Category:List of Modules" href="https://wiki.dolibarr.org/index.php/Category:List_of_Modules">documentation of module</a> for more informations.</p>
+</div><div id='menus' class='step-content clearfix'><h3 class='steps-header'><a href='#menus'>Menus</a></h3><p>Choose here which menu manager you want to use for internal and external users. The menu manager changes the labels, orders and organization of left and top menus. See page <a title="Menus system" href="https://wiki.dolibarr.org/index.php/Menus_system">Menus system</a> for more information.</p>
+</div><div id='display' class='step-content clearfix'><h3 class='steps-header'><a href='#display'>Display</a></h3><p>On this page, you can define force language of application and the look and feel of screens. In a first use, you can keep everything with default values.</p>
+<p><i>Note:</i> Activating multilanguage option in this screen, you will be able to set prefered langauge of customer to print their Invocie/Propal/Order in their own language. Product translation will also be available</p>
+</div><div id='other-boxes-alerts-security-limits-and-accuracy-emails-sms-dictionary-setup' class='step-content clearfix'><h3 class='steps-header'><a href='#other-boxes-alerts-security-limits-and-accuracy-emails-sms-dictionary-setup'>Other (Boxes, Alerts, Security, Limits and accuracy, Emails, SMS, Dictionary setup...)</a></h3><p>Other entries in Setup menu are advanced options. You can forget them if you want.</p>
+<ul>
+<li><a class="new" title="Setup Boxes (page does not exist)" href="https://wiki.dolibarr.org/index.php?title=Setup_Boxes&amp;action=edit&amp;redlink=1">Setup Boxes</a></li>
+<li><a class="new" title="Setup Alerts (page does not exist)" href="https://wiki.dolibarr.org/index.php?title=Setup_Alerts&amp;action=edit&amp;redlink=1">Setup Alerts</a></li>
+<li><a title="Setup Security" href="https://wiki.dolibarr.org/index.php/Setup_Security">Setup Security</a></li>
+<li><a class="new" title="Setup Limits and accuracy (page does not exist)" href="https://wiki.dolibarr.org/index.php?title=Setup_Limits_and_accuracy&amp;action=edit&amp;redlink=1">Setup Limits and accuracy</a></li>
+<li><a class="new" title="Setup PDF (page does not exist)" href="https://wiki.dolibarr.org/index.php?title=Setup_PDF&amp;action=edit&amp;redlink=1">Setup PDF</a></li>
+<li><a title="Setup EMails" href="https://wiki.dolibarr.org/index.php/Setup_EMails">Setup EMails</a></li>
+<li><a class="new" title="Setup SMS (page does not exist)" href="https://wiki.dolibarr.org/index.php?title=Setup_SMS&amp;action=edit&amp;redlink=1">Setup SMS</a></li>
+<li><a title="Setup Dictionnary" href="https://wiki.dolibarr.org/index.php/Setup_Dictionnary">Setup Dictionnary</a></li>
+<li><a title="Setup Other" href="https://wiki.dolibarr.org/index.php/Setup_Other">Setup Other</a></li>
+</ul>
+</div><div id='users' class='step-content clearfix'><h3 class='steps-header'><a href='#users'>Users</a></h3><p>The last step is to create users and assign permissions. Almost all the modules, even activated earlier, are not accessible if you do not give permissions. To do this, you can go to the menu <b>Home -&gt; Users &amp; Groups</b> to define users and their rights. Attention, you should consider to check and reset the user rights when you enable a new module. The list of rights available depends on the activated modules (see above). It is recommended to configure permissions after activating the modules you want to use. For certain actions, if you do not have the rights to do an action, Dolibarr will not show you action. You might miss some useful or important features. <b>To give rights to a user or yourself, if you are an administrator, go to Home -&gt; Users &amp; Groups, select the desired user, then click on its &#8216;Permission&#8217; tab.</b></p>
+<p>You can avoid these configuration steps for each new created user, by configuring the default rights (understand rights allocated automatically each time a new user created) by configuring the default permissions on the menu <a title="Setup Security" href="https://wiki.dolibarr.org/index.php/Setup_Security">Setup Security</a>.</p>
+</div></div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p>Backup is very import for using Dolibarr</p>
+<div id='automatic-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup'>Automatic Backup</a></h3><p>Dolibarr have provide the automatic backup tools.</p>
+<ol>
+<li>Login as superuser,admin tools-&gt;backup,you can enter the interface<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-backup-websoft9.png" width="1585" height="726" /></li>
+<li>Click the &#8220;Generate backup&#8221; button,backup database</li>
+<li>then download all files in /data/wwwroot/default/dolibarr/</li>
+</ol>
+</div><div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><ol>
+<li>Download the entire Joomla file in you root dictionary by FTP or other tools</li>
+<li>Visit http://&lt; Internet IP Address &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export you database</li>
+<li>Click “go” button,then download the SQL backup file</li>
+</ol>
+</div><div id='restore' class='step-content clearfix'><h3 class='steps-header'><a href='#restore'>Restore</a></h3><ol>
+<li>Restore archive file (zip file for example) of documents directory to extract tree of files in documents directory of a new Dolibarr installation or into this current documents directoy (/data/wwwroot/default/dolibarr/documents).</li>
+<li>Login as superuser,admin tools-&gt;restore,you can enter the interface<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/dolibarr/dolibarr-restore-websoft9.png" width="1075" height="519" /></li>
+<li>Restore the data, from a backup dump file, into the database of the new Dolibarr installation or into the database of this current installation (<b>dolibarr</b>). Warning, once restore is finished, you must use a login/password, that existed when backup was made, to connect again. To restore a backup database into this current installation, you can follow this assistant.</li>
+</ol>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>This section describe process to upgrade an existing installation of Dolibarr from an old version to a new one.</p>
+<p>This is steps to process:<br />
+<b>Step 1</b>: Download package (for example from official web site <a href="https://www.dolibarr.org/downloads/" target="_blank" rel="noopener noreferrer">https://www.dolibarr.org/downloads/</a>).<br />
+<b>Step 2</b>: Unpack package files into Dolibarr server directory dedicated to Dolibarr: <b>/data/wwwroot/default/dolibarr/</b><br />
+<b>Step 3</b>: Remove file <b>/data/wwwroot/default/dolibarr/documents/install.lock</b> if it exists to allow usage of the update tool.<br />
+<b>Step 4</b>: Go to the page that updates the database structure and data: <a href="http://47.88.225.230/dolibarr/htdocs/install/" target="_blank" rel="noopener noreferrer">/dolibarr/htdocs/install/</a>.<br />
+<b>Step 5</b>: Restore file <b>/data/wwwroot/default/dolibarr/documents/install.lock</b>, with read permission only, to disable any usage of update tool.</p>
+</div>  </section>
+
+  <section id="main-modules-of-dolibarr" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Main modules of Dolibarr</h2><ul>
+<li>Customers, Prospects or Suppliers directory</li>
+<li>Products and services catalog</li>
+<li>Stock management</li>
+<li>Bank accounts management</li>
+<li>Commercial actions management</li>
+<li>Orders management</li>
+<li>Commercial proposals management</li>
+<li>Contracts management</li>
+<li>Invoices management</li>
+<li>Payments management</li>
+<li>Standing orders management</li>
+<li>Shipping management</li>
+<li>Expense report management</li>
+<li>Following social and fiscal tax payments</li>
+<li>Double entre accounting</li>
+<li>Agenda with ical,vcal export for third tools integration</li>
+<li>EDM (Electronic Document Management)</li>
+<li>Foundations member management</li>
+<li>Leave requests for employees</li>
+<li>Mass emailing</li>
+<li>Realize surveys</li>
+<li>Point of Sale</li>
+<li>Donations management</li>
+<li>Reporting</li>
+<li>PDF Generation of all elements (invoices, proposals, orders, &#8230;)</li>
+<li>Import and export tools (CSV or Excel)</li>
+<li>Bookmarks management</li>
+<li>LDAP connectivity</li>
+<li>Can be extended with a lot of other external modules available from <a class="external text" href="https://www.dolistore.com/" target="_blank" rel="noopener noreferrer">DoliStore.com</a> (Skins, Google sync, AWStats, Bittorrent, Gravatar, &#8230;).</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-login-backend-of-dolibarr" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to login backend of Dolibarr?</h2><p>If you use IP installation,please visist:http://Internet IP Address/dolibarr/htdocs/</p>
+<p>If you use domain installation,please visist:http://youdomain.com/htdocs/</p>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Dolibarr Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://localhost/phpMyAdmin,you can enter the login page</li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/dolibarr
+find /data/wwwroot/default/dolibarr -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/dolibarr -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd res</span></code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient to install.</p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 256M <b>Recommended:</b> 1G or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="what-dolibarr-cant-do" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>What Dolibarr can't do?</h2><p>Those features are not (yet) available even in the latest Dolibarr version.</p>
+<ul>
+<li>Dolibarr does not contain a Payroll module.</li>
+<li>Tasks on the project module can&#8217;t have dependencies between each other.</li>
+<li>Dolibarr does not include any Webmail.</li>
+<li>Double party accountancy is available since 5.0 but reports are not yet complete.</li>
+<li>To manage several companies or foundations, using one installation, you need to add/buy the <a title="Module MultiCompany" href="https://wiki.dolibarr.org/index.php/Module_MultiCompany">Module MultiCompany</a> on <a class="external text" href="https://www.dolistore.com/" target="_blank" rel="noopener noreferrer">www.dolistore.com</a>. Note that without purchasing this extra module you can still make as many installations of companies as you need, but you won&#8217;t be able to share elements between them (like customers).</li>
+<li>Dolibarr can&#8217;t do coffee (not yet).</li>
+</ul>
+</div>  </section>
+
+  <section id="dolibarr-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Dolibarr Help Links</h2><p>Links</p>
+<ul>
+<li><a href="https://www.dolibarr.org" target="_blank" rel="noopener noreferrer">ERP &amp; CRM Dolibarr &#8211; software libre &#8211; open source</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 5.0.1</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

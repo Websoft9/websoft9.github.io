@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Seafile Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://www.seafile.com' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#seafile-stack-components">Seafile Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-seafile">Getting Started with Seafile</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#will-be-used-usernames-and-passwords">Will be used Usernames and Passwords</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-set-domain-name">How to set Domain Name?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-domain-name-resolution">Step1: Domain Name Resolution</a><li class=""><a href="#step2-binding-domain-on-seafile">Step2: Binding Domain on Seafile</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-send-mail">How to send mail?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup-restore">Backup & Restore</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a><li class=""><a href="#restore">Restore</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#upgrade">Upgrade</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#upgrading-owncloud-with-the-updater-app">Upgrading ownCloud with the Updater App</a><li class=""><a href="#manual-owncloud-upgrade">Manual ownCloud Upgrade</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#useful-command-for-you">Useful command for you</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#seafile-help-links">Seafile Help Links</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#postscript">Postscript</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Seafile Image Guide</h1>
+                              <div class="version"> Version 6.2.5</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Seafile is a pre-configured, ready to run image for running Seafile on Cloud.</p>
+<p>Seafile is an enterprise file hosting platform with high reliability and performance. Put files on your own server. Sync and share files across different devices, or access all the files as a virtual disk.Organize files into libraries. A library can be selectively synced into any device. Reliable and efficient file syncing improves your productivity.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile_web_interface.png" width="1200" height="643" /></p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="seafile-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Seafile Stack Components</h2><p><strong>Application directory(Seafile)</strong><br />
+Seafile directory: <em>/opt/seafile<br />
+</em>Seafile configuration file: <em>/opt/seafile/conf/seahub_settings.py<br />
+</em></p>
+<p><strong>Infrastructure(Nginx1.12,memcached)</strong><br />
+Nginx configutation file: /etc/nginx/conf.d/seafile.conf<em><br />
+</em></p>
+<p><strong>Database(MariaDB)</strong><br />
+MariaDB directory: <em>/var/lib/mysql</em></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the installation page directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="getting-started-with-seafile" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Seafile</h2><p>When you have intall the Seafile Image, you should access the installation page and complete the installation wizard for the following steps:</p>
+<ol>
+<li>If you have domain,please complete the domain setting first  (refer to<a href="http://en.websoft9.com/xdocs/wampserver-image-guide/#how-to-set-domain-name" rel="noopener"><strong> How to set Domain Name?</strong></a>),then use browser to visit: <em><strong>http://domain</strong> </em>to start the installation</li>
+<li>Use comand to modify the MySQL password
+<pre class=" language-markup"><code class=" language-markup">[root@iz2ze22sviai20tz ~]# mysqladmin -uroot -p123456 password 'mynewpw'   </code></pre>
+</li>
+<li>Modify the configuration file:/opt/seafile/conf/seahub_settings.py:
+<pre class=" language-markup"><code class=" language-markup">DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'seahub_db',
+        'USER': 'root',
+        'PASSWORD': '123456', //suggest
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
+    }
+}
+
+...
+SITE_BASE                           = 'http://127.0.0.1 or *'  //127.0.0.1 or * to your domain or Internet IP
+FILE_SERVER_ROOT             = 'http://127.0.0.1/seafhttp' //127.0.0.1 to your domain or Internet IP
+</code></pre>
+</li>
+<li>Restart Server</li>
+<li>Use Chrome or Firefox to visit the:http://Internet IP/,you can see the log in page of Seafile(Default account is admin@seafile.local/admin123)<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-login-websoft9.png" width="960" height="500" /></li>
+<li>Log in to backend,start to use Seafile<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/seafile/seafile-bk-websoft9.png" width="960" height="500" /></li>
+</ol>
+</div>  </section>
+
+  <section id="will-be-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Will be used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、Seafile:</strong>Username and Password is<strong> admin@seafile.local/admin123</strong><br />
+<strong>2、MySQL Database:</strong>Default username and password is<strong> </strong><em>root/123456</em><br />
+Control Panel URL:<em>http://Internet IP Address/phpmyadmin</em><br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net/" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</p>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the “yes”<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-set-domain-name" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to set Domain Name?</h2><p>You need do complete two steps on this Stack for using Domain Name to visit your site:</p>
+<div id='step1-domain-name-resolution' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-domain-name-resolution'>Step1: Domain Name Resolution</a></h3><p>Domain Name Resolution indicates the way your domain names are resolved to their mapped IP address. The majority of resolutions from domain names to IP addresses are done through a procedure called DNS. After the resolution, the domain name can be used to access Internet in a much more convenient way.</p>
+<p>You can use Alibaba Cloud DNS in sync with the Domain service. Alibaba Cloud DNS provides authoritative DNS servers and DNS management services.</p>
+<ol>
+<li>Login Cloud Console-&gt;DNS Settings-&gt;Add Record,set Domain Resolution:<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/domain-websoft9.png" width="960" height="400" /></li>
+<li>The type is A record,host is your sub domain,value is your Internet IP Address.Confirm it<br />
+Host use @ to exactly match the original domain name (for example, yourdomain.tld).</li>
+<li>After the Domain Name Resolution please waite for some time until it’s useful(This time is different for different provider of Domain,from 1 minute to 24h)</li>
+</ol>
+<p>Note:Please clear the browser cache when Domain Name Resolution is useful but you browser seem is also feedback the old contents of your site</p>
+</div><div id='step2-binding-domain-on-seafile' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-binding-domain-on-seafile'>Step2: Binding Domain on Seafile</a></h3><p>Modify the configuration file:/opt/seafile/conf/seahub_settings.py:</p>
+<pre class=" language-markup"><code class=" language-markup">...
+SITE_BASE                           = 'http://127.0.0.1'  //127.0.0.1 to your domain name
+FILE_SERVER_ROOT             = 'http://127.0.0.1/seafhttp' //127.0.0.1 to your domain name
+</code></pre>
+</div></div>  </section>
+
+  <section id="how-to-send-mail" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to send mail?</h2><p>Refer to:https://manual-cn-origin.seafile.com/config/sending_email.html</p>
+</div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup,manual local backup,using plugin to backup in three ways, three of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the “snapshot” function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div><div id='restore' class='step-content clearfix'><h3 class='steps-header'><a href='#restore'>Restore</a></h3><p>If you have Snapshot of Server,you can restore all the data by click on button</p>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>You should always maintain regular backups and make a fresh backup before every upgrade.</p>
+<p>Then review third-party apps, if you have any, for compatibility with the new ownCloud release. Any apps that are not developed by ownCloud show a 3rd party designation. Install unsupported apps at your own risk. Then, before the upgrade, all 3rd party apps must be disabled. After the upgrade is complete you may re-enable them.</p>
+<div id='upgrading-owncloud-with-the-updater-app' class='step-content clearfix'><h3 class='steps-header'><a href='#upgrading-owncloud-with-the-updater-app'>Upgrading ownCloud with the Updater App</a></h3><p>The Updater app automates many of the steps of upgrading an ownCloud installation. It is useful for installations that do not have root access, such as shared hosting, for installations with a smaller number of users and data, and it automates updating <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/installation/source_installation.html"><em>manual installations</em></a>.</p>
+<p>You should maintain regular backups (see <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/maintenance/backup.html"><em>Backing up ownCloud</em></a>), and make a backup before every update. The Updater app does not backup your database or data directory.</p>
+<p>The Updater app performs these operations:</p>
+<ul class="simple">
+<li>Creates an <code><span class="pre">updater_backup</span></code> directory under your ownCloud data directory</li>
+<li>Downloads and extracts updated package content into the <code><span class="pre">updater_backup/packageVersion</span></code> directory</li>
+<li>Makes a copy of your current ownCloud instance, except for your data directory, to <code><span class="pre">updater_backup/currentVersion-randomstring</span></code></li>
+<li>Moves all directories except <code><span class="pre">data</span></code>, <code><span class="pre">config</span></code> and <code><span class="pre">themes</span></code> from the current instance to <code><span class="pre">updater_backup/tmp</span></code></li>
+<li>Moves all directories from <code><span class="pre">updater_backup/packageVersion</span></code> to the current version</li>
+<li>Copies your old <code><span class="pre">config.php</span></code> to the new <code><span class="pre">config/</span></code> directory</li>
+</ul>
+<p>Using the Updater app to update your ownCloud installation is just a few steps:</p>
+<ol class="arabic simple">
+<li>You should see a notification at the top of any ownCloud page when there is a new update available.</li>
+<li>Even though the Updater app backs up important directories, you should always have your own current backups (See <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/maintenance/backup.html"><em>Backing up ownCloud</em></a> for details.)</li>
+<li>Verify that the HTTP user on your system can write to your whole ownCloud directory; see the <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/maintenance/update.html#set-updating-permissions-label"><em>Setting Permissions for Updating</em></a> section below.</li>
+<li>Navigate to your Admin page and click the <strong>Update Center</strong> button under Updater. This takes you to the Updater control panel.</li>
+<li>Click Update, and carefully read the messages. If there are any problems it will tell you. The most common issue is directory permissions; your HTTP user needs write permissions to your whole ownCloud directory. (See <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/installation/installation_wizard.html#strong-perms-label"><em>Setting Strong Directory Permissions</em></a>.) Another common issue is SELinux rules (see <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/installation/selinux_configuration.html#selinux-config-label"><em>SELinux Configuration</em></a>.) Otherwise you will see messages about checking your installation and making backups.</li>
+<li>Click Proceed, and then it performs the remaining steps, which takes a few minutes.</li>
+<li>If your directory permissions are correct, a backup was made, and downloading the new ownCloud archive succeeded you will see the following screen. Click the Start Update button to complete your update:It runs for a few minutes, and when it is finished displays a success message, which disappears after a short time.</li>
+<li>Refresh your Admin page to verify your new version number. In the Updater section of your Admin page you can see the current status and backups. These are backups of your old and new ownCloud installations, and do not contain your data files. If your update works and there are no problems you can delete the backups from this screen.If the update fails, then you must update manually. (See <a class="reference internal" href="https://doc.owncloud.org/server/9.1/admin_manual/maintenance/manual_upgrade.html"><em>Manually upgrading</em></a>.)</li>
+</ol>
+</div><div id='manual-owncloud-upgrade' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-owncloud-upgrade'>Manual ownCloud Upgrade</a></h3><p>Please read the documentation:<a href="https://doc.owncloud.org/server/9.1/admin_manual/maintenance/manual_upgrade.html?highlight=upgrade" target="_blank" rel="noopener noreferrer">https://doc.owncloud.org/server/9.1/admin_manual/maintenance/manual_upgrade.html?highlight=upgrade</a></p>
+</div></div>  </section>
+
+  <section id="useful-command-for-you" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Useful command for you</h2><p>These command you may be use:</p>
+<pre class=" language-markup"><code class=" language-markup">~# cd /data/wwwroot/default  //go to directory
+~# reboot //restart server
+~# wget url  //download
+~# unzip xx.zip //unzip
+
+~# systemctl restart nginx  //restart nginx
+~# systemctl restart php-fpm //restart php-fpm
+~# systemctl start | stop | restart mysqld //restart mysql
+
+~# yum update -y 
+~# yum upgrade -y </code></pre>
+</div>  </section>
+
+  <section id="seafile-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Seafile Help Links</h2><ul>
+<li>Site: https://www.seafile.com</li>
+<li>Help documentation: https://www.seafile.com/help/</li>
+<li>Server documentaion: http://manual-cn.seafile.com</li>
+<li>Forum: https://bbs.seafile.com</li>
+</ul>
+</div>  </section>
+
+  <section id="postscript" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Postscript</h2><p>This document is original from Websoft9.In order to ensure the seriousness and usability of the documentation, no one may misappropriate or modify the second distribution. The need for friends reproduced please mark the source, otherwise we reserve the right to give legal action.</p>
+<p>We will periodically update the documentation. Please visit the online documentation for the latest version</p>
+<p>This document URL: <a href="http://en.websoft9.com/xdocs/seafile-image-guide/" target="_blank" rel="noopener noreferrer">http://en.websoft9.com/xdocs/seafile-image-guide/</a><br />
+Support &amp; Partnership: <a href="http://www.websoft9.com/">http://www.websoft9.com</a></p>
+<p>Need more same solution like Owncloud,please read:<a href="https://www.cloudwards.net/diy-cloud-storage-tools/" target="_blank" rel="noopener">Best DIY Cloud Storage Tools</a></p>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 6.2.5</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

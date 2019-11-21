@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EspoCRM Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/espocrm/espocrm' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#espocrm-stack-components">EspoCRM Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#start-to-install-espocrm">Start to install EspoCRM</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-espocrm">Step3. Install EspoCRM</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#backup">Backup</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#extension-packages">Extension Packages</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#using-emails">Using Emails</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-use-another-languages">How to use another languages?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-migrate-from-free-to-advanced-pack">How to migrate from free to Advanced Pack?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#espocrm-help-links">EspoCRM Help Links</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>EspoCRM Image Guide</h1>
+                              <div class="version"> Version 4.2.4</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 EspoCRM is a pre-configured, ready to run image for running EspoCRM on Alibaba Cloud.</p>
+<p>EspoCRM is an Open Source CRM (Customer Relationship Management) software that allows you to see, enter and evaluate all your company relationships regardless of the type. People, companies or opportunities &#8211; all in an easy and intuitive interface.It&#8217;s a web application with a frontend designed as a single page application based on backbone.js and a REST API backend written in PHP.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="espocrm-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>EspoCRM Stack Components</h2><p>Software Version: EspoCRM4.2.4<br />
+Software directory: /data/wwwroot/default/espocrm</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">LAMP</a><br />
+PHP Configuration File: /usr/local/php/etc/php.ini<br />
+Virtual host Configuration File directory: /usr/local/apache/conf/vhost<br />
+Virtual host Configuration Command: /root/oneinstack/vhost.sh</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-bootpage-websoft9.png" width="1414" height="580" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="start-to-install-espocrm" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Start to install EspoCRM</h2><div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><code>mysql -uroot –p </code>                               #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p><code>MySQL [(none)]&gt; create database mydbname;</code></p>
+<p><code>MySQL [(none)]&gt; show databases;</code></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p><code>MySQL [(none)]&gt; grant all privileges on mydbname.* to username@'localhost' identified by 'userpassword';</code></p>
+<p><code>MySQL [(none)]&gt; flush privileges;</code></p>
+<p><code>MySQL [(none)]&gt; exit;</code></p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /root/oneinstack</code><br />
+<code>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# ./vhost.sh</code><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep00.png" alt="" /></a></p>
+</div><div id='step3-install-espocrm' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-espocrm'>Step3. Install EspoCRM</a></h3><p><strong>Open your domain name via browser:</strong><br />
+<strong>1.  Click “Start”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep01.png" alt="" /></a><br />
+<strong>2.  Accept the license, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep02.png" alt="" /></a><br />
+<strong>3.  Enter your database configuration, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep03.png" alt="" /></a><br />
+<strong>4.  Click “Install”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep04.png" alt="" /></a><br />
+<strong>5.  Set admin account, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep05.png" alt="" /></a><br />
+<strong>6.  Set system configuration, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep06.png" alt="" /></a><br />
+<strong>7.  Set your smtp configuration, Click “Next”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep07.png" alt="" /></a><br />
+<strong>8.  EspoCRM has been successfully installed.</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep08.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep08.png" alt="" /></a><br />
+<strong>9. Use <em>http://&lt;domain name&gt;/</em>  to go to your index page, Then enter your admin account, Click &#8220;Login&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep09.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep09.png" alt="" /></a><br />
+<strong>10. This is the EspoCRM page:</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep10.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/ep10.png" alt="" /></a></p>
+</div></div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>Backup is very import for using any applications,you can use Manual Backup as following steps:</p>
+<ol>
+<li>Download the entire Joomla file in you root dictionary by FTP or other tools</li>
+<li>Visit http://&lt; Internet IP Address &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-mysql-backup-websoft9.png" width="635" height="444" /></li>
+<li>Click “go” button,then download the SQL backup file</li>
+</ol>
+</div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>We recommend to make a backup of your EspoCRM files and data before upgrade.To upgrade your EspoCRM download appropriate zip file and upload it at Administration &gt; Upgrade.</p>
+<p>But If there have not any zip file for you version udgrade,you cant&#8217;t upgrade</p>
+<ol>
+<li>Download upgrade package from <a href="https://www.espocrm.com/download/upgrades/" target="_blank" rel="noopener noreferrer">here</a></li>
+<li>Administration &gt; Upgrade,upload it<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-upgrade-websoft9.png" width="967" height="420" /></li>
+<li>Then you will get the message &#8220;Your EspoCRM will be upgraded to version <strong>4.x.x</strong>. This can take some time.&#8221;,click the &#8220;Run upgrade&#8221;</li>
+<li>Upgraded successfully</li>
+</ol>
+</div>  </section>
+
+  <section id="extension-packages" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Extension Packages</h2><p>Extensions allow you to add extra functionality to EspoCRM. They can be installed by Administrator panel-&gt;Customization-&gt;Extensions</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-extension-websoft9.png" width="947" height="269" /></p>
+</div>  </section>
+
+  <section id="using-emails" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Emails</h2><p>EspoCRM provides the ability to fetch emails from IMAP box. This makes possible to use EspoCRM as an email client along with CRM-specific features.</p>
+<h2>IMAP accounts</h2>
+<p>User can setup IMAP account on Personal Email Accounts page (Emails tab &gt; top-right menu &gt; Personal Email Accounts).</p>
+<p>Specify what folders to monitor in Monitored Folders field. By default it&#8217;s set to INBOX. If you use some external email client to send emails you can add Sent folder to archive those emails.</p>
+<p><em>Fetch Since</em> allows you to choose the date emails should be archived from. Set it to some date prior today if you need to archive old emails.</p>
+<p>There is an ability to specify <em>Folder</em> in Persnoal Email Account. Incoming emails will be put in that folder.</p>
+<h2>SMTP accounts</h2>
+<p>Users can setup SMTP settings in Preferences as well as in thier Personal Email Accounts. Administrator also can allow to use system SMTP (make it Shared).</p>
+<p>Users can have multiple SMTP accounts (since version 4.2.0). But email addresses user can use to send emails from are defined by email addresses of <em>User</em> record.</p>
+<h2>Working with Emails</h2>
+<p>Emails are fetched by cron (in background) every few minutes (period can specified by Administrator). You can see all your emails at Emails tab. There are standard folders Inbox, Sent, Draft emails at the left side.</p>
+<p><em>Status</em> field. <code>Sent</code> means it was sent from CRM, <code>Archived</code> – fetched from IMAP account or archived manually, <code>Draft</code> – means that email was created as a draft.</p>
+<p>When the new email comes the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and Contact in B2C mode) etc. If it wasn&#8217;t recognized then user can link it manually by filling in <em>Parent</em> field.</p>
+<p>If an email came from a new potential client user can <strong>convert it to Lead</strong>. Open Email entry and click Create Lead in top-right menu.</p>
+<p>It&#8217;s also possible to <strong>create Task or Case</strong> from an email record.</p>
+<p>If email addresses (from, to, cc) in an email record are known to the system it will show the person they are related to (Contact, Lead, User etc). If some email address is new you can <strong>create contact</strong> right from there.</p>
+<p>All emails related to specific record are shown in History panel of that record. If some email is related, for example, to opportunity but opportunity is related to the account, it will be shown both in opportunity and account.</p>
+<h2>Sending Emails</h2>
+<p>You can compose new email by a few ways:</p>
+<ul>
+<li><em>Compose Email</em> button on Emails list view;</li>
+<li>replying on another email;</li>
+<li>clicking on an email address of some record;</li>
+<li><em>Compose Email</em> action of Activities panel.</li>
+</ul>
+<p>There is an ability to <strong>select template</strong> of your email.</p>
+<p>You can setup <strong>email signature</strong> in Preferences.</p>
+<h2>Email Folders</h2>
+<p>Users can create their own email folders to put some of emails in for convenience. List of available folders is available at Emails page at the left side. To create or edit folders follow Emails &gt; dropdown in top-right corner &gt; Folders. <code>Skip Notification</code> means that you wan&#8217;t be notified about incoming emails that fall into the certain folder. By utilizing Email Filters it&#8217;s possible to put emails in folders automatically by specific criteria.</p>
+<h2>Email Filters</h2>
+<p>Administrator can create global email filters to skip not desirable emails. They are available at Administration &gt; Email Filters.</p>
+<p>Regular user can create email filters for their Personal Email Accounts or for their entire inbox. They are available at Emails &gt; dropdown in top-right corner &gt; Filters.</p>
+<p>There are two types of filters:</p>
+<ul>
+<li>Skip &#8211; email will be put in <em>Trash</em> or not imported if filter is related to Personal Email Account;</li>
+<li>Put in Folder &#8211; imported emails will be put into specified user&#8217;s folder automatically.</li>
+</ul>
+<h2>Email Templates</h2>
+<p>Email templates are available at Emails &gt; dropdown in top-right corner &gt; Email Templates. They can be used both for mass email sendings and for regular emails. <code>One-off</code> checkbox means that email template supposed to be used only once, what is usual for email marketing.</p>
+<p>It&#8217;s possible to use placefolders in email template&#8217;s body and subject e.g. {Account.name}, {Person.emailAddress}. They will be replaced with values of related records.</p>
+<p>You can use additional reserved placefolders in template body: {optOutUrl} and {optOutLink}.</p>
+<pre><code>&lt;a href="{optOutUrl}"&gt;Unsubscribe&lt;/a&gt;</code></pre>
+<p>This is unsubscribe link for mass email.</p>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 EspoCRM Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://localhost/phpMyAdmin,you can enter the login page</li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/espocrm
+find /data/wwwroot/default/espocrm -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/espocrm -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient to install.</p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 64M <b>Recommended:</b> 128M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="how-to-use-another-languages" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use another languages?</h2><p>EspoCRM support more than 14+ languages,how to configure the language after installation?</p>
+<p>Administrator-&gt;Settings,change the language and save it</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/espocrm/EspoCRM-language-websoft9.png" width="1582" height="744" /></p>
+</div>  </section>
+
+  <section id="how-to-migrate-from-free-to-advanced-pack" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to migrate from free to Advanced Pack?</h2><p>If you plan to buy ESPO CRM Advanced Pack when using free version, how to use it?</p>
+<p>Advanced Pack is an extension. You can install any extension on your instance or remove it, when you want. You don&#8217;t need another one.</p>
+</div>  </section>
+
+  <section id="espocrm-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>EspoCRM Help Links</h2><h3 class="steps-header">Links</h3>
+<ul>
+<li>For more EspoCRM information, please visit EspoCRM <a href="http://blog.espocrm.com" target="_blank" rel="noopener noreferrer">blog</a>, follow EspoCRM on <a href="https://twitter.com/espocrm" target="_blank" rel="noopener noreferrer">twitter</a>.If you have any suggestions or questions, please ask on the EspoCRM <a href="http://forum.espocrm.com" target="_blank" rel="noopener noreferrer">forum</a>.</li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 4.2.4</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

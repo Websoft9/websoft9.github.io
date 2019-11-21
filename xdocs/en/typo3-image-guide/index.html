@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Typo3 Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/TYPO3/TYPO3.CMS' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#typo3-stack-components">Typo3 Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#database-password">Database Password</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#getting-started-with-typo3">Getting Started with Typo3</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step1-create-a-database">Step1. Create a database</a><li class=""><a href="#step2-add-a-virtual-host">Step2. Add a virtual host</a><li class=""><a href="#step3-install-typo3">Step3. Install Typo3</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#the-extension-manager">The Extension Manager</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#installing-a-new-extension">Installing a new extension</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#templates">Templates</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#the-list-module">The List module</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup">Backup</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#manual-backup">Manual Backup</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#linux">Linux</a><li class=""><a href="#windows">Windows</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-using-human-readable-urls">How to using Human readable URLs?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-backend-language">How to change backend language?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-a-pre-configured-site">How to add a pre-configured site?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-modify-php-settings">How to modify PHP settings?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#typo3-help-links">Typo3 Help Links</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Typo3 Image Guide</h1>
+                              <div class="version"> Version 8.6.1</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 TYPO3 is a pre-configured, ready to run image for running TYPO3 on Alibaba Cloud.</p>
+<p>TYPO3 is a free, feature-rich Enterprise class Open Source Web CMS based on PHP with a vast international community of developers and supporters.The TYPO3 Universe offers highly flexible, scaleable and customizable products for Web Content Management, providing the basis for websites, intranets and web &amp; mobile applications worldwide &#8211; always with a focus on the current needs of businesses and public institutions.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="typo3-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Typo3 Stack Components</h2><p><strong>Software Version:</strong> Typo3-8.6.1<br />
+<strong>Software directory:</strong> /data/wwwroot/default/typo3</p>
+<p><strong>Basic software environment:</strong> <a href="http://en.websoft9.com/xdocs/php-stack-linux-image-guide/" target="_blank" rel="noopener noreferrer">Click here</a><br />
+<strong>PHP Configuration File:</strong> /usr/local/php/etc/php.ini<br />
+<strong>Virtual host Configuration File directory:</strong> /usr/local/apache/conf/vhost<br />
+<strong>Virtual host Configuration Command:</strong> /root/oneinstack/vhost.sh</p>
+<p>Database install directory: /usr/local/mysql<br />
+Database data directory: /data/mysql<br />
+Database Configuration File: /etc/my.cnf</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the boot page of Websoft9 below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-bootpage-websoft9.png" width="988" height="543" /></li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="database-password" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Database Password</h2><p>This Image use MySQL for database</p>
+<p><strong>#default user/password：</strong>root/123456</p>
+<p>MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+</div>  </section>
+
+  <section id="getting-started-with-typo3" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with Typo3</h2><p><strong>We will show you how to install Typo3:</strong><br />
+1.Create the database required for Typo3,<br />
+2.Add a virtual host required for Typo3,(not nessesary)<br />
+3.Start to install Typo3.</p>
+<div id='step1-create-a-database' class='step-content clearfix'><h3 class='steps-header'><a href='#step1-create-a-database'>Step1. Create a database</a></h3><p><strong>1.login in MySQL:</strong></p>
+<p><strong>Method 1:</strong>Use following URL to open phpMyAdmin page: http://&lt; Public net IP &gt;/phpMyAdmin</p>
+<p><strong>Method 2:</strong>Use SSH command to login in.</p>
+<p><code>mysql -uroot –p </code>                               #enter mysql console</p>
+<p><strong> #default user/password：</strong>root/123456            More MySQL User Guide: <a href="http://en.websoft9.com/xdocs/manage-mysql%ef%bc%88lnmplamp-image-%ef%bc%89" target="_blank" rel="noopener noreferrer">Click here</a></p>
+<p>&nbsp;</p>
+<p><strong>2.create a database:</strong></p>
+<p>&nbsp;</p>
+<p><code>MySQL [(none)]&gt; create database mydbname;</code></p>
+<p><code>MySQL [(none)]&gt; show databases;</code></p>
+<p>&nbsp;</p>
+<p><strong>3.Create a Database User and grants permissions to the User:</strong></p>
+<p><code>MySQL [(none)]&gt; grant all privileges on mydbname.* to username@'localhost' identified by 'userpassword';</code></p>
+<p><code>MySQL [(none)]&gt; flush privileges;</code></p>
+<p><code>MySQL [(none)]&gt; exit;</code></p>
+<p>&nbsp;</p>
+<p><a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" target="_blank" rel="noopener noreferrer"><img class="alignnone size-medium wp-image-16689" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/common/before2.png" alt="before2" /></a></p>
+</div><div id='step2-add-a-virtual-host' class='step-content clearfix'><h3 class='steps-header'><a href='#step2-add-a-virtual-host'>Step2. Add a virtual host</a></h3><p><strong>Use SSH Command to Add a virtual host:</strong></p>
+<p><code>[root@iZbp1i4rjdsy216yq7lgucZ ~]# cd /root/oneinstack</code><br />
+<code>[root@iZbp1i4rjdsy216yq7lgucZ oneinstack]# ./vhost.sh</code><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty00.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty00.png" alt="" /></a></p>
+</div><div id='step3-install-typo3' class='step-content clearfix'><h3 class='steps-header'><a href='#step3-install-typo3'>Step3. Install Typo3</a></h3><p><strong>Open your domain name via browser:</strong><br />
+<strong>1. Click “System loods good. Continue!”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty02.png" alt="" /></a><br />
+<strong>2. Fill in Database username, password and host, Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty03.png" alt="" /></a><br />
+<strong>3. Select a database name, Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty04.png" alt="" /></a><br />
+<strong>4. Set Admin user adn password, Click “Continue”;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty05.png" alt="" /></a><br />
+<strong>5. Installation done, You can open the TYPO3 backend;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty06.png" alt="" /></a><br />
+<strong>6. Fill in admin username and password, Click &#8220;Login&#8221;;</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty07.png" alt="" /></a><br />
+<strong>7. The TYPO3 backend:</strong><br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty08.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/ty08.png" alt="" /></a></p>
+<p>Use <strong><em>http://&lt;domain name&gt;/</em></strong>  to go to your index page.</p>
+</div></div>  </section>
+
+  <section id="the-extension-manager" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>The Extension Manager</h2><p>TYPO3 CMS has many built-in features but even more features are available via extensions. Actually the whole of TYPO3 CMS itself is made of extensions. With public extensions you can enhance existing features or add totally new ones.</p>
+<p>The <em>Extension Manager</em> is where you can manage available extensions or get new ones from the TYPO3 Extension Repository (TER). It is quite a rich tool and this chapter provides only a brief overview.</p>
+<p>Moving to <strong>ADMIN TOOLS &gt; Extensions</strong>, we get the following view:</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-BackendExtensionManager-websoft9.png" width="789" height="405" /></p>
+<p>It shows the &#8220;Installed extensions&#8221;. The first action icon (1) can be used to install an uninstalled extension or vice-versa (uninstalled extensions appear grayed out).</p>
+<p>Next comes information about the extension: title, key, version and state. Finally are one or more actions icons, depending on what the extension offers. All extensions have a download action, many will have a configuration action, which can be used to access the extension&#8217;s options. Again just hover over the actions to get a help text.</p>
+<div id='installing-a-new-extension' class='step-content clearfix'><h3 class='steps-header'><a href='#installing-a-new-extension'>Installing a new extension</a></h3><p>Let&#8217;s look briefly at the extension installation process. Use the menu in the docheader to switch to the &#8220;Get extensions&#8221; view:</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-BackendExtensionManagerInstall-websoft9.png" width="789" height="429" /></div>
+<p>The list which appears in this view is the full list of extensions from the TER (limited to those compatible with the TYPO3 CMS that you are using). You can update this list using the button at the top right (1). A search field is available (2).</p>
+<p>Clicking the &#8220;Import and install&#8221; action (3) will trigger the installation. Extensions may depend on other extensions, in which case all will be installed transparently.</p>
+<p>If you look for a specific version of an extension, you can click on its title (4) and access the list of all available versions.</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-BackendExtensionManagerExtensionVersions-websoft9.png" width="789" height="487" /></div>
+<p>Only compatible versions are displayed. Known insecure versions will also never show up.</p>
+</div></div>  </section>
+
+  <section id="templates" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Templates</h2><p>After that brief overview of pages and content elements, you might wonder how all this structure is turned into a web site, complete with page layout, CSS and JavaScript files.</p>
+<p>In TYPO3 CMS this job is achieved using <em>templates</em> which should be considered as a kind of configuration written in a language called <em>TypoScript</em>.</p>
+<p>The <strong>WEB &gt; Template</strong> module provides an overview of the TypoScript configuration and allows to work with so-called &#8220;template records&#8221;, which is where the TypoScript configuration is actually stored.</p>
+<p>Here is a brief view of the <em>Template</em> module:</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-template-websoft9.png" width="1054" height="672" /></div>
+<p>Templating itself is covered by other tutorials:</p>
+<ul class="simple">
+<li>the <a class="reference external" title="(in TypoScript in 45 Minutes v7.6)" href="https://docs.typo3.org/typo3cms/TyposcriptIn45MinutesTutorial/Index.html#start"><span class="xref std std-ref">TypoScript in 45 minutes Tutorial</span></a> covers the basics of TypoScript and how to related pages and content elements to an actual HTML output.</li>
+<li>the <a class="reference external" title="(in Templating Tutorial: Basics v7.6 (latest))" href="https://docs.typo3.org/typo3cms/TemplatingTutorial/Index.html#start"><span class="xref std std-ref">Templating Tutorial</span></a> guides you through the actual integration of HTML models into your TYPO3 CMS installation using TypoScript.</li>
+</ul>
+<div id="facts-about-templates-and-possibilities" class="section">
+<p>&nbsp;</p>
+<h2>Facts about templates and possibilities</h2>
+<p>Here is a short list of the possibilities offered by TYPO3 CMS templates:</p>
+<ul class="simple">
+<li>You can implement <em>any</em> design you like, the way you like.</li>
+<li>You can have any number of menu levels.</li>
+<li>You can have multiple sites, multiple templates.</li>
+<li>You can have pages in any number of languages.</li>
+<li>You can have multiple content areas (columns) on a page.</li>
+<li>You can integrate all kinds of external data sources through plugins written in PHP.</li>
+<li>You can add any number of web applications to run on various pages in TYPO3.</li>
+<li>You can extend pretty much anything with PHP.</li>
+</ul>
+</div>
+</div>  </section>
+
+  <section id="the-list-module" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>The List module</h2><p>In TYPO3 CMS all the information is stored in database records: pages, content elements, templates, users, news items, etc. For some of this information dedicated modules exist, like the Page or the Template module which we visited earlier.</p>
+<p>But these records, as well as all others that don&#8217;t have such a dedicated module, can be created and edited using the WEB &gt; List module.</p>
+<ul>
+<li>Using the List module effectively</li>
+<li>The clipboard</li>
+<li>Advanced clipboard usage</li>
+<li>Mass editing</li>
+</ul>
+</div>  </section>
+
+  <section id="backup" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup</h2><p>To restore a TYPO3 CMS project you need to have a backup of at least the following data directories:</p>
+<ul class="simple">
+<li>fileadmin</li>
+<li>typo3conf</li>
+<li>uploads</li>
+</ul>
+<p>You do not need a backup of the &#8220;typo3temp/&#8221; directory, due to the fact that all files are re-generated automatically if they do not exist. Also a backup of the TYPO3 source code is not needed (unless changes were made to the source code, which is not recommended). You can always download the TYPO3 source packages from the TYPO3 website, even for older versions of TYPO3.</p>
+<p>In addition to the data directories listed above, a backup of the database is required. For MySQL the command line tool &#8220;mysqldump&#8221; (or &#8220;mysqldump.exe&#8221; for Microsoft Windows) is a good way to export the content of the database to a file without any manual interaction (e.g. as an automated, scheduled system task).</p>
+<p>Once a backup has been created, it should be verified that it is complete and can be restored successfully. A good test is to restore a backup of a TYPO3 project to a different server and then check the site for any errors or missing data. In a perfect world, these restore checks should be tested frequently to ensure that the concept works and continues working over a time period. The worst case would be that you rely on your backup concept and when you need to restore a backup you notice that the concept has not worked for months.</p>
+<div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><ol>
+<li>Download the entire Typo3 file in you root dictionary by FTP or other tools</li>
+<li>Visit http://&lt; Internet IP Address &gt;/phpMyAdmin,login in to the phpMyAdmin Panel</li>
+<li>Select you database,then Export<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/wordpress/wordpress-mysql-backup-websoft9.png" width="635" height="444" /></li>
+<li>Click “go” button,then download the SQL backup file</li>
+</ol>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>When a new version of TYPO3 is released, you should follow the guideline in this chapter in order to do an upgrade. Also follow any additional upgrade information carefully. You might e.g. want to skim the included ChangeLog to see if any features affect the way your site works. (Look for lines prepended with &#8220;!!!&#8221; &#8211; those are the really important ones!)</p>
+<p>Basically these are the steps to be done to update your TYPO3 site:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/Backup/Index.html">Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/UpdateReferenceIndex/Index.html">Reference Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/InstallTheNewSource/Index.html">Install the new Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/ConvertGlobalExtensions/Index.html">Convert global Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/UseTheUpgradeWizard/Index.html">Use the upgrade wizard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/RunTheDatabaseAnalyzer/Index.html">Run the Database Analyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/ClearCachesAndUserSettings/Index.html">Clear Caches and User Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/RemoveTemporaryCacheFiles/Index.html">Remove temporary cache files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/ChangelogAndNewsmd/Index.html">Check the ChangeLog and NEWS.md</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/UpdateExtensions/Index.html">Update Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.typo3.org/typo3cms/InstallationGuide/Upgrade/UpdateTranslations/Index.html">Update Translations</a></li>
+</ul>
+</div>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Typo3 Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<div id='linux' class='step-content clearfix'><h3 class='steps-header'><a href='#linux'>Linux</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div><div id='windows' class='step-content clearfix'><h3 class='steps-header'><a href='#windows'>Windows</a></h3><p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>User Remote Desktop Connection of Window to connect to you ECS<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/windows-remote-desktop-websoft9.png" width="411" height="250" /></li>
+<li>Install a Chrome or Firefox browser on you ECS</li>
+<li>Open Chrome or Firefox on your ECS</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-using-human-readable-urls" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to using Human readable URLs?</h2><p>By default TYPO3 CMS identifies the page which should be delivered by the &#8220;?id&#8221; parameter. Just enter <em>http://www.your-site.example.org/index.php?id=33</em> to get the &#8220;Overview&#8221; page of the Introduction Package.</p>
+<p>This is convenient but not good for visitors nor for proper referencing. Human-readable URLs are provided by extension &#8220;realurl&#8221; (others exist). Thus the above-mentioned URL becomes <em>http://www.your-site.example.org/content-examples/overview/</em>.</p>
+<p>This should work out of the box with the Introduction Package. If it does not you may want to deactivate human-readable URLs. The simplest way to achieve this is to go to the <strong>ADMIN TOOLS &gt; Extensions</strong> module and deactivate extension &#8220;realurl&#8221;.</p>
+</div>  </section>
+
+  <section id="how-to-change-backend-language" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change backend language?</h2><p>The TYPO3 CMS backend is available in many languages. These translations are bundled into packages which need to be fetched from the community translation server (<a class="reference external" href="https://translation.typo3.org/">https://translation.typo3.org/</a>). Once installed backend users can choose which language to use.</p>
+<p>Loading translation packages happens in the <strong>ADMIN TOOLS &gt; Languages</strong> module.</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-changelanguage001-websoft9.png" width="831" height="637" /></div>
+<p>Click on the &#8220;+&#8221; icon to activate a new language. A download button appears to the right. Click on it to get the translations. In the docheader is a download icon which will fetch packages for all activated languages. It is recommended to update regularly to benefit from completed or improved translations.</p>
+<p>To change the language of the backend, move to the <strong>User Settings</strong> module, which is accessed by clicking on your user name in the top bar.</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-changelanguage002-websoft9.png" width="822" height="762" /></div>
+<p>Choose &#8220;Language&#8221; at the bottom, then hit the &#8220;Save&#8221; button in the docheader. The backend should update itself automatically but you may want to reload the page in the browser. Your backend should now be in Basque.</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-changelanguage003-websoft9.png" width="821" height="576" /></div>
+<p>As you can see, if a translation is incomplete, the backend will fall back to English.</p>
+<p>A default language can also be set when creating a new backend user.</p>
+<div class="figure"><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/typo3/typo3-changelanguage002-websoft9.png" width="822" height="762" /></div>
+<div class="figure"></div>
+<div class="figure">
+<div class="document">
+<div class="toBeIndexed">
+<div id="changing-backend-language" class="section">
+<div class="admonition caution">
+<p class="first admonition-title">note:Changing a user&#8217;s default language will not change the backend language if that user has already logged in at least once, as the language is kept in the user preferences. Such users will need to update their language themselves.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  </section>
+
+  <section id="how-to-add-a-pre-configured-site" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to add a pre-configured site?</h2><p>You have an empty installation by default. If you want a pre-configured site, there are distributions on the web which can be installed via the Extension Manager.</p>
+</div>  </section>
+
+  <section id="how-to-modify-the-allowed-limit-for-upload" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify the allowed limit for upload?</h2><p>Modify the  /usr/local/php/etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/typo3
+find /data/wwwroot/default/typo3 -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/typo3 -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-modify-php-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to modify PHP settings?</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /usr/local/php/etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient for typo3 to install.</p>
+<p>The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 64M <b>Recommended:</b> 128M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># service httpd restart</span></code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-change-the-max_execution_time" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the max_execution_time?</h2><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /usr/local/php/etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div>  </section>
+
+  <section id="typo3-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Typo3 Help Links</h2><p>Get more information</p>
+<ul>
+<li><a href="https://typo3.org/">https://typo3.org</a> is the main project website. It provides up to date official news, information about events, access to downloading the products and extensions.</li>
+<li><a href="https://wiki.typo3.org/">https://wiki.typo3.org</a> is a collaborative wiki, providing access to all kind of information around the TYPO3 ecosphere.</li>
+<li><a href="https://docs.typo3.org/">https://docs.typo3.org/</a>: TYPO3 is one of the most thoroughly documented OpenSource products around, with manuals covering basic tutorials, TypoScript, administration, development, core structure, etc. You should make the time to locate the various documents, and read those that apply to the work you want to do.</li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 8.6.1</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

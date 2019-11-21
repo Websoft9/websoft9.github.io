@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trac Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/edgewall/trac' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#trac-stack-components">Trac Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#start-to-use-trac">Start to use Trac</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#frequently-used-usernames-and-passwords">Frequently used Usernames and Passwords</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#using-plugins">Using Plugins</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup-restore">Backup & Restore</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a><li class=""><a href="#manual-backup">Manual Backup</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#upgrade">Upgrade</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-add-new-user-for-trac">How to add new user for Trac?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-start-or-stop-the-services">How to start or stop the services?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#ubuntu-linux">Ubuntu Linux</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-add-a-domain-to-trac">How to Add a domain to Trac?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#trac-help-links">Trac Help Links</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>Trac Image Guide</h1>
+                              <div class="version"> Version 1.2.2</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 Trac is a pre-configured, ready to run image for running Trac on Alibaba Cloud.</p>
+<p>Trac is a minimalistic approach to web-based management of software projects. Its goal is to simplify effective tracking and handling of software issues, enhancements and overall progress.All aspects of Trac have been designed with the single goal to help developers write great software while staying out of the way and imposing as little as possible on a team&#8217;s established process and culture.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="trac-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Trac Stack Components</h2><p><strong>Application Software(Trac1.2.2,SVN)</strong><br />
+Trac poject directory: <em>/data/trac</em><br />
+Trac configuration file: <em>/data/trac/conf/trac.ini<br />
+</em>Trac static resources directory: <em>/data/wwwroot/trac</em></p>
+<p><strong>Application Server(Apache2.4,Subversion1.9.3,Python2.7)</strong><br />
+Apache2-mod-Python: /etc/apache2/mods-available/dav_svn.conf<br />
+Apahce2-Trac configuration file: /etc/apache2/sites-available/trac.conf<br />
+SVN Warehouse directory: <em>/data/svn</em><br />
+Apache Log Files:/var/log/apache2</p>
+<p><strong>Database(SQLLite3)</strong><br />
+Database install directory: /usrb/python2.7/sqlite3<br />
+Database data directory: /data/trac/db</p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the http://Internet IP Address/</li>
+<li>If verify successfully,you can enter the Apache default welcome page of this Image</li>
+<li>If no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="start-to-use-trac" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Start to use Trac</h2><p>Using Chrome or Firefox to visit: <em>http://Internet IP Address/</em> to start using this application.Following is the steps:</p>
+<ol>
+<li><strong>Visit <em>http://Internet IP Address </em></strong>or <strong><em>http://yourdomain</em></strong><em> </em>to enter the login in page directly(User Name is: <span style="color: #ff0000;">admin</span>,Password is <span style="color: #ff0000;">admin</span>)<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/trac/trac-login-websoft9.png" width="960" height="261" /></li>
+<li>Click the &#8220;OK&#8221; and Log in to backend of Trac below:<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/trac/trac-backend-websoft9.png" width="960" height="461" /></li>
+</ol>
+</div>  </section>
+
+  <section id="frequently-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Frequently used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、Trac:</strong>Username is <em><strong>admin</strong></em> password is<strong> <em>admin</em></strong><br />
+Backend URL:<em>http://Internet IP Address/trac</em><br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.You can reset the password through console and restart the Server if you have forgotten it.Please Using the <strong><em>Putty</em></strong> for Remote and <strong><em>WinSCP</em></strong> for SFTP</p>
+</div>  </section>
+
+  <section id="using-plugins" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Plugins</h2><p>Plugin is the functions enhancement for application,how to use Trac&#8217;s plugin?</p>
+<ol>
+<li>Visit https://trac.edgewall.org/wiki/PluginList and download the plugin you want to use</li>
+<li>Login the Trac as Administrator,admin-&gt;Plugins,Browse the plugin pack(.egg) and Install it<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/trac/trac-addplugins001-websoft9.png" width="960" height="461" /></li>
+</ol>
+</div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup and manual local backup in two ways, both of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the “snapshot” function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div><div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><p>Trac backups are a copied snapshot of the entire /data/trac directory, including the database. Backups can be created using the <code>hotcopy</code> command of <a class="wiki" href="https://trac.edgewall.org/wiki/TracAdmin">trac-admin</a>.</p>
+<p><strong>Note</strong>: Trac uses the <code>hotcopy</code> nomenclature to match that of <a class="ext-link" href="http://subversion.tigris.org/"><span class="icon">​</span>Subversion</a>, to make it easier to remember when managing both Trac and Subversion servers.</p>
+<p><strong>Backup</strong></p>
+<p>Create a backup of a live <a class="wiki" href="https://trac.edgewall.org/wiki/TracEnvironment">TracEnvironment</a> by running:</p>
+<div class="wiki-code">
+<div class="code">
+<pre><span class="nv">$ </span>trac-admin /data/trac hotcopy /data/backupdir
+</pre>
+</div>
+</div>
+<p>The database will be locked while hotcopy is running.</p>
+<p>The resulting backup directory is safe to handle using standard file-based backup tools like <code>tar</code> or <code>dump</code>/<code>restore</code>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/trac/trac-backup-websoft9.png" width="960" height="253" /></p>
+<p>Please note, the <code>hotcopy</code> command will not overwrite a target directory. When the target exists the operation will end with an error</p>
+<p><strong>Restoring a Backup</strong></p>
+<p>To restore an environment from a backup, stop the process running Trac, ie the web server or <a class="wiki" href="https://trac.edgewall.org/wiki/TracStandalone">tracd</a>, restore the contents of your backup to your <a class="wiki" href="https://trac.edgewall.org/wiki/TracEnvironment">project environment</a> directory and restart the process.</p>
+<p>&nbsp;</p>
+<div class="wiki-code"></div>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>Before upgrade you should put the site down for maintenance and always Backup your code, data and config files.</p>
+<p>It is highly recommended to temporarily disable any third party themes and user CSS customizations before upgrading. Don’t forget to empty your browser cache if you experience weird bugs right after upgrading.</p>
+<p>Note that you should upgrade to the latest version available, installing intermediate releases sequentially is not needed.</p>
+<p>More details:<a href="https://trac.edgewall.org/wiki/TracUpgrade" target="_blank" rel="noopener noreferrer">https://trac.edgewall.org/wiki/TracUpgrade</a></p>
+</div>  </section>
+
+  <section id="how-to-add-new-user-for-trac" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to add new user for Trac?</h2><p>Using the follow command,you can add new user for Trac</p>
+<pre class=" language-markup"><code class=" language-markup">~# htpasswd -c /etc/apache2/dav_svn.passwd user_name #add user/modify password
+~# sudo vim /etc/apache2/dav_svn.authz
+ [/]
+ user_name=rw
+#enable the read and write authority of user_name for SVN warehouse
+~#service apache2 restart #restart apache</code></pre>
+<p>&nbsp;</p>
+</div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the services?</h2><p>You can use the command to manage the services for Server.Please choose the corresponding command mode according to different types of operating system</p>
+<div id='ubuntu-linux' class='step-content clearfix'><h3 class='steps-header'><a href='#ubuntu-linux'>Ubuntu Linux</a></h3><p>Apache Restart</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl restart apache2.service
+</code></pre>
+</div></div>  </section>
+
+  <section id="how-to-add-a-domain-to-trac" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to Add a domain to Trac?</h2><p>If you want use Domain for this application,you should complete below steps:</p>
+<ul>
+<li>Domain resolution if you want to use (Add an A record to the Internet IP Address of Server from your Domain Control Panel)</li>
+<li>Add ServerName or ServerAlias to the Apache Trac configuration file: /etc/apache2/sites-enabled/trac.conf,
+<pre class=" language-markup">ServerName www.mydomain.com 
+ServerAlias mydomain.com</pre>
+</li>
+<li>Restart the services</li>
+</ul>
+</div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644,folder 755 ,Permissions Users and groups www-data<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www-data.www-data /data/wwwroot/weblate
+find /data/wwwroot/default/weblate -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/weblate -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="trac-help-links" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Trac Help Links</h2><ul>
+<li><strong>Trac Homepage &#8211; </strong><a title="http://wiki.processmaker.com" href="https://trac.edgewall.org/" target="_blank" rel="noopener noreferrer">https://trac.edgewall.org/</a></li>
+<li><strong>Documentation &#8211; </strong><a title="http://forum.processmaker.com" href="https://trac.edgewall.org/wiki/TracGuide" target="_blank" rel="noopener noreferrer">https://trac.edgewall.org/wiki/TracGuide</a></li>
+</ul>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 1.2.2</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>

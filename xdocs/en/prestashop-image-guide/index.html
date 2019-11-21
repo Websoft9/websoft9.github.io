@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PrestaShop Image Guide</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/skin-blue.css">
+
+    <link rel="stylesheet" type="text/css" href="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/css/style.css">
+
+    <!-- All dynamic styles -->
+        <style type="text/css">
+        
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+              <style>
+            .xdocs-pre-loader{
+                background: url(https://en.websoft9.com/wp-content/plugins/xdocs/assets/img/loader1.gif) center no-repeat #fff;
+            }
+        </style>
+
+          </head>
+  <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+
+
+    
+    <div class="xdocs-pre-loader"></div>    <div class="wrapper">
+      <header class="main-header">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+      </header>
+      <!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">
+  <ul class='social'><li><a target='_blank' href='http://en.websoft9.com' ><i class='fa fa-home'></i></a></li><li><a target='_blank' href='https://github.com/PrestaShop/PrestaShop/' ><i class='fa fa-github'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-envelope'></i></a></li><li><a target='_blank' href='http://en.websoft9.com/support' ><i class='fa fa-support'></i></a></li></ul>  
+  <!-- sidebar: style can be found in sidebar.less -->
+  <div class="sidebar" id="scrollspy">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="nav sidebar-menu">
+      <li class="active"><a href="#introduction">Introduction</a>
+
+                  
+                             
+
+               <li class=""><a href="#prestashop-stack-components">PrestaShop  Stack Components</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#verify-the-image">Verify the Image</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#will-be-used-usernames-and-passwords">Will be used Usernames and Passwords</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#getting-started-with-prestashop">Getting Started with PrestaShop</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-connect-server">How to connect Server?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#connect-to-a-linux-instance-using-windows-os">Connect to a Linux instance using Windows OS</a><li class=""><a href="#use-management-terminal-to-connect-to-an-ecs-instance">Use Management Terminal to connect to an ECS instance</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-use-sftp">How to use SFTP?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-access-phpmyadmin">How to access phpMyAdmin?</a>
+
+                    
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#using-modules">Using Modules</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#search-and-install-modules">Search and install Modules</a><li class=""><a href="#module-marketplaceaddons-website">Module marketplace(Addons website)</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#upgrade">Upgrade</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-upgrade">Automatic Upgrade</a><li class=""><a href="#manual-upgrade">Manual Upgrade</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#backup-restore">Backup & Restore</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#automatic-backup-by-snapshot-of-server">Automatic Backup by Snapshot of Server</a><li class=""><a href="#manual-backup">Manual Backup</a><li class=""><a href="#restore">Restore</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#language">Language</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#how-do-i-translate-prestashop-into-my-language">How do I translate PrestaShop into my language?</a><li class=""><a href="#how-do-i-add-a-language-to-the-back-office-or-for-my-customers">How do I add a language to the back office or for my customers?</a><li class=""><a href="#how-do-i-customize-the-translation">How do I customize the translation?</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#useful-php-ini-settings">Useful PHP.ini Settings</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#how-to-modify-the-allowed-limit-for-upload">How to modify the allowed limit for upload?</a><li class=""><a href="#how-to-change-the-max_execution_time">How to change the max_execution_time?</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#prestashop-faq">PrestaShop FAQ</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#how-to-improve-prestashops-performances">How to improve PrestaShop's performances?</a><li class=""><a href="#how-to-move-prestashop-to-a-new-domain">How to move PrestaShop to a new Domain?</a><li class=""><a href="#how-do-i-import-product-data-from-another-application">How do I import product data from another application?</a></ul>                </li>
+
+              
+              
+                 
+                   <li  class="treeview w9-fathermenu-arrow" id="scrollspy-components"><a href="#how-to-configure-domain">How to configure domain?</a>
+                  <ul class="nav treeview-menu"><li class=""><a href="#step-onedomain-resolution">Step One:Domain resolution</a><li class=""><a href="#step-twomodify-the-vhost-file">Step Two:Modify the Vhost file</a></ul>                </li>
+
+              
+              
+                             
+
+               <li class=""><a href="#how-to-change-the-permissions-of-filesytem">How to change the permissions of filesytem?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#how-to-start-or-stop-the-services">How to start or stop the Services?</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#prestashop-help-link">Prestashop Help Link</a>
+
+                    
+              
+                             
+
+               <li class=""><a href="#postscript">Postscript</a>
+
+                    
+              
+            </ul>
+          </div>
+    </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content body">
+
+
+         <!-- Introduction Section -->
+          <section id="introduction">
+            <div class='section-content'>
+              <div class="content-header">
+                <h1>PrestaShop Image Guide</h1>
+                              <div class="version"> Version 1.7.2.3</div>
+                       </div>
+              <div class="row">
+                <div class="col-sm-12">
+                                   </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                     <p>Websoft9 PrestaShop is a pre-configured, ready to run image for running PrestaShop on Alibaba Cloud.</p>
+<p>PrestaShop is one of the world’s most popular ecommerce platforms, and most successful open source projects. Around the world, more than 250,000 ecommerce stores run on PrestaShop technology.PrestaShop has comprehensive product features for small, medium or large ecommerce stores. Hundreds of features are standard and 100% free.</p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- End Introduction Section -->
+
+
+  <section id="prestashop-stack-components" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>PrestaShop  Stack Components</h2><p><strong>Application Software(PrestaShop1.7.2.3)</strong><br />
+Software directory: <em>/data/wwwroot/prestashop</em></p>
+<p><strong>Infrastructure(PHP7.0,APACHE2.4)</strong><br />
+PHP Configuration File: <em>/etc/php.ini</em><br />
+Default Apache Vhost Configuration File: <em>/etc/httpd/conf.d/vhost.conf</em><br />
+Apache Vhost Configuration directory: <em>/etc/httpd/conf.d</em><br />
+Apache Log Files: <em>/var/log/httpd</em></p>
+<p><strong>Database(MYSQL5.7)</strong><br />
+Database install directory: <em>/usr/share/mysql</em><br />
+Database data directory:  <em>/data/mysql</em><br />
+Database Configuration File: <em>/etc/my.cnf</em><br />
+PhpMyAdmin install directory: <em>/usr/share/phpmyadmin</em></p>
+</div>  </section>
+
+  <section id="verify-the-image" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Verify the Image</h2><p>After the installation of Image,please verify it</p>
+<ul>
+<li>Login on Alibaba Cloud console,get you Internet IP Address<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alibabacloud-getip-websoft9.png" width="1480" height="489" /></li>
+<li>Open you Chrome or Firefox on your local PC,visit the <strong><em>http://Internet IP Address </em></strong>and you can enter the installation page directly,if there no response from browser,please check the <a href="https://www.alibabacloud.com/help/doc-detail/25471.htm" target="_blank" rel="noopener noreferrer">Security Group settings</a> to ensure that port 80 is been allowed</li>
+</ul>
+</div>  </section>
+
+  <section id="will-be-used-usernames-and-passwords" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Will be used Usernames and Passwords</h2><p>Three usernames and passwords are required for application installation, application using, andapplication maintenance:</p>
+<p><strong>1、PrestaShop:</strong>Username and Password is<strong> </strong>set by youself when installation,<br />
+Backend URL:<em>http://youdomain.com/admin</em><br />
+<strong>2、MySQL Database:</strong>Default username and password is<strong> </strong><span style="color: #ff0000;"><em>root/123456</em></span><br />
+Control Panel URL:<em>http://Internet IP Address/phpmyadmin</em><br />
+<strong>3、Linux Server:</strong>Username is root,Password is<strong> </strong>set by youself when buying.<br />
+Please Using the <a href="http://www.putty.org/" target="_blank" rel="noopener noreferrer">P<em>utty</em></a> for ssh remote and <a href="https://winscp.net/" target="_blank" rel="noopener noreferrer"><em>WinSCP</em></a> for SFTP</p>
+<p>Note:You can reset the password of OS through Cloud Console if you have forgotten it</p>
+</div>  </section>
+
+  <section id="getting-started-with-prestashop" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Getting Started with PrestaShop</h2><p>It is recommended to complete two steps before the the installation:</p>
+<ul>
+<li>Domain resolution if you want to use domain for this application (Add an A record to the Internet IP Address of Server from Domain Control Panel)</li>
+<li>Modify the MySQL password of r<em>oot</em> through <strong><em>http://Internet IP Address/phpmyadmin</em></strong></li>
+</ul>
+<p>Then access the installation page and complete the installation wizard for the following steps:</p>
+<ol>
+<li>Local Chrome or Firefox to visit <strong><em>http://yourdomain</em></strong> or <strong><em>http://Internet IP Address</em></strong>,you will enter the configuration inerface of installation,Select the language,Click “Next”<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps01.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps01.png" alt="" /></a></li>
+<li>Agree license, Click “Next”<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps02.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps02.png" alt="" /></a></li>
+<li>Set your store information and administration account, Click “Next”<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps03.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps03.png" alt="" /></a></li>
+<li>Enter your database configuration, Click “Next”<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps04.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps04.png" alt="" /></a></li>
+<li><strong> </strong>Your installation is finished! Your must delete &#8220;/data/wwwroot/default/prestashop/install&#8221; folder.<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps05.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps05.png" alt="" /></a></li>
+<li>Use SSH Command to remove install folder, Then Click &#8220;Manage your store&#8221;<br />
+root@iZbp1i4rjdsy216yq7lgucZ:/# cd /data/wwwroot/prestashop/<br />
+root@iZbp1i4rjdsy216yq7lgucZ:/data/wwwroot/default/prestashop# mv install install.bak<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps06.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps06.png" alt="" /></a></li>
+<li>Enter your administration account, Click &#8220;LOG IN&#8221;<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps07.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps07.png" alt="" /></a></li>
+<li>This is your administration panel:<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps08.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps08.png" alt="" /></a></li>
+<li>Use <strong><em>http://&lt;domain name&gt;/</em></strong>  to go to your index page.<br />
+<a href="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps09.png" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-16689 size-full" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/ps09.png" alt="" /></a></li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-connect-server" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to connect Server?</h2><div id='connect-to-a-linux-instance-using-windows-os' class='step-content clearfix'><h3 class='steps-header'><a href='#connect-to-a-linux-instance-using-windows-os'>Connect to a Linux instance using Windows OS</a></h3><p>This section uses PuTTY as an example. PuTTY can be downloaded <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>You can connect to a Linux instance via PuTTY as follows:</p>
+<ol>
+<li>Start Putty.exe.</li>
+<li>Enter the public IP address of the instance in <strong>Host Name (or IP address)</strong>.</li>
+<li>Use the default port <strong>22</strong>.</li>
+<li>Select <strong>SSH</strong> as <strong>Connection Type</strong>.</li>
+<li>Type a session name in <strong>Saved Sessions</strong>, and then click <strong>Save</strong>. In later logins, you may directly load the session without re-entering the IP address.</li>
+<li>Click <strong>Open</strong> to connect.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty.gif" width="454" height="436" /></li>
+<li>Upon first connection, the following dialog box will be displayed. Click <strong>Yes</strong>.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_confirm.png" width="419" height="304" /></li>
+<li>As prompted, enter the username and password for the Linux ECS instance. The password will not be displayed on-screen. Press the <strong>Enter</strong> key to complete connection to the instance.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/ecs_QS_Connect_Putty_pw.png" width="686" height="179" /></li>
+</ol>
+<p>When you connect your computer to the Linux instance successfully, you can operate the instance from your computer.</p>
+</div><div id='use-management-terminal-to-connect-to-an-ecs-instance' class='step-content clearfix'><h3 class='steps-header'><a href='#use-management-terminal-to-connect-to-an-ecs-instance'>Use Management Terminal to connect to an ECS instance</a></h3><p>Refer to <a href="https://www.alibabacloud.com/help/doc-detail/25433.htm">Use Management Terminal (VNC) to connect to an ECS instance</a>.</p>
+</div></div>  </section>
+
+  <section id="how-to-use-sftp" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to use SFTP?</h2><p>Use SFTP you can mange file,upload and download file,configure Server.</p>
+<ol>
+<li>Start WinSCP. Login Dialog will appear.</li>
+<li>Then select your File protocol(SFTP) on the dialog</li>
+<li>Enter your host name to Host name field, username to User name and password to Password like below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsite-websoft9.png" width="960" height="500" /></li>
+<li>You may want to save your session details to a site so you do not need to type them in every time you want to connect. Press Save button and type site name.</li>
+<li>When appear the dialog below,please select the “yes”<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-newsitey-websoft9.png" width="960" height="500" /></li>
+<li>You can manane Linux file below<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-file-websoft9.png" width="960" height="629" /></li>
+<li>WinSCP can integrate the Putty and transfer the log in information to Putty<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-putty-websoft9.png" width="960" height="536" /></li>
+<li>Now you can use Putty(Not need to log in) from the menu bar of WinSCP<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/winscp/winscp-puttyclick-websoft9.png" width="960" height="200" /></li>
+</ol>
+</div>  </section>
+
+  <section id="how-to-access-phpmyadmin" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to access phpMyAdmin?</h2><p>Websoft9 Prestashop Image have installed the phpMyadmin</p>
+<p>phpMyAdmin install directory: /data/wwwroot/default/phpMyAdmin</p>
+<p>Following is the step for access phpMyadmin</p>
+<ol>
+<li>Open Chrome or Firefox on your local PC</li>
+<li>visit the http://Internet IP Address/phpMyAdmin,you can enter the login page<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/mysql/mysql-login-websoft9.png" width="472" height="534" /></li>
+<li>select you language,Username:root,Password:123456</li>
+<li>Click the button “Go”</li>
+</ol>
+</div>  </section>
+
+  <section id="using-modules" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Using Modules</h2><p>PrestaShop comes with a set of modules that can be installed/uninstalled and configured as desired, in order to customize and complete your shop.</p>
+<p>The range of actions is virtually unlimited: the extensibility of PrestaShop makes it possible to turn your shop into exactly what you intend it to do, instead of you having to comply with constraints that you did not choose – provided you can find the module that does exactly what you need.</p>
+<div id='search-and-install-modules' class='step-content clearfix'><h3 class='steps-header'><a href='#search-and-install-modules'>Search and install Modules</a></h3><p>Login backend,Modules and Services-&gt;Modules and Services,you can find the module list and search all the modules</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-searchmodules-websoft9.png" width="1576" height="579" /></p>
+<p>Click the &#8220;Install&#8221; button you can install it online</p>
+</div><div id='module-marketplaceaddons-website' class='step-content clearfix'><h3 class='steps-header'><a href='#module-marketplaceaddons-website'>Module marketplace(Addons website)</a></h3><p>PrestaShop comes bundled with more than 100 modules. Even though it can sound like a lot, you might want to go further by adding extra features that are not available by default in PrestaShop.</p>
+<p>There are many more modules available on the PrestaShop Addons website (http://addons.prestashop.com/), PrestaShop&#8217;s official marketplace Some are free, others are for-pay, and you are sure to find something that suits your needs! Once you are a seasoned module developer/theme designer, you can even submit your own creations, and sell them on Addons!</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-marketplace-websoft9.png" width="1655" height="1229" /></p>
+<p>Login backend,Modules and Services-&gt;Modules &amp; Themes Catalog,you can find the module Marketplace and search all the modules</p>
+<p>The &#8220;Modules Catalog&#8221; page gives you a quick and easy access to the online Addons database of modules and themes. Its interface is pretty straightforward:</p>
+<ul>
+<li>A search field, with which you can search the whole content of the Addons website.</li>
+<li>A few selections of modules that you can buy directly, that will help you achieve certain business objectives:
+<ul>
+<li>Be visible</li>
+<li>Boost your sales</li>
+<li>Increase your customer&#8217;s average cart size</li>
+<li>Building trust with payment modules</li>
+<li>Opt for speed with shipment modules</li>
+<li>Free partner modules</li>
+</ul>
+</li>
+</ul>
+<p>Any link on the page will send you to the Addons website, where more options are available.</p>
+<p>Clicking on an item will open its Addons page in a new browser tab.</p>
+</div></div>  </section>
+
+  <section id="upgrade" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Upgrade</h2><p>New versions of PrestaShop come every few months, sometimes even weeks apart. Some are major, most are minor, but they all bring a slew of innovations, improvements and bug fixes. It is therefore highly advised to keep up with the latest version.</p>
+<p>There are two ways to upgrade PrestaShop:</p>
+<ul>
+<li>Automatic&#8211;The automatic upgrade simply uses the free 1-Click Upgrade module.</li>
+<li>Manual&#8211;The manual upgrade has been deprecated, but its documentation is kept for historical purposes – and for those who cannot use the automatic upgrade.</li>
+</ul>
+<p>Note:The update process will affect all files and folders included in the main PrestaShop installation. This includes all the core files used to run PrestaShop, all default modules and the default theme. If you have made any modifications to those files, your changes will be lost.</p>
+<div id='automatic-upgrade' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-upgrade'>Automatic Upgrade</a></h3><p>Prestashop has a module named &#8220;The 1-Click Upgrade&#8221; that help you update automaticlly.</p>
+<ol>
+<li>Login backend,Modules and Services-&gt;Modules and Services,Search the &#8220;The 1-Click Upgrade&#8221;<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-installautomaticinstall-websoft9.png" width="1126" height="531" /></li>
+<li>Click the &#8220;Install&#8221; button and you can use the automatic upgrade interface now</li>
+<li>then,compares your version of PrestaShop with the latest stable one. You can quickly see whether an update is required or not. If you know that there is a more recent version available than the one presented, you can trigger a version check by clicking the &#8220;Check if a new version available&#8221; button.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-checkupgrade-websoft9.png" width="1312" height="750" /></li>
+<li>If there no new version for upgrade or not suitable for upgrade,you can not use this automatic upgrade interface</li>
+<li>Once all the indicators in the &#8220;pre-Upgrade checklist&#8221; section are green, the update button appears in the &#8220;Start your Upgrade&#8221; section, along with the URL from which the new version will be downloaded.</li>
+<li>Clicking the &#8220;Upgrade PrestaShop now !&#8221; button triggers the whole process.</li>
+<li>Once the upgrade process is launched, the whole configuration page is replaced by two sections: &#8220;Activity Log&#8221; and &#8220;Rollback&#8221;.</li>
+</ol>
+<p>Note:You should never update your online shop right away. The automatic upgrade tool can fail in some situations, and you might not be able to revert to the previous version.The safest way is to have an exact copy of your shop available, either on your local computer or in another folder of your web server. It should contain all your products, categories, themes, modules, translations, settings, etc.Make a trial upgrade on that copy of your shop. Once the upgrade is done, browse your front and back office thoroughly to make sure that everything is as expected. If not, then the upgrade tool has an issue with your configuration, and you should use the manual upgrade method, which is now deprecated and takes longer, but which may help in your situation.</p>
+</div><div id='manual-upgrade' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-upgrade'>Manual Upgrade</a></h3><p>Doing a manual update is a long and detailed process, which should only be used out of necessity – for instance, if you cannot make an automatic update.Therefore, manual updates should be reserved to experts, meaning those who know how to use development tools such as LAMP, phpMyAdmin, etc.</p>
+<p>From the start of the process, your online shop should be disabled (in &#8220;maintenance&#8221; mode&#8221;) so as to make sure that your clients will not lose their carts and orders during the update process. In effect, this means that your shop will be closed for business during the whole process (one to two hours).</p>
+<p>The steps of the upgrade process are:</p>
+<ol>
+<li>Save and Backup Your Current Store:
+<ul>
+<li>Deactivate your store (&#8220;Maintenance&#8221; page of the &#8220;Preferences&#8221; menu).</li>
+<li>Back up your files to your desktop, using your FTP client in a new &#8220;prestashop-prod&#8221; folder. This will be a complete copy of your production site.</li>
+<li>Back up your database (&#8220;Advanced Parameters/DB Backup&#8221; page, or using phpMyAdmin).</li>
+<li>Back up your customized translation (&#8220;Export a language&#8221; section in &#8220;Tools/Translations&#8221; tab).</li>
+</ul>
+</li>
+<li>Getting ready for the new version:
+<ul>
+<li>Download and unzip the latest version of PrestaShop: <a class="external-link" href="http://www.prestashop.com/en/download" rel="nofollow">http://www.prestashop.com/en/download</a>, and unpack it in a new &#8220;prestashop-prep&#8221; folder.</li>
+<li>Copy your personal files (images, logos, photos, translations, modules, etc.) from &#8220;prestashop-prod&#8221; to &#8220;prestashop-prep&#8221; on your computer. A detailed list is available further down in this guide.</li>
+<li>Copy the &#8220;prestashop-prep&#8221; folder to the web folder on your local server (<code>/htdocs</code>, <code>/www</code>, or any other name used by the server package you chose). This is the folder where you will first try to upgrade your PrestaShop, keeping your original backed-up files (prestashop-prod) and the files you prepared (prestashop-prep).</li>
+<li>Recreate the production database on your local server: using phpMyAdmin, create a local database in which you will put the data from your production shop, using the SQL files that were backed-up at the start of the process.</li>
+</ul>
+</li>
+<li>Starting the Local Update:
+<ul>
+<li>Launch the update script on your local server by accessing it with your browser. In version 1.6, that script is located at <code>/install/upgrade/upgrade.php</code>.</li>
+<li>Verification of all parameters before the update: follow the instructions on screen and make sure your server conforms to the new version technical requirements.</li>
+<li>Finishing the update: once the updater has finished, delete the <code>/install</code> folder and access both your front and back office to make sure it works.</li>
+</ul>
+</li>
+<li>QA and Testing:
+<ul>
+<li>Import your translations (&#8220;Import a language pack manually&#8221; section in &#8220;Localization/Translations&#8221; page).</li>
+<li>Check that your theme is still working as expected. If this is not the case, you will have to edit its files.</li>
+<li>Test your shop thoroughly: create accounts, buy products, cancel orders, check the invoices, etc.</li>
+</ul>
+</li>
+<li>Start the update on your production web server:
+<ul>
+<li>Using your FTP client, replace the files for your online shop with those from your &#8220;prestashop-prep&#8221; folder.</li>
+<li>Launch the update script on your production server by accessing it with your browser. In version 1.6, that script is located at <code>/install/upgrade/upgrade.php</code>.</li>
+<li>Verification of all parameters before the update: follow the instructions on screen and make sure your server conforms to the new version technical requirements.</li>
+<li>Finishing the update: once the updater has finished, delete the <code>/install</code> folder and access both your front and back office to make sure it works.</li>
+<li>Import your translations (&#8220;Import a language pack manually&#8221; section in &#8220;Localization/Translations&#8221; page).</li>
+<li>Check that the main domain name is correct (&#8220;Preferences / SEO &amp; URLs&#8221; page, &#8220;Shop URL&#8221; section).</li>
+<li>Regenerate your robots.txt files (&#8220;Preferences / SEO &amp; URLs&#8221; page, &#8220;Generate robots.txt&#8221; section).</li>
+<li>Check that your theme still works as expected. If not, you will have to edit its files.</li>
+<li>Test your store thoroughly: create accounts, buy products, cancel orders, check invoices, etc.</li>
+</ul>
+</li>
+<li>Going live with your up-to-date store
+<ul>
+<li>Activate your store (&#8220;Maintenance&#8221; page under the &#8220;Preferences&#8221; menu).</li>
+</ul>
+</li>
+</ol>
+<p>You&#8217;re done! Enjoy all the new features brought by this update!</p>
+</div></div>  </section>
+
+  <section id="backup-restore" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Backup & Restore</h2><p>Routine backup (archives) of the database and application setup is essential to ensure failover is smooth.</p>
+<p>Backup is based on the server snapshot automatic backup,manual local backup in two ways, both of which have their own advantages and disadvantages, it is recommended to use together</p>
+<div id='automatic-backup-by-snapshot-of-server' class='step-content clearfix'><h3 class='steps-header'><a href='#automatic-backup-by-snapshot-of-server'>Automatic Backup by Snapshot of Server</a></h3><p>IaaS provider have the “snapshot” function for Server, the snapshot is for the server disk. Snapshot tool can record the specified point in time the hard disk data, all backed up, and can achieve a key recovery.</p>
+<p>If you have an automatic snapshot of the disk settings, the following scenes you can be more calm face:</p>
+<ul>
+<li>Work a few days of the results, was mistakenly deleted</li>
+<li>Hackers damage your site</li>
+<li>The content has been messed up</li>
+</ul>
+<p>Done a snapshot backup, a key to restore to the backup point of time state. That is, on-site reduction, very good function.</p>
+<p>Different cloud vendor snapshot settings slightly different, specific reference:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/25455.htm" target="_blank" rel="noopener noreferrer">How to use Alicloud snapshot? </a></li>
+</ul>
+</div><div id='manual-backup' class='step-content clearfix'><h3 class='steps-header'><a href='#manual-backup'>Manual Backup</a></h3><p>Below is the steps for manual backup:</p>
+<ol>
+<li>Go to your store&#8217;s back office, open the &#8220;Maintenance&#8221; page under the &#8220;Preference&#8221; menu, then select &#8220;No&#8221; for the &#8220;Enable Shop&#8221; option.</li>
+<li>Copy all of your files from your server to your local computer using an FTP client.</li>
+<li>Go to the the &#8220;DB Backup&#8221; page, then follow the instructions on the page.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-dbbackup-websoft9.png" width="1138" height="600" /></li>
+<li>or Using phpMyAdimin to backup your database<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-dbexport-websoft9.png" width="895" height="561" /></li>
+</ol>
+</div><div id='restore' class='step-content clearfix'><h3 class='steps-header'><a href='#restore'>Restore</a></h3><p>Prestashop restore is very complex, get more from <a href="http://doc.prestashop.com/display/PS16/Making+and+restoring+your+own+backup" target="_blank" rel="noopener noreferrer">Making and restoring your own backup</a></p>
+</div></div>  </section>
+
+  <section id="language" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Language</h2><div id='how-do-i-translate-prestashop-into-my-language' class='step-content clearfix'><h3 class='steps-header'><a href='#how-do-i-translate-prestashop-into-my-language'>How do I translate PrestaShop into my language?</a></h3><p>You can help translate PrestaShop into your language by participating <a class="external-link" href="https://crowdin.com/project/prestashop-official" rel="nofollow">using the Crowdin tool</a>! Thank you for your contribution!</p>
+</div><div id='how-do-i-add-a-language-to-the-back-office-or-for-my-customers' class='step-content clearfix'><h3 class='steps-header'><a href='#how-do-i-add-a-language-to-the-back-office-or-for-my-customers'>How do I add a language to the back office or for my customers?</a></h3><p>This is the same thing, and it is done in two steps:</p>
+<ul>
+<li>In the &#8220;Localization&#8221; page of the &#8220;Localization&#8221; menu, select the country for the language you need, and import the localization package.<br />
+<img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-local-websoft9.png" width="1600" height="630" /></li>
+<li>in the &#8220;Languages&#8221; page of the &#8220;Localization&#8221; menu, make sure that the new language is enabled. You can disable a language at any time.</li>
+</ul>
+<p>Make sure that your products various text fields (name, description, tags, URL, etc.) are translated in every languages that are displayed to the customer.</p>
+<p>See the <span class="confluence-link"><a href="http://doc.prestashop.com/display/PS16/Localization">documentation on the &#8220;Localization&#8221; page</a></span>, and <a href="http://doc.prestashop.com/display/PS16/Languages">the one for the &#8220;Languages&#8221; page</a>.</p>
+</div><div id='how-do-i-customize-the-translation' class='step-content clearfix'><h3 class='steps-header'><a href='#how-do-i-customize-the-translation'>How do I customize the translation?</a></h3><p>You can edit the translation files directly within PrestaShop, in the &#8220;Translations&#8221; page of the &#8220;Localization&#8221; menu.</p>
+</div></div>  </section>
+
+  <section id="useful-php-ini-settings" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Useful PHP.ini Settings</h2><p>The PHP configuration file allows you to configure the modules enabled, the email settings or the size of the upload files. It is located at /etc/php.ini.</p>
+<p>There are some PHP settings that need to be sufficient when running your application,The values for PHP.ini below are <i>suggested values</i> only.</p>
+<ul>
+<li>memory_limit – <b>Minimum:</b> 128M <b>Recommended:</b> 512M or better</li>
+<li>upload_max_filesize – <b>Minimum:</b> 20M</li>
+<li>post_max_size – <b>Minimum:</b> 20M</li>
+<li>max_execution_time: <b>At Least</b> 120 <b>Recommended:</b> 300</li>
+</ul>
+<p>After modifying the PHP configuration file, restart both Apache and PHP-FPM for the changes to take effect:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># systemctl restart httpd</span></code></pre>
+<div id='how-to-modify-the-allowed-limit-for-upload' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-modify-the-allowed-limit-for-upload'>How to modify the allowed limit for upload?</a></h3><p>Modify the  /etc/php.ini file to increase the allowed size for uploads:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token punctuation">;</span> Maximum size of <span class="token constant">POST</span> data that <span class="token constant">PHP</span> will accept<span class="token punctuation">.</span>
+post_max_size <span class="token operator">=</span> <span class="token constant">16M</span>
+<span class="token punctuation">;</span> Maximum allowed size <span class="token keyword">for</span> uploaded files<span class="token punctuation">.</span>
+upload_max_filesize <span class="token operator">=</span> <span class="token constant">16M</span></code></pre>
+<p>then,restart the apache</p>
+<pre class=" language-php"><code class=" language-php"><span class="token shell-comment comment"># systemctl restart httpd</span></code></pre>
+</div><div id='how-to-change-the-max_execution_time' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-change-the-max_execution_time'>How to change the max_execution_time?</a></h3><p>If you receive the message “Maximum execution time of 30 seconds exceeded”.You may also like to extend the max_execution_time for PHP and you can modify it by two methods below</p>
+<p><strong>Method one:</strong> edit your  /etc/php.ini</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token punctuation">;</span> Maximum execution time of each script<span class="token punctuation">,</span> in seconds
+<span class="token punctuation">;</span> http<span class="token punctuation">:</span><span class="token comment" spellcheck="true">//php.net/max-execution-time</span>
+<span class="token punctuation">;</span> Note<span class="token punctuation">:</span> This directive is hardcoded to <span class="token number">0</span> <span class="token keyword">for</span> the <span class="token constant">CLI</span> <span class="token constant">SAPI</span>
+max_execution_time <span class="token operator">=</span> <span class="token number">90</span>
+<span class="token punctuation">;</span> Maximum amount of time each script may spend parsing request data<span class="token punctuation">.</span> It's a good
+<span class="token punctuation">;</span> idea to limit this time on productions servers in order to eliminate unexpectedly
+<span class="token punctuation">;</span> long running scripts<span class="token punctuation">.</span>
+</code></pre>
+<p><strong>Method two:</strong> edit your .htaccess:</p>
+<pre class=" language-php"><code class=" language-php">
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;</span>IfModule <span class="token attr-name">mod_php5.c</span><span class="token punctuation">&gt;</span></span></span>
+php_value max_execution_time <span class="token number">90</span>
+<span class="token markup"><span class="token tag"><span class="token punctuation">&lt;/</span>IfModule<span class="token punctuation">&gt;</span></span></span></code></pre>
+</div></div>  </section>
+
+  <section id="prestashop-faq" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>PrestaShop FAQ</h2><div id='how-to-improve-prestashops-performances' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-improve-prestashops-performances'>How to improve PrestaShop's performances?</a></h3><p>Here are a few tips that should enable you to optimize PrestaShop.</p>
+<p id="SystemAdministratorGuide-ImprovingPHPperformance"><strong>Improving PHP performance:</strong>Whenever possible, use an opcode cache (or ask your web host to install one for you), in order to alleviate the server’s processing load. Opcode means “operation code”, and defines the compiled state of the dynamic files, which can then be processed faster.PrestaShop is compatible with eAccelerator (<a class="external-link" href="http://eaccelerator.net/" rel="nofollow">http://eaccelerator.net/</a>) as well as the new OPcache feature from PHP 5.5.0: <a class="external-link" href="http://www.php.net/manual/en/intro.opcache.php" rel="nofollow">http://www.php.net/manual/en/intro.opcache.php</a>.</p>
+<p><strong>Improving MySQL performance:</strong>Enable MySQL’s cache (or ask your web host to do it for you), and give it a high value (for instance, 256M).Whenever possible, use the MySQL drop-in replacement Percona Server (<a class="external-link" href="http://www.percona.com/software/percona-server" rel="nofollow">http://www.percona.com/software/percona-server</a>), which provides significant improvements over the standard MySQL server thanks to its XtraDB database engine.</p>
+</div><div id='how-to-move-prestashop-to-a-new-domain' class='step-content clearfix'><h3 class='steps-header'><a href='#how-to-move-prestashop-to-a-new-domain'>How to move PrestaShop to a new Domain?</a></h3><p>Here are the main steps when moving PrestaShop to a new domain within the same server. These are mostly a simpler version of the above steps – we do not touch the data, which stays on the same MySQL server.</p>
+<ol>
+<li>Put your shop in maintenance mode, so as to not lose new customers or orders will moving the data.<br />
+Go to your back-office, and under the “Preference” menu, open the “Maintenance” page and set the “Enable shop” option to “No”.</li>
+<li>Move your files
+<ol>
+<li><strong>Make a backup of all the files</strong>: connect to your FTP server, and copy all the files and folders to your local hard-drive.</li>
+<li><strong>Transfer your files to your new host</strong>: Connect to the FTP server for your new host, and copy all the files and folders that you just downloaded to your local hard-drive, as is.</li>
+</ol>
+</li>
+<li>Configuration
+<ol>
+<li>On the new server, open the <code>/config/settings.inc.php </code>file and update the settings for the new database server (with your own settings instead of the examples here):
+<ul>
+<li><code>define('_DB_SERVER_', '<a class="external-link" href="http://sql.domainname.com/" rel="nofollow">sql.domainname.com</a>');</code></li>
+<li><code>define('_DB_NAME_', 'prestashop');</code></li>
+<li><code>define('_DB_USER_', 'PS-user');</code></li>
+<li><code>define('_DB_PASSWD_', 'djsf15');</code></li>
+<li><code>define('_DB_PREFIX_', 'ps_');</code></li>
+</ul>
+</li>
+<li>Log in to your back office, go to the “Preferences” menu, select the “SEO &amp; URLs” page, and in the “Set shop URL” section change the domain name to your new domain. Do the same for the SSL domain.<br />
+In effect, this will update the “PS_SHOP_DOMAIN” and “PS_SHOP_DOMAIN_SSL” rows in the “ps_configuration” SQL table.</li>
+</ol>
+</li>
+<li>Connect to your new FTP server and delete everything except the <code>index.php</code>files in the following folders:
+<ul>
+<li><code>/tools/smarty/cache</code></li>
+<li><code>/tools/smarty/compile</code></li>
+<li><code>/tools/smarty_v2/cache</code></li>
+<li><code>/tools/smarty_v2/compile</code></li>
+</ul>
+</li>
+<li>Go to your back office, and in the “Maintenance” preference page, set the “Enable shop” option back to “Yes”.</li>
+</ol>
+<p>You should be good to go! Check that all the links are functioning, that all your products, images, modules and themes are still there, and try to create a new account and place an order so as to make sure your shop is working as expected.</p>
+</div><div id='how-do-i-import-product-data-from-another-application' class='step-content clearfix'><h3 class='steps-header'><a href='#how-do-i-import-product-data-from-another-application'>How do I import product data from another application?</a></h3><p>The CSV import page enables you to easily fill your product catalog when you have a very large amount of products, or to import data that you exported and converted from another e-commerce tool.</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/prestashop/prestashop-csvimport-websoft9.png" width="1512" height="1874" /></p>
+<p>Get more from <a href="http://doc.prestashop.com/display/PS16/CSV+Import+Parameters" target="_blank" rel="noopener noreferrer">http://doc.prestashop.com/display/PS16/CSV+Import+Parameters</a></p>
+</div></div>  </section>
+
+  <section id="how-to-configure-domain" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to configure domain?</h2><p>Use domain you should complete the following steps:</p>
+<div id='step-onedomain-resolution' class='step-content clearfix'><h3 class='steps-header'><a href='#step-onedomain-resolution'>Step One:Domain resolution</a></h3><p>e.g,If you using the AliCloud Domain product,you should log in to your Domain Console Panel</p>
+<p><img class="alignnone size-medium" src="http://libs.websoft9.com/Websoft9/DocsPicture/en/alicloud/alicloud-domains.png" width="960" height="308" /></p>
+<p>And find the domain name resolution interface,then add an A record to the Internet IP Address of Server from Domain Control Panel.</p>
+</div><div id='step-twomodify-the-vhost-file' class='step-content clearfix'><h3 class='steps-header'><a href='#step-twomodify-the-vhost-file'>Step Two:Modify the Vhost file</a></h3><ol>
+<li>Using SFTP to edit the <em>/ect/httpd/conf.d/vhost.conf</em></li>
+<li>Modify the domain related information like below,then save it
+<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token punctuation">&lt;</span>VirtualHost <span class="token attr-name"><span class="token namespace">*:</span>80</span><span class="token punctuation">&gt;</span></span>
+ServerName www.mydomain.com
+ServerAlias mydomain.com</code></pre>
+</li>
+<li>Using putty to run the command “systemctl restart httpd”</li>
+</ol>
+</div></div>  </section>
+
+  <section id="how-to-change-the-permissions-of-filesytem" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to change the permissions of filesytem?</h2><p>When install new extension from back-end it will not successful,may be the permissions of file and folder is not appropriate,you should change it</p>
+<p>Web site root permissions to follow:<br />
+file 644， folder 755 ，Permissions Users and groups www<br />
+If there is a file permissions problem, execute the following three commands:</p>
+<pre class=" language-markup"><code class=" language-markup">chown -R www.www /data/wwwroot/default/prestashop
+find /data/wwwroot/default/prestashop -type d -exec chmod 755 {} \;
+find /data/wwwroot/default/prestashop -type f -exec chmod 644 {} \;</code></pre>
+</div>  </section>
+
+  <section id="how-to-start-or-stop-the-services" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>How to start or stop the Services?</h2><p>Apache http service</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl start httpd
+~# systemctl stop httpd
+~# systemctl restart httpd
+</code></pre>
+<p>MySQL  service</p>
+<pre class=" language-markup"><code class=" language-markup">~# systemctl start mysqld
+~# systemctl stop mysqld
+~# systemctl restart mysqld</code></pre>
+</div>  </section>
+
+  <section id="prestashop-help-link" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Prestashop Help Link</h2><p>Links</p>
+<ul>
+<li><a href="https://www.prestashop.com" target="_blank" rel="noopener noreferrer"><span style="color: #3c8dbc;">PrestaShop open source ecommerce software</span></a></li>
+</ul>
+</div>  </section>
+
+  <section id="postscript" class="stickem-container">
+  <div class='section-content'><h2 class='page-header'>Postscript</h2><p>This document is original from Websoft9.In order to ensure the seriousness and usability of the documentation, no one may misappropriate or modify the second distribution. The need for friends reproduced please mark the source, otherwise we reserve the right to give legal action.</p>
+<p>We will periodically update the documentation. Please visit the online documentation for the latest version</p>
+<p>This document URL: <a href="http://en.websoft9.com/xdocs/prestashop-image-guide/" target="_blank" rel="noopener noreferrer">http://en.websoft9.com/xdocs/prestashop-image-guide/</a><br />
+Support &amp; Partnership: <a href="http://en.websoft9.com/">http://en.websoft9.com</a></p>
+</div>  </section>
+
+    </div><!-- /.content -->
+</div><!-- /.content-wrapper -->
+      
+
+  <footer class="main-footer">
+
+      <div class="pull-right hidden-xs">
+                        <div class="version"> Version 1.7.2.3</div>
+               </div>
+
+    <div class="copyrights">Websoft9</div>  </footer>
+
+
+</div><!-- ./wrapper -->
+
+
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.stickem.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://en.websoft9.com/wp-content/plugins/xdocs/themes/theme1/assets/js/docs.js"></script>
+    </body>
+</html>
