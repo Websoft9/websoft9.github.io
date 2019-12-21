@@ -6,7 +6,7 @@
 
 1. /docs 我们所有开源项目的文档
 2. /assets, /zh, /en 以及根目录下的 html 文件是 **[support主页](https://support.websoft9.com)** 本身的静态页面
-3. /.github 用于自动化部署 
+3. /.github 是用于自动化部署的程序，可选 
 
 ## 使用说明
 
