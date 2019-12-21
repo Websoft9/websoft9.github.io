@@ -10,7 +10,7 @@
 
 ## 使用说明
 
-1. 将项目 git clone 到你的网站根目录
-2. 设置域名，例如：*www.websoft9.cn*
-3. 打开 *http://www.websoft9.cn* 访问即可
+1. 准备好支持 HTML 的虚拟主机或静态网站空间
+2. 将项目 git clone 到你的网站根目录
+3. 绑定域名
 
