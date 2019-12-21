@@ -1,6 +1,6 @@
 # Websoft9 文档
 
-此项目对应的Websoft9公司技术支持网站的静态页面：https://support.websoft9.com
+此项目对应的 Websoft9 公司[技术支持网站](https://support.websoft9.com)所有的静态内容
 
 ## 目录说明
 
