@@ -1,19 +1,14 @@
-name: Upload To Azure
+name: Upload To Azure Blob Storage
 on: push
 
 jobs:
-  deploy:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      
-      - uses: feeloor/azure-static-website-deploy@master
-        env:
-          SOURCE_DIR: "./"
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_SECRET: ${{ secrets.AZURE_SECRET }}
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
-          AZURE_INDEX_DOCUMENT_NAME: "index.html"
-          AZURE_ERROR_DOCUMENT_NAME: "404.html"
+      - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
+        with:
+          source_dir: _dist
+          container_name: www
+          connection_string: ${{ secrets.ConnectionString }}
+          extra_args: '--pattern *.tar.gz*'
