@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: debug
+        run: pwd
       - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
         with:
           source_dir: websoft9.github.io/docs
