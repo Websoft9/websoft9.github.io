@@ -10,7 +10,7 @@ jobs:
         run: ls
       - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
         with:
-          source_dir: websoft9.github.io/docs
+          source_dir: docs
           container_name: $web
           connection_string: ${{ secrets.Azure_blob }}
           extra_args: '--pattern *.tar.gz*'
