@@ -13,4 +13,3 @@ jobs:
           source_dir: docs
           container_name: $web
           connection_string: ${{ secrets.Azure_blob }}
-          extra_args: '--pattern *.tar.gz*'
